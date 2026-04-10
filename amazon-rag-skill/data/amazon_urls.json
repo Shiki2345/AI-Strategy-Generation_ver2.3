@@ -1,0 +1,320 @@
+[
+  {
+    "id": "rag_001",
+    "user_description": "美国亚马逊账户详情页",
+    "aliases": [
+      "美国站账户页",
+      "US站账户信息页",
+      "Seller Central账户详情",
+      "账户设置页面"
+    ],
+    "exact_url": "https://sellercentral.amazon.com/sw/AccountInfo/",
+    "url_pattern": "sellercentral.amazon.com/sw/AccountInfo",
+    "page_description": "包含账户设置、银行信息、税务信息、公司信息等",
+    "keywords": ["账户", "详情", "美国", "Seller Central", "账户信息"],
+    "marketplace": "US",
+    "category": "account_management"
+  },
+  {
+    "id": "rag_002",
+    "user_description": "亚马逊广告报告页",
+    "aliases": [
+      "广告数据下载页",
+      "广告报表页",
+      "Advertising Reports",
+      "广告分析页面"
+    ],
+    "exact_url": "https://sellercentral.amazon.com/advertising/reports",
+    "url_pattern": "sellercentral.amazon.com/advertising/reports",
+    "page_description": "可以下载广告活动的数据报告，包括点击量、转化率、花费等指标",
+    "keywords": ["广告", "报告", "数据", "下载", "分析"],
+    "marketplace": "ALL",
+    "category": "advertising"
+  },
+  {
+    "id": "rag_003",
+    "user_description": "订单管理页面",
+    "aliases": [
+      "订单列表",
+      "Manage Orders",
+      "订单处理页",
+      "订单查询页面"
+    ],
+    "exact_url": "https://sellercentral.amazon.com/orders-v3",
+    "url_pattern": "sellercentral.amazon.com/orders-v3",
+    "page_description": "管理所有订单，包括待发货、已发货、取消的订单",
+    "keywords": ["订单", "管理", "发货", "查询"],
+    "marketplace": "ALL",
+    "category": "order_management"
+  },
+  {
+    "id": "rag_004",
+    "user_description": "库存管理页面",
+    "aliases": [
+      "库存查询",
+      "Inventory Management",
+      "库存列表",
+      "FBA库存"
+    ],
+    "exact_url": "https://sellercentral.amazon.com/inventory",
+    "url_pattern": "sellercentral.amazon.com/inventory",
+    "page_description": "查看和管理所有SKU的库存数量、状态、价格等",
+    "keywords": ["库存", "SKU", "管理", "数量"],
+    "marketplace": "ALL",
+    "category": "inventory"
+  },
+  {
+    "id": "rag_005",
+    "user_description": "产品上架页面",
+    "aliases": [
+      "添加产品",
+      "Add Product",
+      "创建Listing",
+      "产品创建页"
+    ],
+    "exact_url": "https://sellercentral.amazon.com/product-search",
+    "url_pattern": "sellercentral.amazon.com/product-search",
+    "page_description": "搜索和添加新产品，创建新的产品Listing",
+    "keywords": ["产品", "上架", "添加", "创建", "Listing"],
+    "marketplace": "ALL",
+    "category": "product_management"
+  },
+  {
+    "id": "rag_006",
+    "user_description": "支付报告页面",
+    "aliases": [
+      "付款报告",
+      "Payment Reports",
+      "财务报表",
+      "收款记录"
+    ],
+    "exact_url": "https://sellercentral.amazon.com/payments/dashboard/index.html",
+    "url_pattern": "sellercentral.amazon.com/payments/dashboard",
+    "page_description": "查看所有付款记录、交易明细、费用扣除等财务信息",
+    "keywords": ["支付", "付款", "财务", "报告", "收款"],
+    "marketplace": "ALL",
+    "category": "finance"
+  },
+  {
+    "id": "rag_007",
+    "user_description": "账户健康页面",
+    "aliases": [
+      "Account Health",
+      "账户绩效",
+      "健康状况",
+      "绩效指标"
+    ],
+    "exact_url": "https://sellercentral.amazon.com/performance/dashboard",
+    "url_pattern": "sellercentral.amazon.com/performance/dashboard",
+    "page_description": "显示账户健康指标，包括ODR、取消率、迟发率等关键绩效",
+    "keywords": ["健康", "绩效", "ODR", "指标", "账户状态"],
+    "marketplace": "ALL",
+    "category": "account_health"
+  },
+  {
+    "id": "rag_008",
+    "user_description": "买家消息中心",
+    "aliases": [
+      "Buyer Messages",
+      "客户消息",
+      "买家联系",
+      "站内信"
+    ],
+    "exact_url": "https://sellercentral.amazon.com/messaging/inbox",
+    "url_pattern": "sellercentral.amazon.com/messaging/inbox",
+    "page_description": "查看和回复买家发送的消息和问题",
+    "keywords": ["消息", "买家", "客户", "站内信", "沟通"],
+    "marketplace": "ALL",
+    "category": "customer_service"
+  },
+  {
+    "id": "rag_009",
+    "user_description": "退货管理页面",
+    "aliases": [
+      "退货处理",
+      "Return Requests",
+      "退款申请",
+      "退货列表"
+    ],
+    "exact_url": "https://sellercentral.amazon.com/returns/list",
+    "url_pattern": "sellercentral.amazon.com/returns/list",
+    "page_description": "管理买家的退货请求和退款申请",
+    "keywords": ["退货", "退款", "返回", "处理"],
+    "marketplace": "ALL",
+    "category": "customer_service"
+  },
+  {
+    "id": "rag_010",
+    "user_description": "广告活动管理",
+    "aliases": [
+      "Campaign Manager",
+      "广告投放",
+      "广告设置",
+      "PPC管理"
+    ],
+    "exact_url": "https://advertising.amazon.com/cm/campaigns",
+    "url_pattern": "advertising.amazon.com/cm/campaigns",
+    "page_description": "创建和管理广告活动，包括SP、SB、SD广告",
+    "keywords": ["广告", "Campaign", "投放", "PPC", "推广"],
+    "marketplace": "ALL",
+    "category": "advertising"
+  },
+  {
+    "id": "rag_011",
+    "user_description": "品牌注册管理",
+    "aliases": [
+      "Brand Registry",
+      "品牌备案",
+      "商标管理",
+      "品牌保护"
+    ],
+    "exact_url": "https://brandservices.amazon.com/",
+    "url_pattern": "brandservices.amazon.com",
+    "page_description": "管理品牌注册、商标保护、A+页面等品牌相关功能",
+    "keywords": ["品牌", "商标", "注册", "保护", "Brand Registry"],
+    "marketplace": "ALL",
+    "category": "brand"
+  },
+  {
+    "id": "rag_012",
+    "user_description": "促销活动管理",
+    "aliases": [
+      "Promotions",
+      "优惠券",
+      "折扣设置",
+      "促销创建"
+    ],
+    "exact_url": "https://sellercentral.amazon.com/merchandising-new",
+    "url_pattern": "sellercentral.amazon.com/merchandising-new",
+    "page_description": "创建和管理各种促销活动，如优惠券、秒杀、折扣等",
+    "keywords": ["促销", "优惠券", "折扣", "活动", "Promotion"],
+    "marketplace": "ALL",
+    "category": "marketing"
+  },
+  {
+    "id": "rag_013",
+    "user_description": "商品评论管理",
+    "aliases": [
+      "Product Reviews",
+      "客户评价",
+      "Review管理",
+      "评论查看"
+    ],
+    "exact_url": "https://sellercentral.amazon.com/product-reviews",
+    "url_pattern": "sellercentral.amazon.com/product-reviews",
+    "page_description": "查看和分析产品的买家评论和评分",
+    "keywords": ["评论", "Review", "评价", "反馈"],
+    "marketplace": "ALL",
+    "category": "product_management"
+  },
+  {
+    "id": "rag_014",
+    "user_description": "FBA发货计划",
+    "aliases": [
+      "FBA Shipment",
+      "发货到FBA",
+      "创建发货计划",
+      "入库计划"
+    ],
+    "exact_url": "https://sellercentral.amazon.com/fba/sendtoamazon/",
+    "url_pattern": "sellercentral.amazon.com/fba/sendtoamazon",
+    "page_description": "创建FBA发货计划，安排货物发往亚马逊仓库",
+    "keywords": ["FBA", "发货", "入库", "计划", "仓库"],
+    "marketplace": "ALL",
+    "category": "fulfillment"
+  },
+  {
+    "id": "rag_015",
+    "user_description": "业务报告中心",
+    "aliases": [
+      "Business Reports",
+      "销售报告",
+      "数据分析",
+      "报表中心"
+    ],
+    "exact_url": "https://sellercentral.amazon.com/business-reports",
+    "url_pattern": "sellercentral.amazon.com/business-reports",
+    "page_description": "查看各类业务报告，包括销售、流量、转化等数据",
+    "keywords": ["报告", "报表", "销售", "数据", "分析"],
+    "marketplace": "ALL",
+    "category": "analytics"
+  },
+  {
+    "id": "rag_016",
+    "user_description": "用户权限管理",
+    "aliases": [
+      "User Permissions",
+      "子账号管理",
+      "权限设置",
+      "账号授权"
+    ],
+    "exact_url": "https://sellercentral.amazon.com/user-manager",
+    "url_pattern": "sellercentral.amazon.com/user-manager",
+    "page_description": "管理子账号用户和设置权限",
+    "keywords": ["权限", "用户", "子账号", "管理", "授权"],
+    "marketplace": "ALL",
+    "category": "account_management"
+  },
+  {
+    "id": "rag_017",
+    "user_description": "日本站账户详情",
+    "aliases": [
+      "日本站账户页",
+      "JP站账户信息",
+      "日本亚马逊账户"
+    ],
+    "exact_url": "https://sellercentral.amazon.co.jp/sw/AccountInfo/",
+    "url_pattern": "sellercentral.amazon.co.jp/sw/AccountInfo",
+    "page_description": "日本站的账户设置、银行信息、税务信息",
+    "keywords": ["日本", "账户", "JP", "详情"],
+    "marketplace": "JP",
+    "category": "account_management"
+  },
+  {
+    "id": "rag_018",
+    "user_description": "欧洲站账户详情",
+    "aliases": [
+      "欧洲站账户页",
+      "EU站账户信息",
+      "欧洲亚马逊账户"
+    ],
+    "exact_url": "https://sellercentral.amazon.co.uk/sw/AccountInfo/",
+    "url_pattern": "sellercentral.amazon.co.uk/sw/AccountInfo",
+    "page_description": "欧洲站的账户设置、银行信息、税务信息、VAT信息",
+    "keywords": ["欧洲", "账户", "EU", "UK", "VAT"],
+    "marketplace": "EU",
+    "category": "account_management"
+  },
+  {
+    "id": "rag_019",
+    "user_description": "案件管理页面",
+    "aliases": [
+      "Case Log",
+      "开case",
+      "联系卖家支持",
+      "客服工单"
+    ],
+    "exact_url": "https://sellercentral.amazon.com/cu/case-lobby",
+    "url_pattern": "sellercentral.amazon.com/cu/case-lobby",
+    "page_description": "创建和管理与亚马逊卖家支持的工单和案件",
+    "keywords": ["case", "工单", "客服", "支持", "帮助"],
+    "marketplace": "ALL",
+    "category": "support"
+  },
+  {
+    "id": "rag_020",
+    "user_description": "定价管理页面",
+    "aliases": [
+      "价格设置",
+      "Pricing",
+      "修改价格",
+      "定价策略"
+    ],
+    "exact_url": "https://sellercentral.amazon.com/pricing/manage",
+    "url_pattern": "sellercentral.amazon.com/pricing/manage",
+    "page_description": "批量管理和修改产品价格",
+    "keywords": ["定价", "价格", "修改", "管理"],
+    "marketplace": "ALL",
+    "category": "product_management"
+  }
+]

@@ -1,0 +1,208 @@
+{
+  "skill_metadata": {
+    "skill_id": "access_policy_time_blacklist_v1",
+    "skill_name": "时间限制黑名单访问策略配置",
+    "version": "1.0.0",
+    "category": "网络访问控制",
+    "tags": ["访问策略", "时间限制", "黑名单", "企业管理"],
+    "author": "Access Policy Assistant",
+    "created_at": "2024-01-01",
+    "description": "通过多轮对话帮助用户配置基于时间的网站黑名单访问策略"
+  },
+
+  "applicable_scenarios": [
+    {
+      "scene": "企业办公时间管理",
+      "description": "限制员工工作时间访问娱乐网站",
+      "keywords": ["工作时间", "禁止", "员工", "视频", "游戏", "社交"]
+    },
+    {
+      "scene": "教育机构上课管理",
+      "description": "上课时间屏蔽干扰学习的网站",
+      "keywords": ["上课", "学生", "禁止", "游戏", "娱乐"]
+    },
+    {
+      "scene": "家长控制",
+      "description": "限制孩子特定时段的网络使用",
+      "keywords": ["孩子", "限制", "晚上", "周末"]
+    }
+  ],
+
+  "dialogue_flow": {
+    "phase_1_identify_intent": {
+      "description": "识别用户意图，判断策略类型",
+      "trigger_patterns": [
+        ".*工作时间.*(禁止|屏蔽|限制|不允许).*",
+        ".*(上班|办公).*(不能|禁止).*(访问|打开|看).*",
+        ".*特定时间.*(黑名单|拦截).*"
+      ],
+      "classification": "time_based_blacklist",
+      "response_template": "明白了！你想配置一个**时间限制 + 黑名单**的组合策略。",
+      "next_phase": "phase_2_collect_basic"
+    },
+
+    "phase_2_collect_basic": {
+      "description": "收集基本参数",
+      "required_fields": [
+        {
+          "field_name": "time_range",
+          "display_name": "工作时间",
+          "question": "工作时间是什么时候？",
+          "format": "星期X到星期X HH:MM-HH:MM",
+          "examples": [
+            "周一到周五 9:00-18:00",
+            "周一至周六 8:30-17:30",
+            "每天 9:00-22:00"
+          ],
+          "validation": {
+            "days_pattern": "(周|星期)(一|二|三|四|五|六|日|天)",
+            "time_pattern": "\\d{1,2}:\\d{2}"
+          }
+        },
+        {
+          "field_name": "blocked_sites",
+          "display_name": "屏蔽网站",
+          "question": "需要屏蔽哪些网站？",
+          "provide_presets": true,
+          "preset_categories": [
+            "video_sites_cn",
+            "video_sites_global",
+            "short_video",
+            "social_media",
+            "gaming",
+            "shopping"
+          ],
+          "allow_custom_input": true,
+          "input_format": "域名列表，逗号分隔"
+        },
+        {
+          "field_name": "user_scope",
+          "display_name": "适用范围",
+          "question": "适用于哪些用户？",
+          "options": [
+            "所有员工",
+            "特定部门",
+            "所有员工（某些角色除外）",
+            "特定用户组"
+          ],
+          "allow_exceptions": true
+        }
+      ],
+      "next_phase": "phase_3_confirm_details"
+    },
+
+    "phase_3_confirm_details": {
+      "description": "确认配置细节",
+      "confirmation_points": [
+        {
+          "item": "域名精准度",
+          "question": "检测到 qq.com，是否要屏蔽整个域名？",
+          "issue": "qq.com 会影响 QQ 邮箱等其他腾讯服务",
+          "recommendation": "建议使用 v.qq.com（腾讯视频专用）",
+          "condition": "当域名列表包含通用大域名时触发"
+        },
+        {
+          "item": "子域名匹配",
+          "question": "是否包含所有子域名？",
+          "explanation": "例如 m.bilibili.com（移动版）、www.iqiyi.com 等",
+          "recommendation": "推荐：使用通配符 *. 匹配所有子域名",
+          "options": ["包含所有子域名（通配符）", "仅精确匹配指定域名"]
+        },
+        {
+          "item": "策略命名",
+          "question": "给策略起个名字",
+          "auto_generate_template": "{场景}+{目标网站类型}+限制",
+          "examples": [
+            "工作时间视频网站限制",
+            "办公时段娱乐网站屏蔽",
+            "上课时间游戏网站拦截"
+          ],
+          "allow_custom": true
+        }
+      ],
+      "next_phase": "phase_4_generate_config"
+    },
+
+    "phase_4_generate_config": {
+      "description": "生成最终配置",
+      "output_format": "JSON",
+      "template_file": "config_template.json",
+      "parameter_mapping": {
+        "time_range": "time_restrictions.schedule",
+        "blocked_sites": "blacklist.domains",
+        "user_scope": "user_scope",
+        "policy_name": "policy_name"
+      },
+      "enhancements": [
+        "添加友好的拦截提示信息",
+        "启用日志记录功能",
+        "设置时区信息",
+        "包含版本号和创建时间"
+      ],
+      "next_phase": "phase_5_deliver"
+    },
+
+    "phase_5_deliver": {
+      "description": "交付配置并提供后续指导",
+      "deliverables": [
+        "完整 JSON 配置文件",
+        "配置说明表格",
+        "下一步操作建议"
+      ],
+      "follow_up_options": [
+        "直接应用配置",
+        "调整参数",
+        "测试验证",
+        "配置新策略"
+      ]
+    }
+  },
+
+  "common_patterns": {
+    "domain_precision_check": {
+      "trigger": "检测到顶级域名（如 qq.com, baidu.com）",
+      "warning_domains": ["qq.com", "baidu.com", "tencent.com", "alibaba.com"],
+      "action": "提示用户确认是否需要更精准的子域名",
+      "suggestions": {
+        "qq.com": "v.qq.com（腾讯视频）",
+        "baidu.com": "tieba.baidu.com（百度贴吧）"
+      }
+    },
+    
+    "time_parsing": {
+      "weekday_mapping": {
+        "周一|星期一|Monday": "Monday",
+        "周二|星期二|Tuesday": "Tuesday",
+        "周三|星期三|Wednesday": "Wednesday",
+        "周四|星期四|Thursday": "Thursday",
+        "周五|星期五|Friday": "Friday",
+        "周六|星期六|Saturday": "Saturday",
+        "周日|周天|星期日|星期天|Sunday": "Sunday"
+      },
+      "time_format": "HH:MM (24小时制)"
+    }
+  },
+
+  "best_practices": [
+    {
+      "practice": "使用通配符匹配子域名",
+      "reason": "避免遗漏移动版、国际版等变体",
+      "example": "*.bilibili.com 而非 bilibili.com"
+    },
+    {
+      "practice": "提供友好的拦截提示",
+      "reason": "让用户知道为什么被拦截，减少困惑",
+      "example": "工作时间禁止访问视频网站，请专注工作 💼"
+    },
+    {
+      "practice": "启用日志记录",
+      "reason": "便于审计和策略优化",
+      "config": "enforcement.log_violations = true"
+    },
+    {
+      "practice": "明确时区设置",
+      "reason": "避免跨地区部署时的时间歧义",
+      "default": "Asia/Shanghai"
+    }
+  ]
+}

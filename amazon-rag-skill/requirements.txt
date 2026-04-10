@@ -1,0 +1,6 @@
+# 使用较新版本的 ChromaDB，有预编译的 wheel
+chromadb==0.5.0
+openai==1.12.0
+python-dotenv==1.0.0
+# sentence-transformers 暂时不安装（可选，如果不需要本地 embedding）
+# sentence-transformers==2.3.1

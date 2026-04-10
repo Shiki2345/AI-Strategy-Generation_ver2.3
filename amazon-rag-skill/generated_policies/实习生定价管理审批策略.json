@@ -1,0 +1,283 @@
+{
+  "policy_id": "amazon_pricing_intern_approval_001",
+  "policy_name": "实习生访问定价管理页审批策略",
+  "policy_type": "approval_based_access_control",
+  "description": "实习生访问亚马逊 Seller Central 定价管理页面需要实时审批，由主管决定临时访问权限的有效期",
+  "version": "1.0",
+  "created_at": "2024-01-15T18:15:00+08:00",
+  
+  "target_resources": {
+    "page_name": "定价管理页面",
+    "exact_url": "https://sellercentral.amazon.com/pricing/manage",
+    "url_pattern": "sellercentral.amazon.com/pricing/manage*",
+    "match_type": "prefix",
+    "marketplace": "ALL",
+    "category": "product_management",
+    "sensitivity_level": "high",
+    "description": "批量管理和修改产品价格，直接影响销售收入和利润"
+  },
+  
+  "time_restrictions": {
+    "enabled": true,
+    "schedule": {
+      "mode": "always",
+      "days_of_week": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "time_range": {
+        "start": "00:00",
+        "end": "23:59"
+      },
+      "timezone": "Asia/Shanghai",
+      "description": "全天生效，7x24 小时"
+    }
+  },
+  
+  "access_control": {
+    "default_action": "require_approval",
+    "approval_workflow": {
+      "enabled": true,
+      "workflow_type": "real_time_approval",
+      "approval_chain": [
+        {
+          "level": 1,
+          "approver_role": "主管",
+          "approver_description": "直属主管/运营主管",
+          "approval_timeout": "30 minutes",
+          "timeout_action": "auto_reject",
+          "notification_channels": ["email", "sms", "app_push"]
+        }
+      ],
+      "application_form": {
+        "reason_required": false,
+        "reason_description": "申请理由（可选填写）",
+        "reason_max_length": 500,
+        "additional_fields": [
+          {
+            "field_name": "urgency_level",
+            "field_type": "select",
+            "options": ["紧急", "普通", "不紧急"],
+            "required": true
+          },
+          {
+            "field_name": "target_products",
+            "field_type": "text",
+            "description": "需要修改价格的产品 SKU 或 ASIN（可选）",
+            "required": false
+          },
+          {
+            "field_name": "estimated_duration",
+            "field_type": "text",
+            "description": "预计需要访问多久",
+            "required": false
+          }
+        ]
+      },
+      "temporary_access": {
+        "duration_controlled_by": "approver",
+        "duration_options": [
+          {"label": "30 分钟", "value": "30m"},
+          {"label": "1 小时", "value": "1h"},
+          {"label": "2 小时", "value": "2h"},
+          {"label": "4 小时", "value": "4h"},
+          {"label": "当天有效", "value": "1d"},
+          {"label": "自定义", "value": "custom"}
+        ],
+        "default_duration": "1h",
+        "max_duration": "3d",
+        "auto_revoke_on_expiry": true,
+        "allow_extension": true,
+        "extension_requires_new_approval": true
+      }
+    }
+  },
+  
+  "user_scope": {
+    "apply_to": {
+      "roles": ["实习生", "临时工", "试用期员工"],
+      "description": "所有实习生及试用期员工"
+    },
+    "exceptions": {
+      "roles": ["主管", "运营经理", "定价专员", "BOSS"],
+      "users": [],
+      "groups": ["管理组", "定价组"],
+      "description": "主管及以上级别、专职定价人员不受此策略限制，可直接访问"
+    }
+  },
+  
+  "block_behavior": {
+    "block_screen": {
+      "enabled": true,
+      "title": "🔒 需要主管审批才能访问",
+      "message": "你正在尝试访问【定价管理页面】\n\n此页面可以批量修改产品价格，直接影响销售收入。实习生需要获得主管批准后才能访问。",
+      "show_page_info": true,
+      "page_info": {
+        "page_name": "定价管理页面",
+        "url": "https://sellercentral.amazon.com/pricing/manage",
+        "sensitivity": "高敏感度 - 价格修改直接影响业务收入"
+      },
+      "actions": [
+        {
+          "type": "primary",
+          "label": "🚀 申请访问权限",
+          "action": "open_approval_form"
+        },
+        {
+          "type": "secondary",
+          "label": "📋 查看我的申请记录",
+          "action": "view_my_requests"
+        },
+        {
+          "type": "tertiary",
+          "label": "❌ 返回上一页",
+          "action": "go_back"
+        }
+      ]
+    },
+    "approval_form_ui": {
+      "title": "申请访问：定价管理页面",
+      "fields": [
+        {
+          "id": "reason",
+          "label": "申请理由（可选）",
+          "type": "textarea",
+          "placeholder": "例如：需要调整促销价格 / 修正价格错误 / 配合市场活动调价",
+          "required": false,
+          "rows": 4
+        },
+        {
+          "id": "urgency",
+          "label": "紧急程度",
+          "type": "radio",
+          "options": [
+            {"value": "urgent", "label": "🔴 紧急（价格错误需立即修正）"},
+            {"value": "normal", "label": "🟡 普通（常规价格调整）"},
+            {"value": "low", "label": "🟢 不紧急（计划性调价）"}
+          ],
+          "required": true,
+          "default": "normal"
+        },
+        {
+          "id": "target_products",
+          "label": "目标产品（可选）",
+          "type": "text",
+          "placeholder": "填写需要修改的 SKU 或 ASIN，如：ABC123, DEF456",
+          "required": false
+        },
+        {
+          "id": "estimated_time",
+          "label": "预计操作时长",
+          "type": "text",
+          "placeholder": "例如：30 分钟",
+          "required": false
+        }
+      ],
+      "submit_button": "📤 提交审批申请",
+      "cancel_button": "取消"
+    },
+    "approval_notification": {
+      "to_approver": {
+        "title": "【访问审批】实习生申请访问定价管理页",
+        "template": "实习生 {{applicant_name}}（{{applicant_role}}）申请访问：\n\n📄 页面：定价管理页面\n🔗 URL：https://sellercentral.amazon.com/pricing/manage\n⏰ 申请时间：{{request_time}}\n🚨 紧急程度：{{urgency}}\n🎯 目标产品：{{target_products}}\n💬 申请理由：{{reason}}\n⏱️ 预计时长：{{estimated_time}}\n\n⚠️ 提醒：此页面可批量修改价格，请谨慎授权。\n\n请在 30 分钟内处理，否则将自动拒绝。",
+        "actions": [
+          {"label": "✅ 批准", "action": "approve"},
+          {"label": "❌ 拒绝", "action": "reject"}
+        ]
+      },
+      "to_applicant_approved": {
+        "title": "✅ 访问申请已批准",
+        "template": "你的访问申请已获得主管批准！\n\n📄 页面：定价管理页面\n⏰ 批准时间：{{approval_time}}\n⌛ 有效期：{{duration}}\n⏳ 到期时间：{{expiry_time}}\n\n⚠️ 重要提醒：\n- 请谨慎操作，价格修改会立即生效\n- 建议先在单个产品测试\n- 批量修改前请再次确认\n\n请在有效期内完成操作，到期后将自动失效。",
+        "auto_redirect": true,
+        "redirect_delay": 3
+      },
+      "to_applicant_rejected": {
+        "title": "❌ 访问申请已拒绝",
+        "template": "很抱歉，你的访问申请未获批准。\n\n📄 页面：定价管理页面\n⏰ 拒绝时间：{{rejection_time}}\n💬 拒绝原因：{{rejection_reason}}\n\n如有疑问，请联系你的主管。"
+      },
+      "to_applicant_timeout": {
+        "title": "⏱️ 访问申请已超时",
+        "template": "你的访问申请在 30 分钟内未获得审批，已自动拒绝。\n\n如仍需访问，请重新提交申请。"
+      }
+    },
+    "access_granted_reminder": {
+      "show_banner": true,
+      "banner_message": "⚠️ 你正在临时访问定价管理页面，权限将于 {{expiry_time}} 到期。修改价格请谨慎操作！",
+      "countdown_timer": true,
+      "expire_soon_alert": {
+        "enabled": true,
+        "alert_before_minutes": 5,
+        "message": "⏰ 你的临时访问权限将在 5 分钟后到期，请尽快完成操作"
+      },
+      "safety_reminders": [
+        "💡 提示：价格修改会立即生效，请确认无误后再保存",
+        "💡 提示：批量修改前建议先测试单个产品",
+        "💡 提示：如有疑问，请及时咨询主管"
+      ]
+    }
+  },
+  
+  "enforcement": {
+    "strict_mode": true,
+    "bypass_allowed": false,
+    "log_all_events": true,
+    "log_retention_days": 90,
+    "events_to_log": [
+      "access_blocked",
+      "approval_requested",
+      "approval_granted",
+      "approval_rejected",
+      "approval_timeout",
+      "temporary_access_started",
+      "temporary_access_expired",
+      "access_during_valid_period",
+      "price_changes_made"
+    ]
+  },
+  
+  "audit_trail": {
+    "enabled": true,
+    "capture_details": {
+      "applicant_info": ["user_id", "name", "role", "department", "email"],
+      "request_details": ["timestamp", "reason", "urgency", "target_products", "estimated_duration"],
+      "approver_info": ["approver_id", "name", "role", "decision", "approved_duration", "rejection_reason"],
+      "access_log": ["access_time", "session_duration", "actions_performed", "ip_address", "modified_products"]
+    },
+    "generate_reports": {
+      "daily_summary": true,
+      "weekly_report": true,
+      "monthly_analytics": true,
+      "report_recipients": ["主管", "运营经理", "IT 管理员"]
+    },
+    "special_monitoring": {
+      "track_price_changes": true,
+      "alert_on_large_changes": true,
+      "large_change_threshold": {
+        "percentage": 20,
+        "absolute_amount": 10
+      },
+      "alert_recipients": ["主管", "定价专员"]
+    }
+  },
+  
+  "compliance": {
+    "data_sensitivity": "high",
+    "regulatory_requirements": [
+      "价格修改权限控制",
+      "实习生操作监督",
+      "价格变动审计追踪",
+      "防止误操作导致损失"
+    ],
+    "risk_level": "high",
+    "mitigation_strategy": "实时审批 + 时限访问 + 完整审计 + 价格变动监控"
+  },
+  
+  "metadata": {
+    "created_by": "Amazon Access Policy Assistant",
+    "created_by_tool": "RAG-powered Policy Generator",
+    "skill_applied": "amazon_approval_access_v1",
+    "last_modified": "2024-01-15T18:15:00+08:00",
+    "rag_entry_id": "rag_020",
+    "rag_similarity": 0.8,
+    "tags": ["审批制", "定价管理", "高敏感", "实习生", "主管审批", "价格监控"],
+    "generation_mode": "skill_reuse",
+    "base_template": "运营专员账户详情页审批策略"
+  }
+}

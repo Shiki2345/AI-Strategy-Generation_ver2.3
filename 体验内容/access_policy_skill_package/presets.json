@@ -1,0 +1,118 @@
+{
+  "preset_version": "1.0",
+  "categories": {
+    "video_sites_cn": {
+      "name": "国内主流视频网站",
+      "description": "包括长视频平台",
+      "domains": [
+        "*.bilibili.com",
+        "*.iqiyi.com",
+        "*.youku.com",
+        "*.v.qq.com",
+        "*.mgtv.com",
+        "*.le.com",
+        "*.pptv.com",
+        "*.sohu.com/tv"
+      ],
+      "tags": ["视频", "娱乐", "国内"]
+    },
+
+    "video_sites_global": {
+      "name": "国际视频平台",
+      "domains": [
+        "*.youtube.com",
+        "*.netflix.com",
+        "*.twitch.tv",
+        "*.vimeo.com",
+        "*.dailymotion.com"
+      ],
+      "tags": ["视频", "娱乐", "国际"]
+    },
+
+    "short_video": {
+      "name": "短视频平台",
+      "domains": [
+        "*.douyin.com",
+        "*.kuaishou.com",
+        "*.ixigua.com",
+        "*.huoshan.com"
+      ],
+      "tags": ["短视频", "娱乐"]
+    },
+
+    "social_media": {
+      "name": "社交媒体",
+      "domains": [
+        "*.weibo.com",
+        "*.zhihu.com",
+        "*.xiaohongshu.com",
+        "*.douban.com",
+        "*.facebook.com",
+        "*.twitter.com",
+        "*.instagram.com"
+      ],
+      "tags": ["社交", "娱乐"]
+    },
+
+    "gaming": {
+      "name": "游戏平台",
+      "domains": [
+        "*.4399.com",
+        "*.7k7k.com",
+        "*.steam.com",
+        "*.epicgames.com",
+        "*.17173.com"
+      ],
+      "tags": ["游戏", "娱乐"]
+    },
+
+    "shopping": {
+      "name": "购物网站",
+      "domains": [
+        "*.taobao.com",
+        "*.tmall.com",
+        "*.jd.com",
+        "*.pinduoduo.com",
+        "*.amazon.com"
+      ],
+      "tags": ["购物", "电商"]
+    }
+  },
+
+  "time_presets": {
+    "standard_workday": {
+      "name": "标准工作日",
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "hours": "09:00-18:00"
+    },
+    "extended_workday": {
+      "name": "延长工作日",
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "hours": "08:30-20:00"
+    },
+    "school_hours": {
+      "name": "上课时间",
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "hours": "08:00-17:00"
+    }
+  },
+
+  "user_scope_presets": {
+    "all_employees": {
+      "apply_to": "all_users",
+      "description": "全体员工"
+    },
+    "all_except_leadership": {
+      "apply_to": "all_users",
+      "exceptions": {
+        "roles": ["BOSS", "CEO", "Manager"]
+      },
+      "description": "全体员工（管理层除外）"
+    },
+    "specific_department": {
+      "apply_to": "specific_groups",
+      "groups": ["{{DEPARTMENT_NAME}}"],
+      "description": "特定部门"
+    }
+  }
+}

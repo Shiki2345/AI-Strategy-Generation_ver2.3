@@ -1,0 +1,461 @@
+{
+  "platform_id": "amazon",
+  "platform_name": "亚马逊",
+  "platform_name_en": "Amazon",
+  "alternative_names": ["Amazon", "亚马逊电商", "亚马逊商城", "亚马逊平台"],
+  "description": "全球最大的电商平台之一",
+  
+  "sites": [
+    {
+      "site_id": "amazon_us",
+      "site_name": "美国亚马逊",
+      "country": "美国",
+      "country_code": "US",
+      "language": "en-US",
+      "base_domain": "amazon.com",
+      "seller_central_domain": "sellercentral.amazon.com",
+      "alternative_names": ["Amazon US", "Amazon USA", "美国站", "amazon.com"],
+      
+      "functional_modules": [
+        {
+          "module_id": "account_management",
+          "module_name": "账号管理",
+          "module_name_en": "Account Management",
+          "alternative_names": [
+            "账户管理", "账号设置", "个人中心", "我的账户",
+            "Account Settings", "My Account", "账户设置"
+          ],
+          "description": "用户可以在这里修改账号信息、密码、支付方式、安全设置等敏感信息",
+          "risk_level": "high",
+          "typical_restrictions": ["客服", "实习生", "运营助理"],
+          "business_impact": "访问此模块可能导致账号安全风险、密码泄露、支付信息暴露",
+          
+          "urls": [
+            {
+              "url": "https://www.amazon.com/gp/css/homepage.html",
+              "url_pattern": "*/gp/css/homepage.html*",
+              "page_name": "账号总览页",
+              "page_name_en": "Account Overview",
+              "page_type": "main",
+              "is_entry": true,
+              "description": "显示账号的所有设置入口",
+              "contains_sensitive_info": true
+            },
+            {
+              "url": "https://www.amazon.com/ap/cnep",
+              "url_pattern": "*/ap/cnep*",
+              "page_name": "修改密码页",
+              "page_name_en": "Change Password",
+              "page_type": "sub",
+              "parent_module": "account_management",
+              "description": "修改账号登录密码",
+              "contains_sensitive_info": true
+            },
+            {
+              "url": "https://www.amazon.com/gp/css/account/info/view.html",
+              "url_pattern": "*/gp/css/account/info/view.html*",
+              "page_name": "登录与安全",
+              "page_name_en": "Login & Security",
+              "page_type": "sub",
+              "parent_module": "account_management",
+              "description": "管理登录方式、两步验证、密码等",
+              "contains_sensitive_info": true
+            },
+            {
+              "url": "https://www.amazon.com/a/settings",
+              "url_pattern": "*/a/settings*",
+              "page_name": "账号设置",
+              "page_name_en": "Account Settings",
+              "page_type": "sub",
+              "parent_module": "account_management",
+              "description": "账号的详细设置页面",
+              "contains_sensitive_info": true
+            },
+            {
+              "url": "https://www.amazon.com/gp/css/account/address/view.html",
+              "url_pattern": "*/gp/css/account/address/view.html*",
+              "page_name": "地址管理",
+              "page_name_en": "Addresses",
+              "page_type": "sub",
+              "parent_module": "account_management",
+              "description": "管理收货地址",
+              "contains_sensitive_info": false
+            }
+          ],
+          
+          "recommended_policy": {
+            "default_mode": "blacklist",
+            "reason": "账号管理涉及密码、安全设置等核心信息，建议默认禁止非管理员访问"
+          }
+        },
+        
+        {
+          "module_id": "payment_management",
+          "module_name": "支付管理",
+          "module_name_en": "Payment Management",
+          "alternative_names": [
+            "支付方式", "付款管理", "银行卡管理", "信用卡",
+            "Payment Methods", "钱包", "Wallet"
+          ],
+          "description": "管理支付方式，包括信用卡、借记卡、礼品卡等",
+          "risk_level": "critical",
+          "typical_restrictions": ["客服", "实习生", "运营助理", "运营"],
+          "business_impact": "访问此模块可能导致财务风险、支付信息泄露",
+          
+          "urls": [
+            {
+              "url": "https://www.amazon.com/cpe/managepaymentmethods",
+              "url_pattern": "*/cpe/managepaymentmethods*",
+              "page_name": "管理支付方式",
+              "page_name_en": "Manage Payment Methods",
+              "page_type": "main",
+              "is_entry": true,
+              "description": "查看和管理所有支付方式",
+              "contains_sensitive_info": true
+            },
+            {
+              "url": "https://www.amazon.com/gp/css/payment-methods/view.html",
+              "url_pattern": "*/gp/css/payment-methods/view.html*",
+              "page_name": "支付方式列表",
+              "page_name_en": "Payment Methods List",
+              "page_type": "main",
+              "description": "显示已保存的支付方式",
+              "contains_sensitive_info": true
+            },
+            {
+              "url": "https://www.amazon.com/gp/wallet",
+              "url_pattern": "*/gp/wallet*",
+              "page_name": "亚马逊钱包",
+              "page_name_en": "Amazon Wallet",
+              "page_type": "sub",
+              "description": "管理礼品卡余额、促销余额等",
+              "contains_sensitive_info": true
+            }
+          ],
+          
+          "recommended_policy": {
+            "default_mode": "blacklist",
+            "reason": "支付信息属于最高级别的敏感数据，强烈建议限制访问"
+          }
+        },
+        
+        {
+          "module_id": "order_management",
+          "module_name": "订单管理",
+          "module_name_en": "Order Management",
+          "alternative_names": [
+            "我的订单", "订单中心", "购买记录", "交易记录",
+            "Orders", "My Orders", "Order History"
+          ],
+          "description": "查看和管理所有订单，包括待发货、已完成、退款等",
+          "risk_level": "medium",
+          "typical_restrictions": [],
+          "business_impact": "访问此模块可能泄露采购信息、客户信息",
+          
+          "urls": [
+            {
+              "url": "https://www.amazon.com/gp/css/order-history",
+              "url_pattern": "*/gp/css/order-history*",
+              "page_name": "订单历史",
+              "page_name_en": "Order History",
+              "page_type": "main",
+              "is_entry": true,
+              "description": "显示所有历史订单",
+              "contains_sensitive_info": false
+            },
+            {
+              "url": "https://www.amazon.com/gp/your-account/order-details",
+              "url_pattern": "*/gp/your-account/order-details*",
+              "page_name": "订单详情",
+              "page_name_en": "Order Details",
+              "page_type": "sub",
+              "description": "查看单个订单的详细信息",
+              "contains_sensitive_info": false
+            },
+            {
+              "url": "https://www.amazon.com/gp/css/returns/homepage.html",
+              "url_pattern": "*/gp/css/returns/homepage.html*",
+              "page_name": "退货中心",
+              "page_name_en": "Returns Center",
+              "page_type": "sub",
+              "description": "管理退货和退款",
+              "contains_sensitive_info": false
+            }
+          ],
+          
+          "recommended_policy": {
+            "default_mode": "whitelist",
+            "reason": "订单信息相对敏感度较低，建议按需配置"
+          }
+        },
+        
+        {
+          "module_id": "seller_central_home",
+          "module_name": "卖家中心首页",
+          "module_name_en": "Seller Central Home",
+          "alternative_names": [
+            "卖家后台", "卖家中心", "商家后台", "店铺管理",
+            "Seller Central", "Seller Dashboard"
+          ],
+          "description": "卖家账号的管理后台首页",
+          "risk_level": "high",
+          "typical_restrictions": ["客服", "实习生"],
+          "business_impact": "访问卖家中心可能导致店铺数据泄露、运营信息暴露",
+          
+          "urls": [
+            {
+              "url": "https://sellercentral.amazon.com/",
+              "url_pattern": "sellercentral.amazon.com/*",
+              "page_name": "卖家中心首页",
+              "page_name_en": "Seller Central Home",
+              "page_type": "main",
+              "is_entry": true,
+              "description": "卖家中心的主入口",
+              "contains_sensitive_info": true
+            },
+            {
+              "url": "https://sellercentral.amazon.com/home",
+              "url_pattern": "sellercentral.amazon.com/home*",
+              "page_name": "卖家首页",
+              "page_name_en": "Home Page",
+              "page_type": "main",
+              "description": "显示店铺概览数据",
+              "contains_sensitive_info": true
+            }
+          ]
+        },
+        
+        {
+          "module_id": "seller_inventory",
+          "module_name": "库存管理",
+          "module_name_en": "Inventory Management",
+          "alternative_names": [
+            "库存", "商品管理", "产品管理", "SKU管理",
+            "Inventory", "Manage Inventory", "Products"
+          ],
+          "description": "管理店铺的商品库存、SKU、价格等",
+          "risk_level": "medium",
+          "typical_restrictions": ["客服"],
+          "business_impact": "可能泄露产品信息、定价策略",
+          
+          "urls": [
+            {
+              "url": "https://sellercentral.amazon.com/inventory",
+              "url_pattern": "sellercentral.amazon.com/inventory*",
+              "page_name": "库存管理",
+              "page_name_en": "Manage Inventory",
+              "page_type": "main",
+              "is_entry": true,
+              "description": "管理所有商品库存",
+              "contains_sensitive_info": false
+            },
+            {
+              "url": "https://sellercentral.amazon.com/productsearch",
+              "url_pattern": "sellercentral.amazon.com/productsearch*",
+              "page_name": "商品搜索",
+              "page_name_en": "Product Search",
+              "page_type": "sub",
+              "description": "搜索和查找商品",
+              "contains_sensitive_info": false
+            }
+          ]
+        },
+        
+        {
+          "module_id": "seller_payments",
+          "module_name": "资金管理",
+          "module_name_en": "Payments",
+          "alternative_names": [
+            "财务管理", "资金", "收款", "结算",
+            "Payments", "Financial", "Settlement"
+          ],
+          "description": "查看店铺收入、结算、手续费等财务信息",
+          "risk_level": "critical",
+          "typical_restrictions": ["客服", "实习生", "运营助理", "运营"],
+          "business_impact": "涉及财务核心数据，严格限制访问",
+          
+          "urls": [
+            {
+              "url": "https://sellercentral.amazon.com/payments",
+              "url_pattern": "sellercentral.amazon.com/payments*",
+              "page_name": "资金管理",
+              "page_name_en": "Payments",
+              "page_type": "main",
+              "is_entry": true,
+              "description": "查看店铺收入和结算信息",
+              "contains_sensitive_info": true
+            },
+            {
+              "url": "https://sellercentral.amazon.com/gp/payments-account/settlement-summary.html",
+              "url_pattern": "*/gp/payments-account/settlement-summary.html*",
+              "page_name": "结算汇总",
+              "page_name_en": "Settlement Summary",
+              "page_type": "sub",
+              "description": "查看详细的结算报告",
+              "contains_sensitive_info": true
+            }
+          ],
+          
+          "recommended_policy": {
+            "default_mode": "blacklist",
+            "reason": "财务数据属于最敏感信息，建议仅向财务人员开放"
+          }
+        },
+        
+        {
+          "module_id": "seller_settings",
+          "module_name": "卖家账号设置",
+          "module_name_en": "Seller Account Settings",
+          "alternative_names": [
+            "店铺设置", "账号设置", "卖家设置",
+            "Account Info", "Settings"
+          ],
+          "description": "管理卖家账号的基本信息、权限、通知等",
+          "risk_level": "high",
+          "typical_restrictions": ["客服", "实习生", "运营助理"],
+          "business_impact": "可能修改店铺配置、权限设置",
+          
+          "urls": [
+            {
+              "url": "https://sellercentral.amazon.com/gp/account/manager/home.html",
+              "url_pattern": "*/gp/account/manager/home.html*",
+              "page_name": "账号信息",
+              "page_name_en": "Account Info",
+              "page_type": "main",
+              "is_entry": true,
+              "description": "查看和修改卖家账号信息",
+              "contains_sensitive_info": true
+            },
+            {
+              "url": "https://sellercentral.amazon.com/gp/account-manager/login-settings.html",
+              "url_pattern": "*/gp/account-manager/login-settings.html*",
+              "page_name": "登录设置",
+              "page_name_en": "Login Settings",
+              "page_type": "sub",
+              "description": "管理登录密码和安全设置",
+              "contains_sensitive_info": true
+            },
+            {
+              "url": "https://sellercentral.amazon.com/gp/account-manager/user-list.html",
+              "url_pattern": "*/gp/account-manager/user-list.html*",
+              "page_name": "用户权限管理",
+              "page_name_en": "User Permissions",
+              "page_type": "sub",
+              "description": "管理子账号和权限",
+              "contains_sensitive_info": true
+            }
+          ]
+        },
+        
+        {
+          "module_id": "seller_advertising",
+          "module_name": "广告管理",
+          "module_name_en": "Advertising",
+          "alternative_names": [
+            "广告", "推广", "广告活动", "PPC",
+            "Advertising", "Campaigns", "Sponsored Products"
+          ],
+          "description": "管理亚马逊站内广告活动",
+          "risk_level": "medium",
+          "typical_restrictions": ["客服", "实习生"],
+          "business_impact": "可能泄露广告策略、预算信息",
+          
+          "urls": [
+            {
+              "url": "https://advertising.amazon.com/",
+              "url_pattern": "advertising.amazon.com/*",
+              "page_name": "广告控制台",
+              "page_name_en": "Advertising Console",
+              "page_type": "main",
+              "is_entry": true,
+              "description": "亚马逊广告管理平台",
+              "contains_sensitive_info": false
+            }
+          ]
+        },
+        
+        {
+          "module_id": "seller_reports",
+          "module_name": "数据报表",
+          "module_name_en": "Reports",
+          "alternative_names": [
+            "报表", "数据分析", "业务报告",
+            "Reports", "Business Reports", "Analytics"
+          ],
+          "description": "查看各类经营数据报表",
+          "risk_level": "medium",
+          "typical_restrictions": ["客服", "实习生"],
+          "business_impact": "可能泄露经营数据、销售情况",
+          
+          "urls": [
+            {
+              "url": "https://sellercentral.amazon.com/business-reports",
+              "url_pattern": "sellercentral.amazon.com/business-reports*",
+              "page_name": "业务报告",
+              "page_name_en": "Business Reports",
+              "page_type": "main",
+              "is_entry": true,
+              "description": "查看销售、流量等数据报表",
+              "contains_sensitive_info": false
+            }
+          ]
+        }
+      ]
+    },
+    
+    {
+      "site_id": "amazon_uk",
+      "site_name": "英国亚马逊",
+      "country": "英国",
+      "country_code": "UK",
+      "language": "en-GB",
+      "base_domain": "amazon.co.uk",
+      "seller_central_domain": "sellercentral-europe.amazon.com",
+      "alternative_names": ["Amazon UK", "英国站", "amazon.co.uk"],
+      
+      "functional_modules": [
+        {
+          "module_id": "account_management",
+          "module_name": "账号管理",
+          "risk_level": "high",
+          "urls": [
+            {
+              "url": "https://www.amazon.co.uk/gp/css/homepage.html",
+              "url_pattern": "*.amazon.co.uk/gp/css/homepage.html*",
+              "page_name": "账号总览页",
+              "page_type": "main"
+            }
+          ]
+        }
+      ]
+    },
+    
+    {
+      "site_id": "amazon_jp",
+      "site_name": "日本亚马逊",
+      "country": "日本",
+      "country_code": "JP",
+      "language": "ja-JP",
+      "base_domain": "amazon.co.jp",
+      "seller_central_domain": "sellercentral.amazon.co.jp",
+      "alternative_names": ["Amazon JP", "日本站", "amazon.co.jp"],
+      
+      "functional_modules": [
+        {
+          "module_id": "account_management",
+          "module_name": "アカウント管理",
+          "module_name_cn": "账号管理",
+          "risk_level": "high",
+          "urls": [
+            {
+              "url": "https://www.amazon.co.jp/gp/css/homepage.html",
+              "url_pattern": "*.amazon.co.jp/gp/css/homepage.html*",
+              "page_name": "アカウントサービス",
+              "page_type": "main"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "policy_name": "{{POLICY_NAME}}",
+  "policy_type": "time_based_blacklist",
+  "description": "{{DESCRIPTION}}",
+  "version": "1.0",
+  "created_at": "{{TIMESTAMP}}",
+  
+  "time_restrictions": {
+    "enabled": true,
+    "schedule": {
+      "days_of_week": "{{DAYS_OF_WEEK}}",
+      "time_range": {
+        "start": "{{START_TIME}}",
+        "end": "{{END_TIME}}"
+      },
+      "timezone": "{{TIMEZONE}}"
+    }
+  },
+  
+  "blacklist": {
+    "domains": "{{BLOCKED_DOMAINS}}",
+    "match_type": "{{MATCH_TYPE}}",
+    "block_action": "deny_with_message",
+    "block_message": "{{BLOCK_MESSAGE}}"
+  },
+  
+  "user_scope": {
+    "apply_to": "{{APPLY_TO}}",
+    "exceptions": {
+      "roles": "{{EXCEPTION_ROLES}}",
+      "users": "{{EXCEPTION_USERS}}",
+      "groups": "{{EXCEPTION_GROUPS}}",
+      "description": "{{EXCEPTION_DESCRIPTION}}"
+    }
+  },
+  
+  "enforcement": {
+    "strict_mode": true,
+    "log_violations": true,
+    "notify_admin": false,
+    "allow_override": false
+  },
+  
+  "metadata": {
+    "created_by": "Access Policy Assistant",
+    "last_modified": "{{TIMESTAMP}}",
+    "tags": "{{TAGS}}"
+  }
+}

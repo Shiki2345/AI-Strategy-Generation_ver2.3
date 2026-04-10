@@ -1,0 +1,52 @@
+{
+  "policy_name": "工作时间视频网站限制",
+  "policy_type": "time_based_blacklist",
+  "description": "工作时间禁止员工访问视频网站，BOSS除外",
+  "version": "1.0",
+  "created_at": "2024-01-01T00:00:00Z",
+  
+  "time_restrictions": {
+    "enabled": true,
+    "schedule": {
+      "days_of_week": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "time_range": {
+        "start": "09:00",
+        "end": "18:00"
+      },
+      "timezone": "Asia/Shanghai"
+    }
+  },
+  
+  "blacklist": {
+    "domains": [
+      "*.bilibili.com",
+      "*.iqiyi.com",
+      "*.youku.com",
+      "*.v.qq.com",
+      "*.mgtv.com"
+    ],
+    "match_type": "wildcard",
+    "block_action": "deny_with_message",
+    "block_message": "工作时间禁止访问视频网站，请专注工作 💼"
+  },
+  
+  "user_scope": {
+    "apply_to": "all_users",
+    "exceptions": {
+      "roles": ["BOSS"],
+      "description": "BOSS 不受此策略限制"
+    }
+  },
+  
+  "enforcement": {
+    "strict_mode": true,
+    "log_violations": true,
+    "notify_admin": false
+  },
+  
+  "metadata": {
+    "created_by": "Access Policy Assistant",
+    "created_at": "2024-01-01T00:00:00Z",
+    "tags": ["工作时间", "视频限制", "员工管理"]
+  }
+}
