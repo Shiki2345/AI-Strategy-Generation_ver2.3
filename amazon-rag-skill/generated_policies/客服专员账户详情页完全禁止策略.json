@@ -1,0 +1,312 @@
+{
+  "policy_id": "amazon_us_account_block_001",
+  "policy_name": "客服专员禁止访问美国站账户详情页",
+  "policy_type": "complete_access_block",
+  "description": "客服专员完全不允许访问美国亚马逊 Seller Central 账户详情页，无任何例外情况",
+  "version": "1.0",
+  "created_at": "2024-01-15T15:00:00+08:00",
+  
+  "target_resources": {
+    "page_name": "美国亚马逊账户详情页",
+    "exact_url": "https://sellercentral.amazon.com/sw/AccountInfo/",
+    "url_pattern": "sellercentral.amazon.com/sw/AccountInfo*",
+    "match_type": "prefix",
+    "marketplace": "US",
+    "category": "account_management",
+    "sensitivity_level": "critical",
+    "description": "包含账户设置、银行信息、税务信息、公司信息等关键敏感数据，客服人员不应接触"
+  },
+  
+  "time_restrictions": {
+    "enabled": true,
+    "schedule": {
+      "mode": "always",
+      "days_of_week": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "time_range": {
+        "start": "00:00",
+        "end": "23:59"
+      },
+      "timezone": "Asia/Shanghai",
+      "description": "全天永久生效，7x24 小时完全禁止"
+    }
+  },
+  
+  "access_control": {
+    "default_action": "block_completely",
+    "approval_workflow": {
+      "enabled": false,
+      "description": "不提供任何审批机制，完全禁止访问"
+    },
+    "bypass_options": {
+      "emergency_access": false,
+      "temporary_override": false,
+      "admin_bypass": false,
+      "description": "无任何绕过机制，确保完全隔离"
+    }
+  },
+  
+  "user_scope": {
+    "apply_to": {
+      "roles": [
+        "客服专员",
+        "客服助理", 
+        "初级客服",
+        "售后专员",
+        "客户支持",
+        "在线客服",
+        "电话客服"
+      ],
+      "description": "所有客服相关职位，包括全职、兼职、实习客服人员"
+    },
+    "exceptions": {
+      "roles": [],
+      "users": [],
+      "groups": [],
+      "description": "无任何例外，客服人员一律禁止访问"
+    }
+  },
+  
+  "block_behavior": {
+    "block_screen": {
+      "enabled": true,
+      "title": "🚫 禁止访问",
+      "message": "客服人员不允许访问【美国站账户详情页】\n\n此页面包含公司核心财务和账户信息，根据权限分离原则和数据安全规定，客服人员无权查看此类信息。\n\n如需协助客户解决账户相关问题，请：\n1. 联系运营人员处理\n2. 转接给有权限的同事\n3. 提交工单给相关部门",
+      "show_page_info": true,
+      "page_info": {
+        "page_name": "美国亚马逊账户详情页",
+        "url": "https://sellercentral.amazon.com/sw/AccountInfo/",
+        "sensitivity": "关键敏感 - 包含银行、税务、公司核心信息",
+        "restriction_level": "完全禁止"
+      },
+      "actions": [
+        {
+          "type": "primary",
+          "label": "📞 联系运营人员",
+          "action": "contact_operations",
+          "description": "转给有权限的运营人员处理"
+        },
+        {
+          "type": "secondary", 
+          "label": "📝 提交协助工单",
+          "action": "create_support_ticket",
+          "description": "创建工单请求协助"
+        },
+        {
+          "type": "tertiary",
+          "label": "❌ 返回上一页",
+          "action": "go_back"
+        }
+      ]
+    },
+    "alternative_resources": {
+      "enabled": true,
+      "title": "🔄 客服可用的替代页面",
+      "suggestions": [
+        {
+          "name": "订单管理页面",
+          "url": "https://sellercentral.amazon.com/orders-v3",
+          "description": "查看和管理客户订单信息"
+        },
+        {
+          "name": "买家消息中心",
+          "url": "https://sellercentral.amazon.com/messaging/inbox",
+          "description": "处理客户咨询和消息"
+        },
+        {
+          "name": "退货管理页面", 
+          "url": "https://sellercentral.amazon.com/returns/list",
+          "description": "处理客户退货和退款申请"
+        },
+        {
+          "name": "产品评论管理",
+          "url": "https://sellercentral.amazon.com/product-reviews",
+          "description": "查看和分析产品评论"
+        },
+        {
+          "name": "案件管理页面",
+          "url": "https://sellercentral.amazon.com/cu/case-lobby",
+          "description": "管理客服工单和案件"
+        }
+      ]
+    },
+    "escalation_contacts": {
+      "enabled": true,
+      "title": "📞 需要协助时联系",
+      "contacts": [
+        {
+          "role": "运营主管",
+          "description": "账户设置相关问题",
+          "contact_method": "内部工作系统转接"
+        },
+        {
+          "role": "财务专员",
+          "description": "付款和银行信息问题",
+          "contact_method": "提交财务协助工单"
+        },
+        {
+          "role": "IT 管理员",
+          "description": "系统访问权限问题",
+          "contact_method": "IT 服务台"
+        }
+      ]
+    }
+  },
+  
+  "security_measures": {
+    "url_redirection": {
+      "enabled": true,
+      "redirect_to": "/customer-service-dashboard",
+      "redirect_delay": 2,
+      "show_warning": true
+    },
+    "screenshot_protection": {
+      "enabled": true,
+      "block_screenshots": true,
+      "watermark_overlay": "禁止访问 - 客服人员"
+    },
+    "session_monitoring": {
+      "enabled": true,
+      "log_all_attempts": true,
+      "alert_on_repeated_attempts": true,
+      "repeated_attempts_threshold": 3
+    }
+  },
+  
+  "enforcement": {
+    "strict_mode": true,
+    "bypass_allowed": false,
+    "override_codes_disabled": true,
+    "log_all_events": true,
+    "log_retention_days": 365,
+    "events_to_log": [
+      "access_blocked",
+      "repeated_access_attempts", 
+      "page_access_denied",
+      "alternative_page_suggested",
+      "escalation_contact_used",
+      "screenshot_attempt_blocked"
+    ]
+  },
+  
+  "violation_handling": {
+    "repeated_attempts": {
+      "threshold": 5,
+      "time_window": "1 hour",
+      "actions": [
+        "notify_supervisor",
+        "temporary_account_freeze",
+        "mandatory_security_training"
+      ]
+    },
+    "suspicious_behavior": {
+      "detection_enabled": true,
+      "behaviors": [
+        "attempting_url_manipulation",
+        "using_browser_tools_to_bypass",
+        "coordinated_access_attempts"
+      ],
+      "response": "immediate_supervisor_alert"
+    }
+  },
+  
+  "audit_trail": {
+    "enabled": true,
+    "capture_details": {
+      "user_info": ["user_id", "name", "role", "department", "shift"],
+      "attempt_details": ["timestamp", "source_page", "access_method", "ip_address", "user_agent"],
+      "system_response": ["block_action", "redirect_target", "warning_shown", "alternatives_provided"]
+    },
+    "generate_reports": {
+      "daily_violations": true,
+      "weekly_summary": true,
+      "monthly_compliance": true,
+      "report_recipients": ["IT 管理员", "人事主管", "合规专员", "客服经理"]
+    },
+    "integration": {
+      "security_system": true,
+      "hr_system": true,
+      "compliance_dashboard": true
+    }
+  },
+  
+  "training_requirements": {
+    "mandatory_training": {
+      "enabled": true,
+      "course_name": "客服人员数据安全与权限边界培训",
+      "frequency": "quarterly",
+      "content_topics": [
+        "为什么客服不能访问账户财务信息",
+        "数据安全和隐私保护原则", 
+        "正确的问题升级流程",
+        "客服权限范围和职责边界"
+      ]
+    },
+    "violation_remedial_training": {
+      "enabled": true,
+      "trigger": "after_3_violations",
+      "mandatory_completion": true,
+      "supervisor_involvement": true
+    }
+  },
+  
+  "compliance": {
+    "data_sensitivity": "critical",
+    "regulatory_requirements": [
+      "数据最小化访问原则",
+      "职责分离制度",
+      "财务信息隔离",
+      "客户隐私保护"
+    ],
+    "risk_level": "high",
+    "mitigation_strategy": "完全隔离 + 替代方案 + 培训教育",
+    "business_justification": "客服人员处理客户问题时无需访问公司财务账户信息，访问此类页面存在数据泄露风险且超出工作职责范围"
+  },
+  
+  "communication_strategy": {
+    "policy_announcement": {
+      "enabled": true,
+      "channels": ["email", "内部公告", "培训会议"],
+      "key_messages": [
+        "此限制是为保护公司和客户数据安全",
+        "客服人员有专门的工作页面和工具",
+        "遇到需要账户信息的客户问题请及时转接",
+        "违规尝试访问将记录并可能影响绩效"
+      ]
+    },
+    "ongoing_reminders": {
+      "frequency": "monthly",
+      "method": "系统弹窗提醒",
+      "content": "提醒客服人员权限边界和正确的问题处理流程"
+    }
+  },
+  
+  "effectiveness_metrics": {
+    "success_indicators": [
+      "客服人员违规访问尝试次数为零",
+      "客户问题正确转接率 > 95%",
+      "客服满意度保持在合理水平",
+      "数据安全事件零发生"
+    ],
+    "monitoring_frequency": "weekly",
+    "review_schedule": "quarterly"
+  },
+  
+  "metadata": {
+    "created_by": "Amazon Access Policy Assistant", 
+    "created_by_tool": "RAG-powered Policy Generator",
+    "last_modified": "2024-01-15T15:00:00+08:00",
+    "rag_entry_id": "rag_001",
+    "rag_similarity": 1.0,
+    "policy_severity": "maximum",
+    "tags": [
+      "完全禁止",
+      "客服专员", 
+      "账户管理",
+      "关键敏感",
+      "美国站",
+      "数据安全",
+      "职责分离",
+      "零例外"
+    ]
+  }
+}

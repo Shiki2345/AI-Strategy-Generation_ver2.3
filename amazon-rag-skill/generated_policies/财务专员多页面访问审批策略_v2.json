@@ -1,0 +1,340 @@
+{
+  "policy_metadata": {
+    "policy_id": "amazon_finance_multi_page_approval_002",
+    "policy_name": "财务专员多页面访问审批限制策略",
+    "policy_type": "approval_based_access_control",
+    "version": "1.0.0",
+    "created_at": "2024-01-15T19:30:00Z",
+    "description": "限制财务专员访问美国和日本亚马逊的买家消息中心与商品评论管理页面，需BOSS审批"
+  },
+
+  "target_resources": [
+    {
+      "page_name": "买家消息中心",
+      "exact_urls": [
+        "https://sellercentral.amazon.com/messaging/inbox",
+        "https://sellercentral.amazon.co.jp/messaging/inbox"
+      ],
+      "url_patterns": [
+        "sellercentral.amazon.com/messaging/inbox*",
+        "sellercentral.amazon.co.jp/messaging/inbox*"
+      ],
+      "page_description": "查看和回复买家发送的消息和问题",
+      "sensitivity_level": "MEDIUM",
+      "business_impact": "客户沟通渠道，可能涉及订单金额信息",
+      "marketplaces": ["US", "JP"]
+    },
+    {
+      "page_name": "商品评论管理",
+      "exact_urls": [
+        "https://sellercentral.amazon.com/product-reviews",
+        "https://sellercentral.amazon.co.jp/product-reviews"
+      ],
+      "url_patterns": [
+        "sellercentral.amazon.com/product-reviews*",
+        "sellercentral.amazon.co.jp/product-reviews*"
+      ],
+      "page_description": "查看和分析产品的买家评论和评分",
+      "sensitivity_level": "MEDIUM",
+      "business_impact": "产品评价管理，可能影响销售策略决策",
+      "marketplaces": ["US", "JP"]
+    }
+  ],
+
+  "access_control": {
+    "control_type": "approval_based",
+    "approval_workflow": {
+      "mode": "real_time",
+      "approver": {
+        "role": "BOSS/CEO",
+        "level": "executive",
+        "backup_approver": null
+      },
+      "approval_timeout": "30分钟",
+      "timeout_action": "auto_reject",
+      "escalation": {
+        "enabled": false,
+        "escalation_time": null,
+        "escalation_to": null
+      }
+    },
+
+    "temporary_access": {
+      "duration_controlled_by": "approver",
+      "available_durations": [
+        {
+          "label": "15分钟",
+          "value": "15m",
+          "description": "快速查看处理"
+        },
+        {
+          "label": "1小时", 
+          "value": "1h",
+          "description": "一般业务处理"
+        },
+        {
+          "label": "4小时",
+          "value": "4h", 
+          "description": "复杂问题调查"
+        },
+        {
+          "label": "1天",
+          "value": "24h",
+          "description": "全天业务支持"
+        },
+        {
+          "label": "3天",
+          "value": "72h",
+          "description": "特殊项目需求"
+        }
+      ],
+      "default_duration": "1h",
+      "max_duration": "72h",
+      "extension_policy": {
+        "allowed": true,
+        "requires_new_approval": true,
+        "max_extensions": 2
+      }
+    },
+
+    "application_form": {
+      "reason_required": false,
+      "reason_optional": true,
+      "reason_templates": [
+        "协助处理客户投诉相关的订单问题",
+        "核查产品评论中的退款相关信息",
+        "配合月度财务对账工作",
+        "支持跨部门业务协作",
+        "其他（请详细说明）"
+      ],
+      "additional_fields": [
+        {
+          "field": "urgency_level",
+          "label": "紧急程度",
+          "type": "select",
+          "required": true,
+          "options": ["紧急", "一般", "非紧急"],
+          "default": "一般"
+        },
+        {
+          "field": "business_context",
+          "label": "业务背景",
+          "type": "textarea",
+          "required": false,
+          "placeholder": "请简要描述需要访问的业务背景..."
+        }
+      ]
+    }
+  },
+
+  "user_scope": {
+    "restricted_users": {
+      "roles": [
+        "财务专员",
+        "财务助理", 
+        "初级财务",
+        "财务实习生",
+        "会计专员",
+        "出纳员"
+      ],
+      "departments": ["财务部", "会计部"],
+      "user_identification": {
+        "method": "role_based",
+        "fallback_method": "manual_assignment"
+      }
+    },
+    "exceptions": {
+      "whitelisted_users": [],
+      "emergency_override": {
+        "enabled": true,
+        "requires_dual_approval": true,
+        "max_duration": "2h",
+        "notification_required": true
+      }
+    }
+  },
+
+  "time_restrictions": {
+    "schedule": "24/7",
+    "timezone": "Asia/Shanghai",
+    "effective_period": "permanent",
+    "maintenance_windows": []
+  },
+
+  "notifications": {
+    "approval_request": {
+      "channels": ["email", "sms", "app_push"],
+      "recipients": ["boss@company.com"],
+      "template": "财务专员 {{applicant_name}} 申请访问 {{page_name}}，理由：{{reason}}，紧急程度：{{urgency}}",
+      "include_quick_approve_link": true
+    },
+    "approval_decision": {
+      "notify_applicant": true,
+      "channels": ["email", "app_push"],
+      "approved_template": "您的访问申请已批准，权限有效期至 {{expiry_time}}",
+      "rejected_template": "您的访问申请已被拒绝，原因：{{rejection_reason}}"
+    },
+    "access_monitoring": {
+      "access_granted": {
+        "notify": ["security@company.com", "it@company.com"],
+        "message": "财务专员 {{user}} 获得临时访问权限：{{pages}}"
+      },
+      "access_expiry_warning": {
+        "advance_notice": "5分钟",
+        "message": "您的临时访问权限将在5分钟后到期"
+      },
+      "access_expired": {
+        "message": "您的临时访问权限已到期，页面将被阻止访问"
+      }
+    }
+  },
+
+  "block_behavior": {
+    "block_screen": {
+      "title": "需要BOSS审批才能访问",
+      "message": "财务人员访问此页面需要BOSS批准。点击下方按钮申请临时访问权限。",
+      "icon": "🔐",
+      "background_color": "#f8f9fa",
+      "show_page_info": true,
+      "show_alternative_actions": true
+    },
+
+    "blocked_pages_info": [
+      {
+        "page": "买家消息中心",
+        "reason": "客服沟通页面，财务人员通常不需要直接处理客户消息",
+        "alternatives": [
+          {
+            "action": "联系客服部门",
+            "description": "如需了解客户消息内容，请联系客服同事协助"
+          },
+          {
+            "action": "查看订单详情",
+            "description": "可通过订单管理页面查看订单相关信息"
+          }
+        ]
+      },
+      {
+        "page": "商品评论管理", 
+        "reason": "产品评价管理页面，主要用于运营和客服工作",
+        "alternatives": [
+          {
+            "action": "联系运营部门",
+            "description": "如需了解产品评论信息，请联系运营同事协助"
+          },
+          {
+            "action": "查看业务报告",
+            "description": "可通过业务报告页面查看相关数据分析"
+          }
+        ]
+      }
+    ],
+
+    "ui_elements": {
+      "request_access_button": {
+        "text": "🚀 申请临时访问权限",
+        "style": "primary",
+        "position": "center"
+      },
+      "contact_alternatives": {
+        "show": true,
+        "title": "其他解决方案"
+      },
+      "return_button": {
+        "text": "← 返回上一页",
+        "style": "secondary"
+      }
+    }
+  },
+
+  "audit_and_compliance": {
+    "logging": {
+      "log_level": "detailed",
+      "retention_period": "90天",
+      "log_events": [
+        "access_request_submitted",
+        "approval_decision_made", 
+        "temporary_access_granted",
+        "page_access_attempted",
+        "access_expired",
+        "emergency_override_used"
+      ],
+      "log_fields": [
+        "timestamp",
+        "user_id",
+        "user_role", 
+        "page_name",
+        "action",
+        "approver_id",
+        "duration",
+        "ip_address",
+        "user_agent",
+        "business_justification"
+      ]
+    },
+    "reporting": {
+      "daily_summary": true,
+      "weekly_analysis": true,
+      "monthly_compliance_report": true,
+      "recipients": ["security@company.com", "compliance@company.com"]
+    },
+    "compliance_tags": [
+      "financial_access_control",
+      "role_separation",
+      "approval_workflow",
+      "audit_trail"
+    ]
+  },
+
+  "enforcement": {
+    "strict_mode": true,
+    "bypass_prevention": {
+      "block_direct_url_access": true,
+      "block_browser_navigation": true,
+      "block_new_tab_opening": true,
+      "detect_proxy_circumvention": true
+    },
+    "technical_implementation": {
+      "browser_extension": true,
+      "proxy_server_rules": true,
+      "application_level_hooks": true,
+      "network_level_filtering": false
+    }
+  },
+
+  "performance_monitoring": {
+    "response_time_targets": {
+      "block_screen_display": "< 500ms",
+      "approval_notification": "< 5s",
+      "access_grant_processing": "< 10s"
+    },
+    "availability_targets": {
+      "system_uptime": "99.9%",
+      "approval_system_availability": "99.5%"
+    }
+  },
+
+  "maintenance": {
+    "policy_review_schedule": "quarterly",
+    "next_review_date": "2024-04-15",
+    "policy_owner": "IT Security Team",
+    "business_stakeholder": "Finance Department Head",
+    "technical_contact": "security-team@company.com"
+  },
+
+  "integration_notes": {
+    "deployment_priority": "high",
+    "rollout_strategy": "gradual_rollout",
+    "testing_requirements": [
+      "功能测试：验证审批流程完整性",
+      "用户体验测试：确保界面友好易用", 
+      "性能测试：验证系统响应时间",
+      "安全测试：确保无绕过漏洞"
+    ],
+    "dependencies": [
+      "用户角色管理系统",
+      "邮件通知服务",
+      "审计日志系统"
+    ]
+  }
+}

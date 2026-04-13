@@ -1,0 +1,422 @@
+{
+  "policy_id": "amazon_finance_block_001",
+  "policy_name": "财务专员禁止访问买家消息中心与商品评论管理页面",
+  "policy_type": "complete_access_block",
+  "description": "财务专员完全不允许访问美国站和日本站的买家消息中心与商品评论管理页面，基于职责分离原则",
+  "version": "1.0",
+  "created_at": "2024-01-15T16:30:00+08:00",
+  
+  "target_resources": [
+    {
+      "page_name": "美国站买家消息中心",
+      "exact_url": "https://sellercentral.amazon.com/messaging/inbox",
+      "url_pattern": "sellercentral.amazon.com/messaging/*",
+      "match_type": "prefix",
+      "marketplace": "US",
+      "category": "customer_service",
+      "sensitivity_level": "medium",
+      "description": "处理买家咨询和消息，属于客服职责范围，财务人员无需接触"
+    },
+    {
+      "page_name": "日本站买家消息中心", 
+      "exact_url": "https://sellercentral.amazon.co.jp/messaging/inbox",
+      "url_pattern": "sellercentral.amazon.co.jp/messaging/*",
+      "match_type": "prefix",
+      "marketplace": "JP",
+      "category": "customer_service",
+      "sensitivity_level": "medium",
+      "description": "处理日本站买家咨询和消息，涉及日语沟通，财务人员职责范围外"
+    },
+    {
+      "page_name": "美国站商品评论管理",
+      "exact_url": "https://sellercentral.amazon.com/product-reviews",
+      "url_pattern": "sellercentral.amazon.com/product-reviews*",
+      "match_type": "prefix", 
+      "marketplace": "US",
+      "category": "product_management",
+      "sensitivity_level": "medium",
+      "description": "查看和分析产品评论，属于运营和产品管理职责，与财务无关"
+    },
+    {
+      "page_name": "日本站商品评论管理",
+      "exact_url": "https://sellercentral.amazon.co.jp/product-reviews", 
+      "url_pattern": "sellercentral.amazon.co.jp/product-reviews*",
+      "match_type": "prefix",
+      "marketplace": "JP", 
+      "category": "product_management",
+      "sensitivity_level": "medium",
+      "description": "日本站产品评论管理，涉及日语内容，财务人员无需关注"
+    }
+  ],
+  
+  "time_restrictions": {
+    "enabled": true,
+    "schedule": {
+      "mode": "always",
+      "days_of_week": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "time_range": {
+        "start": "00:00",
+        "end": "23:59"
+      },
+      "timezone": "Asia/Shanghai",
+      "description": "全天永久生效，7x24 小时完全禁止"
+    }
+  },
+  
+  "access_control": {
+    "default_action": "block_completely",
+    "approval_workflow": {
+      "enabled": false,
+      "description": "不提供任何审批机制，基于职责分离原则完全禁止访问"
+    },
+    "bypass_options": {
+      "emergency_access": false,
+      "temporary_override": false,
+      "admin_bypass": false,
+      "description": "无任何绕过机制，确保职责边界清晰"
+    }
+  },
+  
+  "user_scope": {
+    "apply_to": {
+      "roles": [
+        "财务专员",
+        "财务助理", 
+        "会计师",
+        "出纳员",
+        "财务分析师",
+        "成本会计",
+        "财务实习生",
+        "财务顾问"
+      ],
+      "description": "所有财务相关职位人员，包括全职、兼职、实习财务人员"
+    },
+    "exceptions": {
+      "roles": [],
+      "users": [],
+      "groups": [],
+      "description": "无任何例外，财务人员一律禁止访问客服和产品评论相关页面"
+    }
+  },
+  
+  "block_behavior": {
+    "block_screen": {
+      "enabled": true,
+      "title": "🚫 职责范围外，禁止访问",
+      "message": "财务人员不允许访问【买家消息中心】和【商品评论管理】页面\n\n根据职责分离原则，客户服务和产品管理不属于财务部门的工作范围。访问这些页面可能影响工作效率并存在数据安全风险。\n\n如需协助处理相关业务，请：\n1. 联系客服部门处理客户消息\n2. 联系运营部门处理产品评论\n3. 通过正式渠道获取相关数据报告",
+      "show_page_info": true,
+      "page_info_dynamic": true,
+      "actions": [
+        {
+          "type": "primary",
+          "label": "📞 联系客服部门",
+          "action": "contact_customer_service",
+          "description": "转给客服部门处理消息相关问题"
+        },
+        {
+          "type": "primary", 
+          "label": "📊 联系运营部门",
+          "action": "contact_operations",
+          "description": "转给运营部门处理产品相关问题"
+        },
+        {
+          "type": "secondary",
+          "label": "📋 申请数据报告",
+          "action": "request_data_report",
+          "description": "通过正式流程申请相关数据报告"
+        },
+        {
+          "type": "tertiary",
+          "label": "❌ 返回财务工作台",
+          "action": "go_to_finance_dashboard"
+        }
+      ]
+    },
+    "alternative_resources": {
+      "enabled": true,
+      "title": "💰 财务专员可用页面",
+      "suggestions": [
+        {
+          "name": "支付报告页面",
+          "url": "https://sellercentral.amazon.com/payments/dashboard/index.html",
+          "description": "查看付款记录、交易明细、费用扣除等财务信息",
+          "priority": "high"
+        },
+        {
+          "name": "业务报告中心", 
+          "url": "https://sellercentral.amazon.com/business-reports",
+          "description": "获取销售、财务等业务数据报告",
+          "priority": "high"
+        },
+        {
+          "name": "账户健康页面",
+          "url": "https://sellercentral.amazon.com/performance/dashboard", 
+          "description": "监控账户绩效指标和健康状况",
+          "priority": "medium"
+        },
+        {
+          "name": "库存管理页面",
+          "url": "https://sellercentral.amazon.com/inventory",
+          "description": "查看库存价值和成本信息",
+          "priority": "medium"
+        },
+        {
+          "name": "广告报告页面",
+          "url": "https://sellercentral.amazon.com/advertising/reports",
+          "description": "获取广告花费和ROI数据",
+          "priority": "low"
+        }
+      ]
+    },
+    "escalation_contacts": {
+      "enabled": true,
+      "title": "📞 需要协助时联系",
+      "contacts": [
+        {
+          "role": "客服主管",
+          "description": "客户消息、退款、售后问题",
+          "contact_method": "内部工作系统转接",
+          "scenarios": ["客户投诉处理", "退款争议", "售后问题"]
+        },
+        {
+          "role": "运营经理",
+          "description": "产品评论、Listing优化、运营数据",
+          "contact_method": "运营部门工作群",
+          "scenarios": ["产品评论分析", "运营策略", "市场反馈"]
+        },
+        {
+          "role": "数据分析师",
+          "description": "业务数据报告、财务分析支持",
+          "contact_method": "数据需求申请系统",
+          "scenarios": ["定制报告", "数据分析", "趋势洞察"]
+        },
+        {
+          "role": "IT 管理员",
+          "description": "系统访问权限、技术支持",
+          "contact_method": "IT 服务台",
+          "scenarios": ["权限问题", "系统故障", "账号管理"]
+        }
+      ]
+    },
+    "context_aware_messaging": {
+      "enabled": true,
+      "page_specific_messages": {
+        "messaging": {
+          "title": "客户消息处理",
+          "message": "此页面用于处理买家咨询、投诉和售后问题。财务人员如需了解客户财务相关问题，请通过客服部门获取处理结果和相关数据。",
+          "business_justification": "客服沟通需要专业话术和处理流程，财务人员直接接触客户可能导致信息不一致或处理不当。"
+        },
+        "product-reviews": {
+          "title": "商品评论管理", 
+          "message": "此页面用于监控和分析产品评价。财务人员如需评论相关的财务影响分析，请向运营部门索取评论汇总报告和影响分析。",
+          "business_justification": "产品评论分析需要运营和市场专业知识，财务人员应专注于财务数据分析而非产品层面的评价管理。"
+        }
+      }
+    }
+  },
+  
+  "security_measures": {
+    "url_redirection": {
+      "enabled": true,
+      "redirect_to": "/finance-dashboard",
+      "redirect_delay": 3,
+      "show_warning": true
+    },
+    "screenshot_protection": {
+      "enabled": true,
+      "block_screenshots": true,
+      "watermark_overlay": "禁止访问 - 财务人员"
+    },
+    "session_monitoring": {
+      "enabled": true,
+      "log_all_attempts": true,
+      "alert_on_repeated_attempts": true,
+      "repeated_attempts_threshold": 2,
+      "alert_message": "财务人员反复尝试访问客服/产品页面，请核实是否有特殊需求"
+    }
+  },
+  
+  "enforcement": {
+    "strict_mode": true,
+    "bypass_allowed": false,
+    "override_codes_disabled": true,
+    "log_all_events": true,
+    "log_retention_days": 180,
+    "events_to_log": [
+      "access_blocked_messaging",
+      "access_blocked_reviews",
+      "repeated_access_attempts",
+      "page_access_denied",
+      "alternative_page_suggested",
+      "escalation_contact_used",
+      "context_aware_message_shown"
+    ]
+  },
+  
+  "violation_handling": {
+    "repeated_attempts": {
+      "threshold": 3,
+      "time_window": "30 minutes",
+      "actions": [
+        "notify_finance_manager",
+        "notify_hr_department",
+        "require_role_clarification_meeting"
+      ]
+    },
+    "suspicious_behavior": {
+      "detection_enabled": true,
+      "behaviors": [
+        "attempting_url_manipulation",
+        "using_browser_tools_to_bypass",
+        "accessing_from_unusual_locations",
+        "pattern_of_non_finance_page_attempts"
+      ],
+      "response": "immediate_department_head_alert"
+    },
+    "cross_department_coordination": {
+      "enabled": true,
+      "notification_targets": ["财务经理", "人事主管", "合规专员"],
+      "escalation_threshold": "repeated_violations_within_week"
+    }
+  },
+  
+  "audit_trail": {
+    "enabled": true,
+    "capture_details": {
+      "user_info": ["user_id", "name", "role", "department", "cost_center"],
+      "attempt_details": ["timestamp", "attempted_page", "source_page", "access_method", "ip_address", "user_agent"],
+      "system_response": ["block_action", "redirect_target", "warning_shown", "alternatives_provided", "context_message"],
+      "business_context": ["time_of_day", "current_workload", "recent_page_history"]
+    },
+    "generate_reports": {
+      "daily_violations": true,
+      "weekly_summary": true,
+      "monthly_compliance": true,
+      "quarterly_role_analysis": true,
+      "report_recipients": ["财务经理", "IT 管理员", "合规专员", "人事主管"]
+    },
+    "integration": {
+      "hr_system": true,
+      "compliance_dashboard": true,
+      "finance_system": true,
+      "audit_system": true
+    }
+  },
+  
+  "training_requirements": {
+    "mandatory_training": {
+      "enabled": true,
+      "course_name": "财务人员职责边界与数据安全培训",
+      "frequency": "semi_annually",
+      "content_topics": [
+        "财务与客服职责分离的重要性",
+        "数据安全和隐私保护原则", 
+        "跨部门协作的正确流程",
+        "财务人员的系统访问权限边界",
+        "如何通过正当渠道获取业务数据"
+      ]
+    },
+    "violation_remedial_training": {
+      "enabled": true,
+      "trigger": "after_2_violations",
+      "mandatory_completion": true,
+      "supervisor_involvement": true,
+      "additional_assessment": true
+    },
+    "onboarding_training": {
+      "enabled": true,
+      "for_new_employees": true,
+      "content": "新入职财务人员系统权限说明和职责边界培训"
+    }
+  },
+  
+  "compliance": {
+    "data_sensitivity": "medium",
+    "regulatory_requirements": [
+      "职责分离制度",
+      "内控制度合规",
+      "数据访问最小化原则",
+      "跨部门信息流管控"
+    ],
+    "risk_level": "medium",
+    "mitigation_strategy": "完全隔离 + 替代数据获取渠道 + 跨部门协作机制",
+    "business_justification": "财务人员专注于财务数据分析和管理，客户服务和产品评论管理属于其他部门职责，访问这些系统既无必要性也存在数据混乱风险"
+  },
+  
+  "communication_strategy": {
+    "policy_announcement": {
+      "enabled": true,
+      "channels": ["email", "内部公告", "财务部门会议"],
+      "key_messages": [
+        "此限制基于职责分离原则，有助于提高工作专业化程度",
+        "财务人员有专门的财务数据分析工具和页面",
+        "跨部门数据需求请通过正式渠道申请",
+        "此举有助于防范数据安全风险和操作错误"
+      ]
+    },
+    "ongoing_reminders": {
+      "frequency": "monthly",
+      "method": "财务系统登录提醒",
+      "content": "提醒财务人员专注本职工作，通过正当渠道获取跨部门数据"
+    },
+    "feedback_collection": {
+      "enabled": true,
+      "channels": ["季度满意度调查", "财务部门反馈会"],
+      "topics": ["是否影响工作效率", "数据获取渠道是否便利", "改进建议"]
+    }
+  },
+  
+  "effectiveness_metrics": {
+    "success_indicators": [
+      "财务人员违规访问尝试次数 < 5次/月",
+      "跨部门数据需求通过正当渠道申请率 > 95%",
+      "财务工作效率保持稳定",
+      "数据安全事件零发生",
+      "财务人员对职责边界理解度 > 90%"
+    ],
+    "monitoring_frequency": "weekly",
+    "review_schedule": "quarterly",
+    "adjustment_triggers": [
+      "违规尝试次数异常增长",
+      "财务工作效率显著下降",
+      "大量跨部门数据需求积压"
+    ]
+  },
+  
+  "integration_points": {
+    "finance_systems": {
+      "erp_integration": "与财务ERP系统集成，提供财务专用数据视图",
+      "reporting_tools": "集成专业财务报表工具，减少对运营系统的依赖"
+    },
+    "cross_department_workflow": {
+      "data_request_system": "建立标准化的跨部门数据申请流程",
+      "automated_reports": "自动生成财务需要的客服和产品数据汇总报告"
+    },
+    "approval_escalation": {
+      "exceptional_access": "极特殊情况下的临时访问审批流程（需财务总监+IT总监双重批准）",
+      "business_continuity": "业务连续性计划中的紧急访问机制"
+    }
+  },
+  
+  "metadata": {
+    "created_by": "Amazon Access Policy Assistant", 
+    "created_by_tool": "RAG-powered Policy Generator",
+    "last_modified": "2024-01-15T16:30:00+08:00",
+    "rag_entry_ids": ["rag_008", "rag_013"],
+    "rag_similarity": 1.0,
+    "policy_severity": "medium_high",
+    "affected_marketplaces": ["US", "JP"],
+    "policy_scope": "multi_page_restriction",
+    "tags": [
+      "完全禁止",
+      "财务专员",
+      "职责分离",
+      "客服页面",
+      "产品评论", 
+      "美国站",
+      "日本站",
+      "跨部门协作",
+      "业务边界"
+    ]
+  }
+}
