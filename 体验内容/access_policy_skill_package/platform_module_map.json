@@ -1,0 +1,492 @@
+{
+  "platform_module_map": {
+    "description": "紫鸟浏览器平台能力地图，用于在用户需求超出当前模块能力时，指引用户到正确的模块操作",
+    "version": "1.0",
+    "last_updated": "2026-04-14",
+    "data_confidence_note": "标注 verified 的模块已通过页面截图确认功能；标注 inferred 的模块仅看到菜单项，功能描述为合理推断，待后续确认",
+
+    "modules": [
+      {
+        "module_id": "security_access_policy",
+        "module_name": "访问策略设置",
+        "nav_path": "安全监管 → 安全拦截 → 访问策略设置",
+        "is_current_agent_scope": true,
+        "confidence": "verified",
+        "handles": [
+          "URL级页面屏蔽/放行",
+          "浏览器操作行为控制（复制/下载/打印等）",
+          "按成员/部门/角色/账号/时段设定策略生效范围",
+          "审批控制（BOSS审批/禁止申请）"
+        ]
+      },
+      {
+        "module_id": "security_access_log",
+        "module_name": "访问拦截日志",
+        "nav_path": "安全监管 → 安全拦截 → 访问拦截日志",
+        "confidence": "inferred",
+        "handles": [
+          "查看访问策略的拦截记录"
+        ],
+        "route_when_user_says": [
+          "策略有没有生效",
+          "谁被拦截了",
+          "拦截记录",
+          "查看日志"
+        ]
+      },
+      {
+        "module_id": "security_realtime_monitor",
+        "module_name": "事中监管设置",
+        "nav_path": "安全监管 → 安全监管 → 事中监管设置",
+        "confidence": "verified",
+        "confidence_source": "首页文案：实时监控成员操作，风险告警并拦截危险",
+        "handles": [
+          "实时监控成员操作行为",
+          "风险行为告警和拦截",
+          "操作行为记录"
+        ],
+        "route_when_user_says": [
+          "我想看员工在干什么",
+          "监控操作",
+          "实时告警",
+          "有人操作异常怎么通知我"
+        ]
+      },
+      {
+        "module_id": "security_alert",
+        "module_name": "告警方案设置",
+        "nav_path": "安全监管 → 安全监管 → 告警方案设置",
+        "confidence": "inferred",
+        "handles": [
+          "配置告警方案（具体功能待确认）"
+        ],
+        "route_when_user_says": [
+          "出问题了怎么通知我",
+          "配置告警",
+          "异常提醒"
+        ]
+      },
+      {
+        "module_id": "security_monitor_log",
+        "module_name": "事中监管日志",
+        "nav_path": "安全监管 → 安全监管 → 事中监管日志",
+        "confidence": "inferred",
+        "handles": [
+          "查看事中监管记录（具体功能待确认）"
+        ],
+        "route_when_user_says": [
+          "查看操作记录",
+          "看看员工做了什么"
+        ]
+      },
+      {
+        "module_id": "security_other_monitor",
+        "module_name": "其他监管设置",
+        "nav_path": "安全监管 → 安全监管 → 其他监管设置",
+        "confidence": "inferred",
+        "handles": [
+          "其他监管相关配置（具体功能待确认）"
+        ]
+      },
+      {
+        "module_id": "security_access_approval",
+        "module_name": "成员访问审批",
+        "nav_path": "安全监管 → 成员访问审批",
+        "confidence": "inferred",
+        "handles": [
+          "处理成员的访问审批请求"
+        ],
+        "route_when_user_says": [
+          "有人申请访问怎么审批",
+          "在哪里审批",
+          "临时放行"
+        ]
+      },
+      {
+        "module_id": "security_webpage_resource",
+        "module_name": "网页资源管理",
+        "nav_path": "安全监管 → 网页资源管理",
+        "confidence": "verified",
+        "confidence_source": "页面截图确认：按平台分组的URL资源库",
+        "handles": [
+          "按电商平台分组管理URL资源库（亚马逊/沃尔玛/TikTok Shop/SHEIN/Temu等）",
+          "维护各平台后台和前台的页面地址",
+          "自定义添加/编辑网页资源",
+          "为访问策略提供可引用的URL列表"
+        ],
+        "relationship_to_access_policy": "访问策略中的URL规则可引用此处的网页资源，这是URL模板数据的来源",
+        "route_when_user_says": [
+          "URL列表在哪里管理",
+          "添加新的网页地址",
+          "某个平台的页面地址不对",
+          "新增一个平台的页面"
+        ]
+      },
+      {
+        "module_id": "security_watermark",
+        "module_name": "屏幕水印设置",
+        "nav_path": "安全监管 → 屏幕水印设置",
+        "confidence": "inferred",
+        "handles": [
+          "配置屏幕水印（具体功能待确认）"
+        ],
+        "route_when_user_says": [
+          "防截图",
+          "防拍照",
+          "加水印",
+          "截屏追溯"
+        ]
+      },
+      {
+        "module_id": "account_management",
+        "module_name": "账号管理",
+        "nav_path": "账号管理 → 全部账号",
+        "confidence": "verified",
+        "confidence_source": "页面截图确认：左侧菜单、顶部tab、表格结构全部可见",
+        "handles": [
+          "添加/管理平台账号（电商后台、电商前台、支付平台、邮箱、插件账号、远程账号等）",
+          "账号授权和托管（待托管账密、待授权）",
+          "账号与设备绑定（待绑定设备）",
+          "共享账号管理",
+          "按平台/标签分类管理账号",
+          "批量导入/导出账号"
+        ],
+        "route_when_user_says": [
+          "添加账号",
+          "账号分配",
+          "哪个账号给谁用",
+          "共享账号",
+          "账号到期了"
+        ]
+      },
+      {
+        "module_id": "device_management",
+        "module_name": "设备管理",
+        "nav_path": "设备管理 → 全部设备",
+        "confidence": "verified",
+        "confidence_source": "页面截图确认：设备类型tab、绑定账号列、续费状态全部可见",
+        "handles": [
+          "管理虚拟设备/浏览器环境（平台设备、自有设备、本地虚拟设备、紫鸟盒子）",
+          "设备与平台账号的绑定",
+          "设备到期续费管理",
+          "按标签分类设备"
+        ],
+        "route_when_user_says": [
+          "设备绑定哪个账号",
+          "换个设备登录",
+          "设备到期了",
+          "添加新设备"
+        ]
+      },
+      {
+        "module_id": "ziniao_cloud_number",
+        "module_name": "紫鸟云号",
+        "nav_path": "紫鸟云号",
+        "confidence": "verified",
+        "confidence_source": "功能介绍页截图确认",
+        "handles": [
+          "为跨境电商卖家提供号码管理（多账号绑定、接收短信、接听电话）",
+          "大陆云号接收跨境电商平台短信（不支持接听通话）",
+          "非大陆部分号源可接听全球电话和接收全球跨境电商平台短信"
+        ],
+        "limitations": [
+          "大陆云号只能接收跨境电商运营相关平台的短信",
+          "部分号源每月接收短信上限100次",
+          "其余云号不支持发送短信与拨打电话、不支持接听固话"
+        ],
+        "route_when_user_says": [
+          "接收验证码",
+          "手机号绑定",
+          "云号码",
+          "平台短信"
+        ]
+      },
+      {
+        "module_id": "enterprise_member",
+        "module_name": "成员管理",
+        "nav_path": "企业管理 → 成员管理 → 所有成员",
+        "confidence": "inferred",
+        "handles": [
+          "管理团队成员（查看所有成员列表）"
+        ],
+        "route_when_user_says": [
+          "添加员工",
+          "删除成员",
+          "员工列表"
+        ]
+      },
+      {
+        "module_id": "enterprise_role",
+        "module_name": "角色管理",
+        "nav_path": "企业管理 → 成员管理 → 角色管理",
+        "confidence": "inferred",
+        "handles": [
+          "管理角色（具体权限配置能力待确认）"
+        ],
+        "route_when_user_says": [
+          "创建角色",
+          "角色权限",
+          "运营和客服的权限不一样",
+          "设置不同岗位的权限"
+        ]
+      },
+      {
+        "module_id": "enterprise_department",
+        "module_name": "部门管理",
+        "nav_path": "企业管理 → 部门管理",
+        "confidence": "inferred",
+        "handles": [
+          "管理部门和组"
+        ],
+        "route_when_user_says": [
+          "建个新部门",
+          "把人调到另一个组",
+          "部门架构"
+        ]
+      },
+      {
+        "module_id": "enterprise_member_approval",
+        "module_name": "成员加入审批",
+        "nav_path": "企业管理 → 成员管理 → 成员加入审批",
+        "confidence": "verified",
+        "confidence_source": "菜单截图可见计数(0)",
+        "handles": [
+          "审批新成员的加入请求"
+        ],
+        "route_when_user_says": [
+          "有人要加入团队",
+          "审批新成员"
+        ]
+      },
+      {
+        "module_id": "enterprise_certification",
+        "module_name": "认证管理",
+        "nav_path": "企业管理 → 认证管理",
+        "confidence": "verified",
+        "confidence_source": "菜单截图可见个人认证和企业认证子项",
+        "handles": [
+          "个人身份认证",
+          "企业资质认证"
+        ],
+        "route_when_user_says": [
+          "实名认证",
+          "企业认证"
+        ]
+      },
+      {
+        "module_id": "enterprise_developer",
+        "module_name": "开发者模式配置",
+        "nav_path": "企业管理 → 企业设置 → 开发者模式配置",
+        "confidence": "inferred",
+        "handles": [
+          "开发者模式相关配置（具体功能待确认）"
+        ],
+        "route_when_user_says": [
+          "API接口",
+          "开发者模式",
+          "对接系统"
+        ]
+      },
+      {
+        "module_id": "enterprise_app",
+        "module_name": "应用管理",
+        "nav_path": "企业管理 → 应用管理",
+        "confidence": "inferred",
+        "handles": [
+          "管理应用（具体功能待确认）"
+        ],
+        "route_when_user_says": [
+          "安装应用",
+          "管理插件"
+        ]
+      },
+      {
+        "module_id": "more_enterprise_log",
+        "module_name": "企业日志",
+        "nav_path": "更多 → 企业日志",
+        "confidence": "verified",
+        "confidence_source": "菜单截图可见全部5个子项",
+        "handles": [
+          "登录日志：记录成员登录行为",
+          "操作日志：记录成员操作行为",
+          "风控日志：风控相关记录",
+          "上传日志：文件上传记录",
+          "权限日志：权限变更记录"
+        ],
+        "route_when_user_says": [
+          "谁登录了",
+          "查看操作记录",
+          "谁改了权限",
+          "谁上传了文件"
+        ]
+      },
+      {
+        "module_id": "more_shared_account_log",
+        "module_name": "共享账号日志",
+        "nav_path": "更多 → 共享账号日志",
+        "confidence": "verified",
+        "confidence_source": "菜单截图可见全部4个子项",
+        "handles": [
+          "操作日志：共享账号的操作记录",
+          "审计日志：共享账号的审计记录",
+          "风控日志：共享账号的风控记录",
+          "上传日志：共享账号的上传记录"
+        ],
+        "route_when_user_says": [
+          "共享账号谁做了什么",
+          "共享账号审计",
+          "共享账号操作记录"
+        ]
+      },
+      {
+        "module_id": "more_login_control",
+        "module_name": "登录控制",
+        "nav_path": "更多 → 登录控制",
+        "confidence": "verified",
+        "confidence_source": "菜单截图可见全部3个子项",
+        "handles": [
+          "成员登录控制：控制成员的登录权限和方式",
+          "登录请求授权：审批登录请求",
+          "终端白名单：指定允许登录的设备/终端"
+        ],
+        "route_when_user_says": [
+          "限制谁能登录",
+          "只允许某些设备登录",
+          "登录白名单",
+          "有人请求登录怎么审批"
+        ]
+      },
+      {
+        "module_id": "more_authorization",
+        "module_name": "授权管理",
+        "nav_path": "更多 → 授权管理 → 已授权应用",
+        "confidence": "verified",
+        "confidence_source": "菜单截图可见子项",
+        "handles": [
+          "管理已授权的第三方应用"
+        ],
+        "route_when_user_says": [
+          "第三方应用权限",
+          "已授权哪些应用"
+        ]
+      },
+      {
+        "module_id": "fee_management",
+        "module_name": "费用管理",
+        "nav_path": "费用管理",
+        "confidence": "inferred",
+        "handles": [
+          "费用和账单管理（具体功能待确认）"
+        ]
+      }
+    ],
+
+    "routing_principles": {
+      "description": "指路原则：Agent 的建议边界 = 紫鸟平台的能力边界",
+      "rules": [
+        "1. 建议只推荐紫鸟平台内已有的模块和功能，不推荐外部系统（ERP、OA、API网关等）",
+        "2. 不出现「找技术团队」「找系统服务商」「找IT管理员」等指向外部角色的引导",
+        "3. 平台内有替代方案就推荐替代方案，有现成模板就推荐模板",
+        "4. 平台内确实做不到的需求，坦诚告知「目前做不了」，不把用户推向一个他找不到的地方",
+        "5. Agent 是紫鸟的配置助手，不是 IT 顾问"
+      ]
+    },
+
+    "routing_rules": {
+      "description": "当用户需求超出访问策略能力时，优先在紫鸟平台内指路。仅当平台内完全无法满足时，坦诚告知做不到",
+      "rules": [
+        {
+          "user_intent": "控制页面内某个字段/按钮的可见性",
+          "first_check": "是否可通过访问策略的「元素级访问控制」能力实现",
+          "if_yes": "引导使用访问策略的元素级控制能力（通过「网页元素采集」配置）",
+          "if_no": "坦诚告知：「访问策略可以控制整个页面的访问权限，但没办法只隐藏页面里的某几个字段。如果需要隐藏特定按钮或区域，可以试试「网页元素采集」功能。」"
+        },
+        {
+          "user_intent": "数据按人隔离（共用账号）",
+          "platform_solution": "建议拆分独立账号来间接实现",
+          "route_to": "account_management",
+          "nav_path": "账号管理 → 全部账号",
+          "response": "共用账号下大家看到的内容是一样的，平台没办法区分谁看哪些数据。但如果可以给不同组分配独立的平台账号（在「账号管理 → 全部账号」中操作），我就能帮您通过访问策略实现组间的页面隔离。",
+          "if_cannot_split_account": "坦诚告知：「在共用账号的情况下，这个需求目前做不到。如果后续可以拆分独立账号，随时来找我配置。」"
+        },
+        {
+          "user_intent": "多级审批流程",
+          "platform_alternative": "平台支持「仅BOSS审批」和「禁止申请访问」两种审批模式",
+          "response": "平台目前支持两种审批方式：「仅BOSS可审批」和「禁止申请访问」。需要我帮您配置其中一种吗？",
+          "if_not_enough": "坦诚告知：「逐级审批（比如主管→经理→BOSS）目前平台还不支持，目前只有这两种审批方式可以选择。」"
+        },
+        {
+          "user_intent": "查看策略是否生效 / 拦截记录",
+          "route_to": "security_access_log",
+          "nav_path": "安全监管 → 安全拦截 → 访问拦截日志"
+        },
+        {
+          "user_intent": "监控员工实时操作",
+          "route_to": "security_realtime_monitor",
+          "nav_path": "安全监管 → 安全监管 → 事中监管设置"
+        },
+        {
+          "user_intent": "防止截图/拍照泄露",
+          "route_to": "security_watermark",
+          "nav_path": "安全监管 → 屏幕水印设置"
+        },
+        {
+          "user_intent": "员工权限/角色配置",
+          "route_to": "enterprise_role",
+          "nav_path": "企业管理 → 成员管理 → 角色管理"
+        },
+        {
+          "user_intent": "部门/组管理",
+          "route_to": "enterprise_department",
+          "nav_path": "企业管理 → 部门管理"
+        },
+        {
+          "user_intent": "账号分配/拆分独立账号",
+          "route_to": "account_management",
+          "nav_path": "账号管理 → 全部账号"
+        },
+        {
+          "user_intent": "API/接口级控制",
+          "route_to": "enterprise_developer",
+          "nav_path": "企业管理 → 企业设置 → 开发者模式配置",
+          "response": "接口相关的配置可以到「企业管理 → 企业设置 → 开发者模式配置」看看。"
+        },
+        {
+          "user_intent": "限制谁能登录 / 登录设备控制",
+          "route_to": "more_login_control",
+          "nav_path": "更多 → 登录控制"
+        },
+        {
+          "user_intent": "查看谁登录了 / 谁做了什么操作",
+          "route_to": "more_enterprise_log",
+          "nav_path": "更多 → 企业日志"
+        },
+        {
+          "user_intent": "查看共享账号的操作记录",
+          "route_to": "more_shared_account_log",
+          "nav_path": "更多 → 共享账号日志"
+        },
+        {
+          "user_intent": "管理URL资源/页面地址",
+          "route_to": "security_webpage_resource",
+          "nav_path": "安全监管 → 网页资源管理"
+        },
+        {
+          "user_intent": "添加/管理成员",
+          "route_to": "enterprise_member",
+          "nav_path": "企业管理 → 成员管理 → 所有成员"
+        },
+        {
+          "user_intent": "设备与账号绑定",
+          "route_to": "device_management",
+          "nav_path": "设备管理 → 全部设备"
+        },
+        {
+          "user_intent": "接收验证码/号码绑定",
+          "route_to": "ziniao_cloud_number",
+          "nav_path": "紫鸟云号"
+        }
+      ]
+    }
+  }
+}

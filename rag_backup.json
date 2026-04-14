@@ -19,8 +19,9 @@
     ],
     "marketplace": "US",
     "category": "account_management",
-    "created_at": "2026-04-13T10:07:15.605648",
-    "usage_count": 0
+    "created_at": "2026-04-10T17:42:16.039586",
+    "usage_count": 1,
+    "last_used": "2026-04-10T18:07:29.557421"
   },
   {
     "id": "rag_002",
@@ -42,7 +43,7 @@
     ],
     "marketplace": "ALL",
     "category": "advertising",
-    "created_at": "2026-04-13T10:07:15.606685",
+    "created_at": "2026-04-10T17:42:16.040574",
     "usage_count": 0
   },
   {
@@ -64,7 +65,7 @@
     ],
     "marketplace": "ALL",
     "category": "order_management",
-    "created_at": "2026-04-13T10:07:15.607296",
+    "created_at": "2026-04-10T17:42:16.041420",
     "usage_count": 0
   },
   {
@@ -86,7 +87,7 @@
     ],
     "marketplace": "ALL",
     "category": "inventory",
-    "created_at": "2026-04-13T10:07:15.607889",
+    "created_at": "2026-04-10T17:42:16.042331",
     "usage_count": 0
   },
   {
@@ -109,7 +110,7 @@
     ],
     "marketplace": "ALL",
     "category": "product_management",
-    "created_at": "2026-04-13T10:07:15.608419",
+    "created_at": "2026-04-10T17:42:16.043051",
     "usage_count": 0
   },
   {
@@ -132,7 +133,7 @@
     ],
     "marketplace": "ALL",
     "category": "finance",
-    "created_at": "2026-04-13T10:07:15.609013",
+    "created_at": "2026-04-10T17:42:16.043750",
     "usage_count": 0
   },
   {
@@ -155,7 +156,7 @@
     ],
     "marketplace": "ALL",
     "category": "account_health",
-    "created_at": "2026-04-13T10:07:15.609708",
+    "created_at": "2026-04-10T17:42:16.044788",
     "usage_count": 0
   },
   {
@@ -178,8 +179,9 @@
     ],
     "marketplace": "ALL",
     "category": "customer_service",
-    "created_at": "2026-04-13T10:07:15.610360",
-    "usage_count": 0
+    "created_at": "2026-04-10T17:42:16.046504",
+    "usage_count": 1,
+    "last_used": "2026-04-13T10:41:33.360701"
   },
   {
     "id": "rag_009",
@@ -200,7 +202,7 @@
     ],
     "marketplace": "ALL",
     "category": "customer_service",
-    "created_at": "2026-04-13T10:07:15.611573",
+    "created_at": "2026-04-10T17:42:16.047623",
     "usage_count": 0
   },
   {
@@ -223,7 +225,7 @@
     ],
     "marketplace": "ALL",
     "category": "advertising",
-    "created_at": "2026-04-13T10:07:15.614178",
+    "created_at": "2026-04-10T17:42:16.048992",
     "usage_count": 0
   },
   {
@@ -246,7 +248,7 @@
     ],
     "marketplace": "ALL",
     "category": "brand",
-    "created_at": "2026-04-13T10:07:15.615706",
+    "created_at": "2026-04-10T17:42:16.049754",
     "usage_count": 0
   },
   {
@@ -269,7 +271,7 @@
     ],
     "marketplace": "ALL",
     "category": "marketing",
-    "created_at": "2026-04-13T10:07:15.617677",
+    "created_at": "2026-04-10T17:42:16.051073",
     "usage_count": 0
   },
   {
@@ -291,8 +293,9 @@
     ],
     "marketplace": "ALL",
     "category": "product_management",
-    "created_at": "2026-04-13T10:07:15.618688",
-    "usage_count": 0
+    "created_at": "2026-04-10T17:42:16.052041",
+    "usage_count": 1,
+    "last_used": "2026-04-13T10:41:33.362185"
   },
   {
     "id": "rag_014",
@@ -314,7 +317,7 @@
     ],
     "marketplace": "ALL",
     "category": "fulfillment",
-    "created_at": "2026-04-13T10:07:15.619559",
+    "created_at": "2026-04-10T17:42:16.052867",
     "usage_count": 0
   },
   {
@@ -337,7 +340,7 @@
     ],
     "marketplace": "ALL",
     "category": "analytics",
-    "created_at": "2026-04-13T10:07:15.620352",
+    "created_at": "2026-04-10T17:42:16.053748",
     "usage_count": 0
   },
   {
@@ -360,7 +363,7 @@
     ],
     "marketplace": "ALL",
     "category": "account_management",
-    "created_at": "2026-04-13T10:07:15.621116",
+    "created_at": "2026-04-10T17:42:16.054607",
     "usage_count": 0
   },
   {
@@ -381,7 +384,7 @@
     ],
     "marketplace": "JP",
     "category": "account_management",
-    "created_at": "2026-04-13T10:07:15.621884",
+    "created_at": "2026-04-10T17:42:16.055549",
     "usage_count": 0
   },
   {
@@ -403,7 +406,7 @@
     ],
     "marketplace": "EU",
     "category": "account_management",
-    "created_at": "2026-04-13T10:07:15.622600",
+    "created_at": "2026-04-10T17:42:16.056389",
     "usage_count": 0
   },
   {
@@ -426,7 +429,7 @@
     ],
     "marketplace": "ALL",
     "category": "support",
-    "created_at": "2026-04-13T10:07:15.623334",
+    "created_at": "2026-04-10T17:42:16.057275",
     "usage_count": 0
   },
   {
@@ -448,7 +451,8 @@
     ],
     "marketplace": "ALL",
     "category": "product_management",
-    "created_at": "2026-04-13T10:07:15.624322",
-    "usage_count": 0
+    "created_at": "2026-04-10T17:42:16.058151",
+    "usage_count": 2,
+    "last_used": "2026-04-10T18:22:20.943408"
   }
 ]

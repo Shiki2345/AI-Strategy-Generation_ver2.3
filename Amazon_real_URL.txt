@@ -1,0 +1,900 @@
+{
+    "payload": {
+        "data": [
+            {
+                "name": "添加商品",
+                "url_pattern": "https://*.amazon.*/product-search"
+            },
+            {
+                "name": "批量上传商品",
+                "url_pattern": "https://*.amazon.*/listing/upload"
+            },
+            {
+                "name": "补全您的草稿",
+                "url_pattern": "https://*.amazon.*/fixyourproducts/drafts"
+            },
+            {
+                "name": "查看销售申请",
+                "url_pattern": "https://*.amazon.*/hz/myqdashboard"
+            },
+            {
+                "name": "改进商品信息质量",
+                "url_pattern": "https://*.amazon.*/quality"
+            },
+            {
+                "name": "上传图片",
+                "url_pattern": "https://*.amazon.*/imaging/upload"
+            },
+            {
+                "name": "上传和管理视频",
+                "url_pattern": "https://*.amazon.*/creatorhub/video/library"
+            },
+            {
+                "name": "管理商品文档",
+                "url_pattern": "https://*.amazon.*/enhanced-content/content-manager/workflow/product-document"
+            },
+            {
+                "name": "批量上传2",
+                "url_pattern": "https://*.amazon.*/product-search/bulk"
+            },
+            {
+                "name": "优化商品信息-新版页面",
+                "url_pattern": "https://*.amazon.*/myinventory/inventory/views/optimize-listings"
+            },
+            {
+                "name": "创建图文版商品描述",
+                "url_pattern": "https://*.amazon.*/enhanced-content/content-manager/workflow"
+            },
+            {
+                "name": "管理所有库存",
+                "url_pattern": "https://*.amazon.*/myinventory/inventory"
+            },
+            {
+                "name": "管理卖家自配送商品",
+                "url_pattern": "https://*.amazon.*/seller-fulfilled-product/analytics"
+            },
+            {
+                "name": "全球销售",
+                "url_pattern": "https://*.amazon.*/global-selling/dashboard"
+            },
+            {
+                "name": "管理亚马逊库存",
+                "url_pattern": "https://*.amazon.*/hz/inventory/view/FBAKNIGHTS"
+            },
+            {
+                "name": "库存规划",
+                "url_pattern": "https://*.amazon.*/inventoryplanning/dashboard"
+            },
+            {
+                "name": "管理亚马逊货件",
+                "url_pattern": "https://*.amazon.*/gp/ssof/shipping-queue.html"
+            },
+            {
+                "name": "亚马逊物流库存",
+                "url_pattern": "https://*.amazon.*/inventoryplanning/manageinventoryhealth"
+            },
+            {
+                "name": "库存表现",
+                "url_pattern": "https://*.amazon.*/inventory-performance/dashboard"
+            },
+            {
+                "name": "补充库存",
+                "url_pattern": "https://*.amazon.*/restockinventory/recommendations"
+            },
+            {
+                "name": "滞留库存",
+                "url_pattern": "https://*.amazon.*/inventoryplanning/stranded-inventory"
+            },
+            {
+                "name": "无法履行的库存",
+                "url_pattern": "https://*.amazon.*/inventory"
+            },
+            {
+                "name": "亚马逊物流退货",
+                "url_pattern": "https://*.amazon.*/fba/return"
+            },
+            {
+                "name": "全驱动库存",
+                "url_pattern": "https://*.amazon.*/fba-inventory/gim/inventory-list"
+            },
+            {
+                "name": "发送至亚马逊",
+                "url_pattern": "https://*.amazon.*/fba/sendtoamazon"
+            },
+            {
+                "name": "出货表现",
+                "url_pattern": "https://*.amazon.*/fba/inboundperformancedashboard"
+            },
+            {
+                "name": "创建移除订单",
+                "url_pattern": "https://*.amazon.*/recoveryui/removal-order/create"
+            },
+            {
+                "name": "商品编辑-图片",
+                "url_pattern": "https://*.amazon.*/abis/listing/edit/images"
+            },
+            {
+                "name": "商品编辑-产品详情",
+                "url_pattern": "https://*.amazon.*/abis/listing/edit/product_details"
+            },
+            {
+                "name": "管理亚马逊物流库存",
+                "url_pattern": "https://*.amazon.*/inventoryplanning/manageinventoryhealth"
+            },
+            {
+                "name": "FBA-控制面板",
+                "url_pattern": "https://*.amazon.*/fba/dashboard/"
+            },
+            {
+                "name": "创建变体",
+                "url_pattern": "https://*.amazon.*/listing/varwiz"
+            },
+            {
+                "name": "创建定价规则",
+                "url_pattern": "https://*.amazon.*/automatepricing/rules/rule/"
+            },
+            {
+                "name": "创建发往亚马逊的货件",
+                "url_pattern": "https://*.amazon.*/fba/sendtoamazon/pack_mixed_unit_step"
+            },
+            {
+                "name": "创建秒杀",
+                "url_pattern": "https://*.amazon.*/merchandising-new/create"
+            },
+            {
+                "name": "促销相关页面",
+                "url_pattern": "https://*.amazon.*/promotions"
+            },
+            {
+                "name": "秒杀",
+                "url_pattern": "https://*.amazon.*/merchandising-new"
+            },
+            {
+                "name": "Listing编辑",
+                "url_pattern": "https://*.amazon.*/abis/listing/edit/offer"
+            },
+            {
+                "name": "管理库存-新页面",
+                "url_pattern": "https://*.amazon.*/amazonsell/manage-products"
+            },
+            {
+                "name": "编辑商品信息",
+                "url_pattern": "https://*.amazon.*/abis/listing/edit"
+            },
+            {
+                "name": "定价状况",
+                "url_pattern": "https://*.amazon.*/pricing/health"
+            },
+            {
+                "name": "管理定价",
+                "url_pattern": "https://*.amazon.*/myinventory/inventory"
+            },
+            {
+                "name": "自动定价",
+                "url_pattern": "https://*.amazon.*/automatepricing/home"
+            },
+            {
+                "name": "佣金折扣",
+                "url_pattern": "https://*.amazon.*/feediscounts/dashboard/price"
+            },
+            {
+                "name": "自动定价-新版",
+                "url_pattern": "https://*.amazon.*/automatepricingv2/pricingrules"
+            },
+            {
+                "name": "管理订单",
+                "url_pattern": "https://*.amazon.*/orders-v3"
+            },
+            {
+                "name": "创建 MCF 订单",
+                "url_pattern": "https://*.amazon.*/mcf/orders/create-order"
+            },
+            {
+                "name": "订单报告",
+                "url_pattern": "https://*.amazon.*/order-reports-and-feeds/reports"
+            },
+            {
+                "name": "上传订单相关文件",
+                "url_pattern": "https://*.amazon.*/order-reports-and-feeds/feeds"
+            },
+            {
+                "name": "管理退货",
+                "url_pattern": "https://*.amazon.*/gp/returns/list"
+            },
+            {
+                "name": "卖家自配送-取消订单",
+                "url_pattern": "https://*.amazon.*/orders-v3/order/*/cancel-order"
+            },
+            {
+                "name": "FBA订单管理",
+                "url_pattern": "https://*.amazon.*/orders-v3/fba/all"
+            },
+            {
+                "name": "订单详情",
+                "url_pattern": "https://*.amazon.*/orders-v3/order"
+            },
+            {
+                "name": "订单退款",
+                "url_pattern": "https://*.amazon.*/gp/orders-v2/refund"
+            },
+            {
+                "name": "增长建议",
+                "url_pattern": "https://*.amazon.*/grow"
+            },
+            {
+                "name": "浏览计划",
+                "url_pattern": "https://*.amazon.*/recommended-programs"
+            },
+            {
+                "name": "定制计划",
+                "url_pattern": "https://*.amazon.*/gestalt/manageregistration/index.html"
+            },
+            {
+                "name": "选品指南针",
+                "url_pattern": "https://*.amazon.*/selection"
+            },
+            {
+                "name": "商机探测器",
+                "url_pattern": "https://*.amazon.*/opportunity-explorer"
+            },
+            {
+                "name": "可用于所有渠道的亚马逊物流库存",
+                "url_pattern": "https://*.amazon.*/mcf"
+            },
+            {
+                "name": "卖家钱包-新版",
+                "url_pattern": "https://*.amazon.*/mario/sellerwallet/seller-wallet-onboard/regional/node/welcome/render"
+            },
+            {
+                "name": "付款",
+                "url_pattern": "https://*.amazon.*/payments/dashboard/index.html"
+            },
+            {
+                "name": "卖家钱包",
+                "url_pattern": "https://*.amazon.*/gc/sellerwallet-program"
+            },
+            {
+                "name": "亚马逊销售指导",
+                "url_pattern": "https://*.amazon.*/hz/sellingcoach"
+            },
+            {
+                "name": "业务报告",
+                "url_pattern": "https://*.amazon.*/business-reports"
+            },
+            {
+                "name": "库存和销售报告",
+                "url_pattern": "https://*.amazon.*/reportcentral"
+            },
+            {
+                "name": "退货报告",
+                "url_pattern": "https://*.amazon.*/returns/report"
+            },
+            {
+                "name": "自定义报告",
+                "url_pattern": "https://*.amazon.*/customizedReports/lp"
+            },
+            {
+                "name": "库存报告",
+                "url_pattern": "https://*.amazon.*/listing/reports"
+            },
+            {
+                "name": "税务文件库",
+                "url_pattern": "https://*.amazon.*/gp/tax/tax-library.html"
+            },
+            {
+                "name": "广告",
+                "url_pattern": "https://*.amazon.*/sspa/tresah"
+            },
+            {
+                "name": "管理税费",
+                "url_pattern": "https://*.amazon.*/managetaxes/global-transaction-reports"
+            },
+            {
+                "name": "广告报告",
+                "url_pattern": "https://advertising.amazon.*/reports"
+            },
+            {
+                "name": "销量与访问量",
+                "url_pattern": "https://*.amazon.*/custom-analytics"
+            },
+            {
+                "name": "账户状况",
+                "url_pattern": "https://*.amazon.*/performance/dashboard"
+            },
+            {
+                "name": "反馈",
+                "url_pattern": "https://*.amazon.*/feedback-manager/index.html"
+            },
+            {
+                "name": "亚马逊商城交易索赔",
+                "url_pattern": "https://*.amazon.*/gp/guarantee-claims/home.html"
+            },
+            {
+                "name": "信用卡拒付索赔",
+                "url_pattern": "https://*.amazon.*/gp/chargebacks/home.html"
+            },
+            {
+                "name": "业绩通知",
+                "url_pattern": "https://*.amazon.*/performance/notifications"
+            },
+            {
+                "name": "买家之声",
+                "url_pattern": "https://*.amazon.*/voice-of-the-customer"
+            },
+            {
+                "name": "账户状况-1",
+                "url_pattern": "https://*.amazon.*/gp/seller-rating/pages/performance-summary.html"
+            },
+            {
+                "name": "反馈管理器",
+                "url_pattern": "https://*.amazon.*/gp/seller-rating/pages/feedback-manager.html"
+            },
+            {
+                "name": "业绩通知-1",
+                "url_pattern": "https://*.amazon.*/gp/customer-experience/perf-notifications.html"
+            },
+            {
+                "name": "销售伙伴应用商店",
+                "url_pattern": "https://*.amazon.*/selling-partner-appstore"
+            },
+            {
+                "name": "管理您的应用",
+                "url_pattern": "https://*.amazon.*/apps/manage"
+            },
+            {
+                "name": "探索服务",
+                "url_pattern": "https://*.amazon.*/tsba"
+            },
+            {
+                "name": "管理服务请求",
+                "url_pattern": "https://*.amazon.*/spnsellerdashboard"
+            },
+            {
+                "name": "开发应用程序",
+                "url_pattern": "https://*.amazon.*/sellingpartner/developerconsole"
+            },
+            {
+                "name": "开发应用程序-新版",
+                "url_pattern": "https://solutionproviderportal.amazon.com/"
+            },
+            {
+                "name": "B2B平台",
+                "url_pattern": "https://*.amazon.*/business/b2bcentral"
+            },
+            {
+                "name": "管理报价",
+                "url_pattern": "https://*.amazon.*/business/manage-quotes"
+            },
+            {
+                "name": "装箱推荐",
+                "url_pattern": "https://*.amazon.*/business/largepacks"
+            },
+            {
+                "name": "打造您的品牌",
+                "url_pattern": "https://*.amazon.*/build-your-brand"
+            },
+            {
+                "name": "卖家大学",
+                "url_pattern": "https://*.amazon.*/learn"
+            },
+            {
+                "name": "论坛",
+                "url_pattern": "https://*.amazon.*/forums"
+            },
+            {
+                "name": "新闻",
+                "url_pattern": "https://*.amazon.*/gp/headlines.html"
+            },
+            {
+                "name": "礼品选项",
+                "url_pattern": "https://*.amazon.*/gcx/gift-options"
+            },
+            {
+                "name": "您的信息和政策",
+                "url_pattern": "https://*.amazon.*/gp/help-content/home.html"
+            },
+            {
+                "name": "税务设置-澳大利亚",
+                "url_pattern": "https://sellercentral.amazon.com.au/tax/jpregistrations"
+            },
+            {
+                "name": "账户信息",
+                "url_pattern": "https://*.amazon.*/global-dashboard"
+            },
+            {
+                "name": "付款信息",
+                "url_pattern": "https://*.amazon.*/global-dashboard/payment-information"
+            },
+            {
+                "name": "卖家信息",
+                "url_pattern": "https://*.amazon.*/sw/AccountInfo/SellerProfile"
+            },
+            {
+                "name": "登录设置",
+                "url_pattern": "https://*.amazon.*/ap/cnep"
+            },
+            {
+                "name": "全球账户",
+                "url_pattern": "https://*.amazon.*/account/management"
+            },
+            {
+                "name": "通知首选项",
+                "url_pattern": "https://*.amazon.*/notifications/preferences"
+            },
+            {
+                "name": "退货设置",
+                "url_pattern": "https://*.amazon.*/gp/returns/settings"
+            },
+            {
+                "name": "配送设置",
+                "url_pattern": "https://*.amazon.*/sbr"
+            },
+            {
+                "name": "税务设置-美国",
+                "url_pattern": "https://sellercentral.amazon.com/tax/nexus/settings"
+            },
+            {
+                "name": "税务设置-英国",
+                "url_pattern": "https://sellercentral.amazon.co.uk/gc/amazon-business/tax-settings"
+            },
+            {
+                "name": "用户权限",
+                "url_pattern": "https://*.amazon.*/gp/account-manager/home.html"
+            },
+            {
+                "name": "用户权限历史记录",
+                "url_pattern": "https://*.amazon.*/audit/account"
+            },
+            {
+                "name": "亚马逊物流",
+                "url_pattern": "https://*.amazon.*/fba/settings*"
+            },
+            {
+                "name": "亚马逊查看存款方式",
+                "url_pattern": "https://*.amazon.*/sw/AccountInfo/DepositMethodView/step/DepositMethodView"
+            },
+            {
+                "name": "账户概览",
+                "url_pattern": "https://*.amazon.*/global-dashboard/account-overview"
+            },
+            {
+                "name": "店铺信息",
+                "url_pattern": "https://*.amazon.*/global-dashboard/store-information"
+            },
+            {
+                "name": "业务信息",
+                "url_pattern": "https://*.amazon.*/global-dashboard/business-information"
+            },
+            {
+                "name": "发货和退货信息",
+                "url_pattern": "https://*.amazon.*/global-dashboard/shipping-information"
+            },
+            {
+                "name": "税务信息",
+                "url_pattern": "https://*.amazon.*/global-dashboard/tax-information"
+            },
+            {
+                "name": "账户管理",
+                "url_pattern": "https://*.amazon.*/global-dashboard/account-management"
+            },
+            {
+                "name": "税务设置-欧洲",
+                "url_pattern": "https://*.amazon.*/gc/amazon-business/tax-settings"
+            },
+            {
+                "name": "用户权限2",
+                "url_pattern": "https://*.amazon.*/account/permission"
+            },
+            {
+                "name": "税务设置-日本",
+                "url_pattern": "https://sellercentral-japan.amazon.com/gp/tax-manager/dashboard.html/ref=xx_taxmgr_dnav_xx"
+            },
+            {
+                "name": "用户权限-新版",
+                "url_pattern": "https://*.amazon.*/account/permissions"
+            },
+            {
+                "name": "配送设置2",
+                "url_pattern": "https://*.amazon.*/sbr#shipping_templates"
+            },
+            {
+                "name": "用户权限3",
+                "url_pattern": "https://*.amazon.*/account/permissions#/user-management/users"
+            },
+            {
+                "name": "亚马逊物流设置",
+                "url_pattern": "https://*.amazon.*/fba/settings/index.html#/"
+            },
+            {
+                "name": "税务信息2",
+                "url_pattern": "https://*.amazon.*/tax"
+            },
+            {
+                "name": "法人实体",
+                "url_pattern": "https://*.amazon.*/sw/AccountInfo/LegalEntity/step/LegalEntity"
+            },
+            {
+                "name": "RFC信息",
+                "url_pattern": "https://*.amazon.*/tax-interview"
+            },
+            {
+                "name": "卖家信息2",
+                "url_pattern": "https://*.amazon.*/sw/AccountInfo"
+            },
+            {
+                "name": "商业信息",
+                "url_pattern": "https://*.amazon.*/mario/seller-verification"
+            },
+            {
+                "name": "卖家记号",
+                "url_pattern": "https://*.amazon.*/gp/on-board/configuration"
+            },
+            {
+                "name": "商业保险",
+                "url_pattern": "https://*.amazon.*/mario/v2/az/flow/BusinessInsurance"
+            },
+            {
+                "name": "管理您的品牌",
+                "url_pattern": "https://brandregistry.amazon.*/"
+            },
+            {
+                "name": "管理员工",
+                "url_pattern": "https://*.amazon.*/account/permissions#/user-management"
+            },
+            {
+                "name": "添加员工",
+                "url_pattern": "https://*.amazon.*/account/permissions#/add-user"
+            },
+            {
+                "name": "公开邀请",
+                "url_pattern": "https://*.amazon.*/account/permissions#/open-invites/user-invites"
+            },
+            {
+                "name": "两步验证设置",
+                "url_pattern": "https://*.amazon.*/a/settings/approval"
+            },
+            {
+                "name": "亚马逊欧洲站-意大利",
+                "url_pattern": "https://sellercentral.amazon.it/"
+            },
+            {
+                "name": "亚马逊欧洲站-英国",
+                "url_pattern": "https://sellercentral.amazon.co.uk/"
+            },
+            {
+                "name": "亚马逊欧洲站-法国",
+                "url_pattern": "https://sellercentral.amazon.fr/"
+            },
+            {
+                "name": "亚马逊欧洲站-德国",
+                "url_pattern": "https://sellercentral.amazon.de/"
+            },
+            {
+                "name": "亚马逊欧洲站-荷兰",
+                "url_pattern": "https://sellercentral.amazon.nl/"
+            },
+            {
+                "name": "亚马逊欧洲站-瑞典",
+                "url_pattern": "https://sellercentral.amazon.se/"
+            },
+            {
+                "name": "亚马逊欧洲站-西班牙",
+                "url_pattern": "https://sellercentral.amazon.es/"
+            },
+            {
+                "name": "亚马逊-澳大利亚",
+                "url_pattern": "https://sellercentral.amazon.com.au/"
+            },
+            {
+                "name": "亚马逊-日本",
+                "url_pattern": "https://sellercentral.amazon.co.jp/"
+            },
+            {
+                "name": "亚马逊-新加坡",
+                "url_pattern": "https://sellercentral.amazon.sg/"
+            },
+            {
+                "name": "亚马逊-美国",
+                "url_pattern": "https://sellercentral.amazon.com/"
+            },
+            {
+                "name": "亚马逊-墨西哥",
+                "url_pattern": "https://sellercentral.amazon.com.mx/"
+            },
+            {
+                "name": "亚马逊-加拿大",
+                "url_pattern": "https://sellercentral.amazon.ca/"
+            },
+            {
+                "name": "亚马逊-沙特",
+                "url_pattern": "https://sellercentral.amazon.sa/"
+            },
+            {
+                "name": "亚马逊-阿联酋",
+                "url_pattern": "https://sellercentral.amazon.ae/"
+            },
+            {
+                "name": "亚马逊-埃及",
+                "url_pattern": "https://sellercentral.amazon.eg/"
+            },
+            {
+                "name": "亚马逊-日本new",
+                "url_pattern": "https://sellercentral-japan.amazon.com/"
+            },
+            {
+                "name": "亚马逊-欧洲总站",
+                "url_pattern": "https://sellercentral-europe.amazon.com/"
+            },
+            {
+                "name": "亚马逊欧洲站-波兰",
+                "url_pattern": "https://sellercentral.amazon.pl/"
+            },
+            {
+                "name": "亚马逊欧洲站-比利时",
+                "url_pattern": "https://sellercentral.amazon.com.be/"
+            },
+            {
+                "name": "广告",
+                "url_pattern": "https://*.amazon.*/reports"
+            },
+            {
+                "name": "广告页-1",
+                "url_pattern": "https://advertising.amazon.*/cm/"
+            },
+            {
+                "name": "广告页-2",
+                "url_pattern": "https://sellercentral.amazon.*/cm"
+            },
+            {
+                "name": "法国站广告活动管理",
+                "url_pattern": "https://advertising.amazon.fr/"
+            },
+            {
+                "name": "英国站广告活动管理",
+                "url_pattern": "https://advertising.amazon.co.uk/"
+            },
+            {
+                "name": "德国站广告活动管理",
+                "url_pattern": "https://advertising.amazon.de/"
+            },
+            {
+                "name": "意大利站广告活动管理",
+                "url_pattern": "https://advertising.amazon.it/"
+            },
+            {
+                "name": "西班牙站广告活动管理",
+                "url_pattern": "https://advertising.amazon.es/"
+            },
+            {
+                "name": "荷兰站广告活动管理",
+                "url_pattern": "https://advertising.amazon.nl/"
+            },
+            {
+                "name": "瑞典站广告活动管理",
+                "url_pattern": "https://advertising.amazon.se/"
+            },
+            {
+                "name": "波兰站广告活动管理",
+                "url_pattern": "https://advertising.amazon.pl/"
+            },
+            {
+                "name": "日本站new广告活动管理",
+                "url_pattern": "https://advertising-japan.amazon.com/"
+            },
+            {
+                "name": "澳大利亚站广告活动管理",
+                "url_pattern": "https://advertising.amazon.com.au/"
+            },
+            {
+                "name": "墨西哥站广告活动管理",
+                "url_pattern": "https://advertising.amazon.com.mx/"
+            },
+            {
+                "name": "美国站广告活动管理",
+                "url_pattern": "https://advertising.amazon.com/"
+            },
+            {
+                "name": "加拿大广告活动管理",
+                "url_pattern": "https://advertising.amazon.ca/"
+            },
+            {
+                "name": "日本站广告活动管理",
+                "url_pattern": "https://advertising.amazon.co.jp/"
+            },
+            {
+                "name": "创建coupon",
+                "url_pattern": "https://*.amazon.*/coupons/create-coupon"
+            },
+            {
+                "name": "创建PercentageOff",
+                "url_pattern": "https://*.amazon.*/promotions/new/preview"
+            },
+            {
+                "name": "优惠券",
+                "url_pattern": "https://*.amazon.*/coupons/ref=xx_scoupn_dnav_xx"
+            },
+            {
+                "name": "促销",
+                "url_pattern": "https://*.amazon.*/promotions"
+            },
+            {
+                "name": "促销2",
+                "url_pattern": "https://*.amazon.*/promotions/new"
+            },
+            {
+                "name": "广告活动查看1",
+                "url_pattern": "https://*.amazon.*/campaign-manager"
+            },
+            {
+                "name": "广告活动查看2",
+                "url_pattern": "https://*.amazon.*/cm/targeting"
+            },
+            {
+                "name": "广告组页面",
+                "url_pattern": "https://*.amazon.*/cm/*/campaigns"
+            },
+            {
+                "name": "Vine",
+                "url_pattern": "https://*.amazon.*/vine"
+            },
+            {
+                "name": "优惠券主页面",
+                "url_pattern": "https://*.amazon.*/coupons"
+            },
+            {
+                "name": "价格折扣",
+                "url_pattern": "https://*.amazon.*/discounts"
+            },
+            {
+                "name": "广告活动主页面",
+                "url_pattern": "https://advertising.amazon.*/"
+            },
+            {
+                "name": "登录",
+                "url_pattern": "https://*.amazon.*/ap/signin"
+            },
+            {
+                "name": "注册",
+                "url_pattern": "https://*.amazon.*/ap/register"
+            },
+            {
+                "name": "店铺首页-旧版界面",
+                "url_pattern": "https://*.amazon.*/home"
+            },
+            {
+                "name": "登录验证",
+                "url_pattern": "https://*.amazon.*/ap/mfa"
+            },
+            {
+                "name": "亚马逊-美国站首页",
+                "url_pattern": "https://sellercentral.amazon.com/home"
+            },
+            {
+                "name": "亚马逊-日本站首页",
+                "url_pattern": "https://sellercentral-japan.amazon.com/home"
+            },
+            {
+                "name": "验证",
+                "url_pattern": "https://*.amazon.*/ap/sso"
+            },
+            {
+                "name": "新的亚马逊销售体验",
+                "url_pattern": "https://*.amazon.*/amazonsell/business"
+            },
+            {
+                "name": "账户信息2",
+                "url_pattern": "https://*.amazon.*/gp/seller/configuration/account-info-page.html"
+            },
+            {
+                "name": "店铺首页-新版界面",
+                "url_pattern": "https://*.amazon.*/amazonsell/business"
+            },
+            {
+                "name": "假期设置页面",
+                "url_pattern": "https://*.amazon.*/hz/account-info/vacation-settings"
+            },
+            {
+                "name": "管理服务页面",
+                "url_pattern": "https://*.amazon.*/account-information/mys"
+            },
+            {
+                "name": "管理存款方式",
+                "url_pattern": "https://*.amazon.*/sw/AccountInfo/ManageDepositMethods/step/ManageDepositMethods"
+            },
+            {
+                "name": "付费方式",
+                "url_pattern": "https://*.amazon.*/gp/on-board/configuration/single-section/global-billing.html"
+            },
+            {
+                "name": "替换存款方式",
+                "url_pattern": "https://*.amazon.*/sw/AccountInfo/DepositMethod/step/DepositMethod"
+            },
+            {
+                "name": "账户付费方式",
+                "url_pattern": "https://*.amazon.*/sw/AccountInfo/Charge"
+            },
+            {
+                "name": "收费方式更新",
+                "url_pattern": "https://*.amazon.*/sw/AccountInfo/ChargeMethod/step/Update"
+            },
+            {
+                "name": "亚马逊新页面",
+                "url_pattern": "https://*.amazon.*/gp/returns/list/v2"
+            },
+            {
+                "name": "税务设置",
+                "url_pattern": "https://*.amazon.*/tax/nexus/settings"
+            },
+            {
+                "name": "付款方式",
+                "url_pattern": "https://*.amazon.*/gp/on-board/configuration/single-section"
+            },
+            {
+                "name": "管理付款方式",
+                "url_pattern": "https://*.amazon.*/sw/AccountInfo/ChargeMethod"
+            },
+            {
+                "name": "帮助中心首页",
+                "url_pattern": "https://*.amazon.*/help/center"
+            },
+            {
+                "name": "cases管理",
+                "url_pattern": "https://*.amazon.*/cu/case-lobby"
+            },
+            {
+                "name": "帮助中心页面",
+                "url_pattern": "https://*.amazon.*/help/hub"
+            },
+            {
+                "name": "报告视图",
+                "url_pattern": "https://*.amazon.*/payments/dashboard/index.html"
+            },
+            {
+                "name": "交易视图",
+                "url_pattern": "https://*.amazon.*/payments/event/view"
+            },
+            {
+                "name": "所有声明",
+                "url_pattern": "https://*.amazon.*/payments/past-settlements"
+            },
+            {
+                "name": "支出",
+                "url_pattern": "https://*.amazon.*/payments/allstatements/index.html"
+            },
+            {
+                "name": "广告发票历史记录",
+                "url_pattern": "https://*.amazon.*/gp/advertiser/transactions/transactions.html"
+            },
+            {
+                "name": "报告存储库",
+                "url_pattern": "https://*.amazon.*/payments/reports-repository"
+            },
+            {
+                "name": "广告账单历史",
+                "url_pattern": "https://*.amazon.*/billing/history"
+            },
+            {
+                "name": "亚马逊前台",
+                "url_pattern": "https://www.amazon.*/"
+            }
+        ],
+        "status": false,
+        "time": 200,
+        "title": [
+            {
+                "fixed": "left",
+                "key": "name",
+                "title": "name",
+                "width": "200"
+            },
+            {
+                "key": "url_pattern",
+                "title": "url_pattern",
+                "width": "200"
+            }
+        ],
+        "total": 219
+    },
+    "code": 1200,
+    "text": ""
+}

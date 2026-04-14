@@ -1,454 +1,3332 @@
 [
   {
     "id": "rag_001",
-    "user_description": "美国亚马逊账户详情页",
-    "exact_url": "https://sellercentral.amazon.com/sw/AccountInfo/",
-    "page_description": "包含账户设置、银行信息、税务信息、公司信息等",
-    "aliases": [
-      "美国站账户页",
-      "US站账户信息页",
-      "Seller Central账户详情",
-      "账户设置页面"
-    ],
+    "user_description": "添加商品",
+    "exact_url": "https://*.amazon.*/product-search",
+    "page_description": "",
+    "aliases": [],
     "keywords": [
-      "账户",
-      "详情",
-      "美国",
-      "Seller Central",
-      "账户信息"
+      "添加商品"
     ],
-    "marketplace": "US",
-    "category": "account_management",
-    "created_at": "2026-04-13T10:07:15.605648",
-    "usage_count": 0
+    "marketplace": "ALL",
+    "category": "product_management",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
   },
   {
     "id": "rag_002",
-    "user_description": "亚马逊广告报告页",
-    "exact_url": "https://sellercentral.amazon.com/advertising/reports",
-    "page_description": "可以下载广告活动的数据报告，包括点击量、转化率、花费等指标",
-    "aliases": [
-      "广告数据下载页",
-      "广告报表页",
-      "Advertising Reports",
-      "广告分析页面"
-    ],
+    "user_description": "批量上传商品",
+    "exact_url": "https://*.amazon.*/listing/upload",
+    "page_description": "",
+    "aliases": [],
     "keywords": [
-      "广告",
-      "报告",
-      "数据",
-      "下载",
-      "分析"
+      "批量上传商品"
     ],
     "marketplace": "ALL",
-    "category": "advertising",
-    "created_at": "2026-04-13T10:07:15.606685",
-    "usage_count": 0
+    "category": "product_management",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
   },
   {
     "id": "rag_003",
-    "user_description": "订单管理页面",
-    "exact_url": "https://sellercentral.amazon.com/orders-v3",
-    "page_description": "管理所有订单，包括待发货、已发货、取消的订单",
-    "aliases": [
-      "订单列表",
-      "Manage Orders",
-      "订单处理页",
-      "订单查询页面"
-    ],
+    "user_description": "补全您的草稿",
+    "exact_url": "https://*.amazon.*/fixyourproducts/drafts",
+    "page_description": "",
+    "aliases": [],
     "keywords": [
-      "订单",
-      "管理",
-      "发货",
-      "查询"
+      "补全您的草稿"
     ],
     "marketplace": "ALL",
-    "category": "order_management",
-    "created_at": "2026-04-13T10:07:15.607296",
-    "usage_count": 0
+    "category": "product_management",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
   },
   {
     "id": "rag_004",
-    "user_description": "库存管理页面",
-    "exact_url": "https://sellercentral.amazon.com/inventory",
-    "page_description": "查看和管理所有SKU的库存数量、状态、价格等",
-    "aliases": [
-      "库存查询",
-      "Inventory Management",
-      "库存列表",
-      "FBA库存"
-    ],
+    "user_description": "查看销售申请",
+    "exact_url": "https://*.amazon.*/hz/myqdashboard",
+    "page_description": "",
+    "aliases": [],
     "keywords": [
-      "库存",
-      "SKU",
-      "管理",
-      "数量"
+      "查看销售申请"
     ],
     "marketplace": "ALL",
-    "category": "inventory",
-    "created_at": "2026-04-13T10:07:15.607889",
-    "usage_count": 0
+    "category": "other",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
   },
   {
     "id": "rag_005",
-    "user_description": "产品上架页面",
-    "exact_url": "https://sellercentral.amazon.com/product-search",
-    "page_description": "搜索和添加新产品，创建新的产品Listing",
-    "aliases": [
-      "添加产品",
-      "Add Product",
-      "创建Listing",
-      "产品创建页"
-    ],
+    "user_description": "改进商品信息质量",
+    "exact_url": "https://*.amazon.*/quality",
+    "page_description": "",
+    "aliases": [],
     "keywords": [
-      "产品",
-      "上架",
-      "添加",
-      "创建",
-      "Listing"
+      "改进商品信息质量"
     ],
     "marketplace": "ALL",
     "category": "product_management",
-    "created_at": "2026-04-13T10:07:15.608419",
-    "usage_count": 0
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
   },
   {
     "id": "rag_006",
-    "user_description": "支付报告页面",
-    "exact_url": "https://sellercentral.amazon.com/payments/dashboard/index.html",
-    "page_description": "查看所有付款记录、交易明细、费用扣除等财务信息",
-    "aliases": [
-      "付款报告",
-      "Payment Reports",
-      "财务报表",
-      "收款记录"
-    ],
+    "user_description": "上传图片",
+    "exact_url": "https://*.amazon.*/imaging/upload",
+    "page_description": "",
+    "aliases": [],
     "keywords": [
-      "支付",
-      "付款",
-      "财务",
-      "报告",
-      "收款"
+      "上传图片"
     ],
     "marketplace": "ALL",
-    "category": "finance",
-    "created_at": "2026-04-13T10:07:15.609013",
-    "usage_count": 0
+    "category": "product_management",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
   },
   {
     "id": "rag_007",
-    "user_description": "账户健康页面",
-    "exact_url": "https://sellercentral.amazon.com/performance/dashboard",
-    "page_description": "显示账户健康指标，包括ODR、取消率、迟发率等关键绩效",
-    "aliases": [
-      "Account Health",
-      "账户绩效",
-      "健康状况",
-      "绩效指标"
-    ],
+    "user_description": "上传和管理视频",
+    "exact_url": "https://*.amazon.*/creatorhub/video/library",
+    "page_description": "",
+    "aliases": [],
     "keywords": [
-      "健康",
-      "绩效",
-      "ODR",
-      "指标",
-      "账户状态"
+      "上传和管理视频"
     ],
     "marketplace": "ALL",
-    "category": "account_health",
-    "created_at": "2026-04-13T10:07:15.609708",
-    "usage_count": 0
+    "category": "product_management",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
   },
   {
     "id": "rag_008",
-    "user_description": "买家消息中心",
-    "exact_url": "https://sellercentral.amazon.com/messaging/inbox",
-    "page_description": "查看和回复买家发送的消息和问题",
-    "aliases": [
-      "Buyer Messages",
-      "客户消息",
-      "买家联系",
-      "站内信"
-    ],
+    "user_description": "管理商品文档",
+    "exact_url": "https://*.amazon.*/enhanced-content/content-manager/workflow/product-document",
+    "page_description": "",
+    "aliases": [],
     "keywords": [
-      "消息",
-      "买家",
-      "客户",
-      "站内信",
-      "沟通"
+      "管理商品文档"
     ],
     "marketplace": "ALL",
-    "category": "customer_service",
-    "created_at": "2026-04-13T10:07:15.610360",
-    "usage_count": 0
+    "category": "product_management",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
   },
   {
     "id": "rag_009",
-    "user_description": "退货管理页面",
-    "exact_url": "https://sellercentral.amazon.com/returns/list",
-    "page_description": "管理买家的退货请求和退款申请",
-    "aliases": [
-      "退货处理",
-      "Return Requests",
-      "退款申请",
-      "退货列表"
-    ],
+    "user_description": "批量上传2",
+    "exact_url": "https://*.amazon.*/product-search/bulk",
+    "page_description": "",
+    "aliases": [],
     "keywords": [
-      "退货",
-      "退款",
-      "返回",
-      "处理"
+      "批量上传2"
     ],
     "marketplace": "ALL",
-    "category": "customer_service",
-    "created_at": "2026-04-13T10:07:15.611573",
-    "usage_count": 0
+    "category": "product_management",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
   },
   {
     "id": "rag_010",
-    "user_description": "广告活动管理",
-    "exact_url": "https://advertising.amazon.com/cm/campaigns",
-    "page_description": "创建和管理广告活动，包括SP、SB、SD广告",
-    "aliases": [
-      "Campaign Manager",
-      "广告投放",
-      "广告设置",
-      "PPC管理"
-    ],
+    "user_description": "优化商品信息-新版页面",
+    "exact_url": "https://*.amazon.*/myinventory/inventory/views/optimize-listings",
+    "page_description": "",
+    "aliases": [],
     "keywords": [
-      "广告",
-      "Campaign",
-      "投放",
-      "PPC",
-      "推广"
+      "优化商品信息",
+      "新版页面"
     ],
     "marketplace": "ALL",
-    "category": "advertising",
-    "created_at": "2026-04-13T10:07:15.614178",
-    "usage_count": 0
+    "category": "inventory_fba",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
   },
   {
     "id": "rag_011",
-    "user_description": "品牌注册管理",
-    "exact_url": "https://brandservices.amazon.com/",
-    "page_description": "管理品牌注册、商标保护、A+页面等品牌相关功能",
-    "aliases": [
-      "Brand Registry",
-      "品牌备案",
-      "商标管理",
-      "品牌保护"
-    ],
+    "user_description": "创建图文版商品描述",
+    "exact_url": "https://*.amazon.*/enhanced-content/content-manager/workflow",
+    "page_description": "",
+    "aliases": [],
     "keywords": [
-      "品牌",
-      "商标",
-      "注册",
-      "保护",
-      "Brand Registry"
+      "创建图文版商品描述"
     ],
     "marketplace": "ALL",
-    "category": "brand",
-    "created_at": "2026-04-13T10:07:15.615706",
-    "usage_count": 0
+    "category": "product_management",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
   },
   {
     "id": "rag_012",
-    "user_description": "促销活动管理",
-    "exact_url": "https://sellercentral.amazon.com/merchandising-new",
-    "page_description": "创建和管理各种促销活动，如优惠券、秒杀、折扣等",
-    "aliases": [
-      "Promotions",
-      "优惠券",
-      "折扣设置",
-      "促销创建"
-    ],
+    "user_description": "管理所有库存",
+    "exact_url": "https://*.amazon.*/myinventory/inventory",
+    "page_description": "",
+    "aliases": [],
     "keywords": [
-      "促销",
-      "优惠券",
-      "折扣",
-      "活动",
-      "Promotion"
+      "管理所有库存"
     ],
     "marketplace": "ALL",
-    "category": "marketing",
-    "created_at": "2026-04-13T10:07:15.617677",
-    "usage_count": 0
+    "category": "inventory_fba",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
   },
   {
     "id": "rag_013",
-    "user_description": "商品评论管理",
-    "exact_url": "https://sellercentral.amazon.com/product-reviews",
-    "page_description": "查看和分析产品的买家评论和评分",
-    "aliases": [
-      "Product Reviews",
-      "客户评价",
-      "Review管理",
-      "评论查看"
-    ],
+    "user_description": "管理卖家自配送商品",
+    "exact_url": "https://*.amazon.*/seller-fulfilled-product/analytics",
+    "page_description": "",
+    "aliases": [],
     "keywords": [
-      "评论",
-      "Review",
-      "评价",
-      "反馈"
+      "管理卖家自配送商品"
     ],
     "marketplace": "ALL",
     "category": "product_management",
-    "created_at": "2026-04-13T10:07:15.618688",
-    "usage_count": 0
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
   },
   {
     "id": "rag_014",
-    "user_description": "FBA发货计划",
-    "exact_url": "https://sellercentral.amazon.com/fba/sendtoamazon/",
-    "page_description": "创建FBA发货计划，安排货物发往亚马逊仓库",
-    "aliases": [
-      "FBA Shipment",
-      "发货到FBA",
-      "创建发货计划",
-      "入库计划"
-    ],
+    "user_description": "全球销售",
+    "exact_url": "https://*.amazon.*/global-selling/dashboard",
+    "page_description": "",
+    "aliases": [],
     "keywords": [
-      "FBA",
-      "发货",
-      "入库",
-      "计划",
-      "仓库"
+      "全球销售"
     ],
     "marketplace": "ALL",
-    "category": "fulfillment",
-    "created_at": "2026-04-13T10:07:15.619559",
-    "usage_count": 0
+    "category": "other",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
   },
   {
     "id": "rag_015",
-    "user_description": "业务报告中心",
-    "exact_url": "https://sellercentral.amazon.com/business-reports",
-    "page_description": "查看各类业务报告，包括销售、流量、转化等数据",
-    "aliases": [
-      "Business Reports",
-      "销售报告",
-      "数据分析",
-      "报表中心"
-    ],
+    "user_description": "管理亚马逊库存",
+    "exact_url": "https://*.amazon.*/hz/inventory/view/FBAKNIGHTS",
+    "page_description": "",
+    "aliases": [],
     "keywords": [
-      "报告",
-      "报表",
-      "销售",
-      "数据",
-      "分析"
+      "管理亚马逊库存"
     ],
     "marketplace": "ALL",
-    "category": "analytics",
-    "created_at": "2026-04-13T10:07:15.620352",
-    "usage_count": 0
+    "category": "inventory_fba",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
   },
   {
     "id": "rag_016",
-    "user_description": "用户权限管理",
-    "exact_url": "https://sellercentral.amazon.com/user-manager",
-    "page_description": "管理子账号用户和设置权限",
-    "aliases": [
-      "User Permissions",
-      "子账号管理",
-      "权限设置",
-      "账号授权"
-    ],
+    "user_description": "库存规划",
+    "exact_url": "https://*.amazon.*/inventoryplanning/dashboard",
+    "page_description": "",
+    "aliases": [],
     "keywords": [
-      "权限",
-      "用户",
-      "子账号",
-      "管理",
-      "授权"
+      "库存规划"
     ],
     "marketplace": "ALL",
-    "category": "account_management",
-    "created_at": "2026-04-13T10:07:15.621116",
-    "usage_count": 0
+    "category": "inventory_fba",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
   },
   {
     "id": "rag_017",
-    "user_description": "日本站账户详情",
-    "exact_url": "https://sellercentral.amazon.co.jp/sw/AccountInfo/",
-    "page_description": "日本站的账户设置、银行信息、税务信息",
-    "aliases": [
-      "日本站账户页",
-      "JP站账户信息",
-      "日本亚马逊账户"
-    ],
+    "user_description": "管理亚马逊货件",
+    "exact_url": "https://*.amazon.*/gp/ssof/shipping-queue.html",
+    "page_description": "",
+    "aliases": [],
     "keywords": [
-      "日本",
-      "账户",
-      "JP",
-      "详情"
+      "管理亚马逊货件"
     ],
-    "marketplace": "JP",
-    "category": "account_management",
-    "created_at": "2026-04-13T10:07:15.621884",
-    "usage_count": 0
+    "marketplace": "ALL",
+    "category": "authentication",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
   },
   {
     "id": "rag_018",
-    "user_description": "欧洲站账户详情",
-    "exact_url": "https://sellercentral.amazon.co.uk/sw/AccountInfo/",
-    "page_description": "欧洲站的账户设置、银行信息、税务信息、VAT信息",
-    "aliases": [
-      "欧洲站账户页",
-      "EU站账户信息",
-      "欧洲亚马逊账户"
-    ],
+    "user_description": "亚马逊物流库存",
+    "exact_url": "https://*.amazon.*/inventoryplanning/manageinventoryhealth",
+    "page_description": "",
+    "aliases": [],
     "keywords": [
-      "欧洲",
-      "账户",
-      "EU",
-      "UK",
-      "VAT"
+      "亚马逊物流库存"
     ],
-    "marketplace": "EU",
-    "category": "account_management",
-    "created_at": "2026-04-13T10:07:15.622600",
-    "usage_count": 0
+    "marketplace": "ALL",
+    "category": "inventory_fba",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
   },
   {
     "id": "rag_019",
-    "user_description": "案件管理页面",
-    "exact_url": "https://sellercentral.amazon.com/cu/case-lobby",
-    "page_description": "创建和管理与亚马逊卖家支持的工单和案件",
-    "aliases": [
-      "Case Log",
-      "开case",
-      "联系卖家支持",
-      "客服工单"
-    ],
+    "user_description": "库存表现",
+    "exact_url": "https://*.amazon.*/inventory-performance/dashboard",
+    "page_description": "",
+    "aliases": [],
     "keywords": [
-      "case",
-      "工单",
-      "客服",
-      "支持",
-      "帮助"
+      "库存表现"
     ],
     "marketplace": "ALL",
-    "category": "support",
-    "created_at": "2026-04-13T10:07:15.623334",
-    "usage_count": 0
+    "category": "inventory_fba",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
   },
   {
     "id": "rag_020",
-    "user_description": "定价管理页面",
-    "exact_url": "https://sellercentral.amazon.com/pricing/manage",
-    "page_description": "批量管理和修改产品价格",
-    "aliases": [
-      "价格设置",
-      "Pricing",
-      "修改价格",
-      "定价策略"
-    ],
+    "user_description": "补充库存",
+    "exact_url": "https://*.amazon.*/restockinventory/recommendations",
+    "page_description": "",
+    "aliases": [],
     "keywords": [
-      "定价",
-      "价格",
-      "修改",
-      "管理"
+      "补充库存"
+    ],
+    "marketplace": "ALL",
+    "category": "inventory_fba",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_021",
+    "user_description": "滞留库存",
+    "exact_url": "https://*.amazon.*/inventoryplanning/stranded-inventory",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "滞留库存"
+    ],
+    "marketplace": "ALL",
+    "category": "inventory_fba",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_022",
+    "user_description": "无法履行的库存",
+    "exact_url": "https://*.amazon.*/inventory",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "无法履行的库存"
+    ],
+    "marketplace": "ALL",
+    "category": "inventory_fba",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_023",
+    "user_description": "亚马逊物流退货",
+    "exact_url": "https://*.amazon.*/fba/return",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "亚马逊物流退货"
+    ],
+    "marketplace": "ALL",
+    "category": "inventory_fba",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_024",
+    "user_description": "全驱动库存",
+    "exact_url": "https://*.amazon.*/fba-inventory/gim/inventory-list",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "全驱动库存"
+    ],
+    "marketplace": "ALL",
+    "category": "inventory_fba",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_025",
+    "user_description": "发送至亚马逊",
+    "exact_url": "https://*.amazon.*/fba/sendtoamazon",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "发送至亚马逊"
+    ],
+    "marketplace": "ALL",
+    "category": "inventory_fba",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_026",
+    "user_description": "出货表现",
+    "exact_url": "https://*.amazon.*/fba/inboundperformancedashboard",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "出货表现"
+    ],
+    "marketplace": "ALL",
+    "category": "inventory_fba",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_027",
+    "user_description": "创建移除订单",
+    "exact_url": "https://*.amazon.*/recoveryui/removal-order/create",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "创建移除订单"
+    ],
+    "marketplace": "ALL",
+    "category": "order_management",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_028",
+    "user_description": "商品编辑-图片",
+    "exact_url": "https://*.amazon.*/abis/listing/edit/images",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "商品编辑",
+      "图片"
     ],
     "marketplace": "ALL",
     "category": "product_management",
-    "created_at": "2026-04-13T10:07:15.624322",
-    "usage_count": 0
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_029",
+    "user_description": "商品编辑-产品详情",
+    "exact_url": "https://*.amazon.*/abis/listing/edit/product_details",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "商品编辑",
+      "产品详情"
+    ],
+    "marketplace": "ALL",
+    "category": "product_management",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_030",
+    "user_description": "管理亚马逊物流库存",
+    "exact_url": "https://*.amazon.*/inventoryplanning/manageinventoryhealth",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "管理亚马逊物流库存"
+    ],
+    "marketplace": "ALL",
+    "category": "inventory_fba",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_031",
+    "user_description": "FBA-控制面板",
+    "exact_url": "https://*.amazon.*/fba/dashboard/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "FBA",
+      "控制面板"
+    ],
+    "marketplace": "ALL",
+    "category": "inventory_fba",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_032",
+    "user_description": "创建变体",
+    "exact_url": "https://*.amazon.*/listing/varwiz",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "创建变体"
+    ],
+    "marketplace": "ALL",
+    "category": "product_management",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_033",
+    "user_description": "创建定价规则",
+    "exact_url": "https://*.amazon.*/automatepricing/rules/rule/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "创建定价规则"
+    ],
+    "marketplace": "ALL",
+    "category": "pricing",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_034",
+    "user_description": "创建发往亚马逊的货件",
+    "exact_url": "https://*.amazon.*/fba/sendtoamazon/pack_mixed_unit_step",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "创建发往亚马逊的货件"
+    ],
+    "marketplace": "ALL",
+    "category": "inventory_fba",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_035",
+    "user_description": "创建秒杀",
+    "exact_url": "https://*.amazon.*/merchandising-new/create",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "创建秒杀"
+    ],
+    "marketplace": "ALL",
+    "category": "promotions",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_036",
+    "user_description": "促销相关页面",
+    "exact_url": "https://*.amazon.*/promotions",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "促销相关页面"
+    ],
+    "marketplace": "ALL",
+    "category": "promotions",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_037",
+    "user_description": "秒杀",
+    "exact_url": "https://*.amazon.*/merchandising-new",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "秒杀"
+    ],
+    "marketplace": "ALL",
+    "category": "promotions",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_038",
+    "user_description": "Listing编辑",
+    "exact_url": "https://*.amazon.*/abis/listing/edit/offer",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "Listing编辑"
+    ],
+    "marketplace": "ALL",
+    "category": "product_management",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_039",
+    "user_description": "管理库存-新页面",
+    "exact_url": "https://*.amazon.*/amazonsell/manage-products",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "管理库存",
+      "新页面"
+    ],
+    "marketplace": "ALL",
+    "category": "inventory_fba",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_040",
+    "user_description": "编辑商品信息",
+    "exact_url": "https://*.amazon.*/abis/listing/edit",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "编辑商品信息"
+    ],
+    "marketplace": "ALL",
+    "category": "product_management",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_041",
+    "user_description": "定价状况",
+    "exact_url": "https://*.amazon.*/pricing/health",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "定价状况"
+    ],
+    "marketplace": "ALL",
+    "category": "pricing",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_042",
+    "user_description": "管理定价",
+    "exact_url": "https://*.amazon.*/myinventory/inventory",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "管理定价"
+    ],
+    "marketplace": "ALL",
+    "category": "inventory_fba",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_043",
+    "user_description": "自动定价",
+    "exact_url": "https://*.amazon.*/automatepricing/home",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "自动定价"
+    ],
+    "marketplace": "ALL",
+    "category": "pricing",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_044",
+    "user_description": "佣金折扣",
+    "exact_url": "https://*.amazon.*/feediscounts/dashboard/price",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "佣金折扣"
+    ],
+    "marketplace": "ALL",
+    "category": "pricing",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_045",
+    "user_description": "自动定价-新版",
+    "exact_url": "https://*.amazon.*/automatepricingv2/pricingrules",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "自动定价",
+      "新版"
+    ],
+    "marketplace": "ALL",
+    "category": "pricing",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_046",
+    "user_description": "管理订单",
+    "exact_url": "https://*.amazon.*/orders-v3",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "管理订单"
+    ],
+    "marketplace": "ALL",
+    "category": "order_management",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_047",
+    "user_description": "创建 MCF 订单",
+    "exact_url": "https://*.amazon.*/mcf/orders/create-order",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "创建",
+      "MCF",
+      "订单"
+    ],
+    "marketplace": "ALL",
+    "category": "order_management",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_048",
+    "user_description": "订单报告",
+    "exact_url": "https://*.amazon.*/order-reports-and-feeds/reports",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "订单报告"
+    ],
+    "marketplace": "ALL",
+    "category": "order_management",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_049",
+    "user_description": "上传订单相关文件",
+    "exact_url": "https://*.amazon.*/order-reports-and-feeds/feeds",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "上传订单相关文件"
+    ],
+    "marketplace": "ALL",
+    "category": "order_management",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_050",
+    "user_description": "管理退货",
+    "exact_url": "https://*.amazon.*/gp/returns/list",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "管理退货"
+    ],
+    "marketplace": "ALL",
+    "category": "returns",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_051",
+    "user_description": "卖家自配送-取消订单",
+    "exact_url": "https://*.amazon.*/orders-v3/order/*/cancel-order",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "卖家自配送",
+      "取消订单"
+    ],
+    "marketplace": "ALL",
+    "category": "order_management",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_052",
+    "user_description": "FBA订单管理",
+    "exact_url": "https://*.amazon.*/orders-v3/fba/all",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "FBA订单管理"
+    ],
+    "marketplace": "ALL",
+    "category": "order_management",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_053",
+    "user_description": "订单详情",
+    "exact_url": "https://*.amazon.*/orders-v3/order",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "订单详情"
+    ],
+    "marketplace": "ALL",
+    "category": "order_management",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_054",
+    "user_description": "订单退款",
+    "exact_url": "https://*.amazon.*/gp/orders-v2/refund",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "订单退款"
+    ],
+    "marketplace": "ALL",
+    "category": "order_management",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_055",
+    "user_description": "增长建议",
+    "exact_url": "https://*.amazon.*/grow",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "增长建议"
+    ],
+    "marketplace": "ALL",
+    "category": "growth_tools",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_056",
+    "user_description": "浏览计划",
+    "exact_url": "https://*.amazon.*/recommended-programs",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "浏览计划"
+    ],
+    "marketplace": "ALL",
+    "category": "growth_tools",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_057",
+    "user_description": "定制计划",
+    "exact_url": "https://*.amazon.*/gestalt/manageregistration/index.html",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "定制计划"
+    ],
+    "marketplace": "ALL",
+    "category": "other",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_058",
+    "user_description": "选品指南针",
+    "exact_url": "https://*.amazon.*/selection",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "选品指南针"
+    ],
+    "marketplace": "ALL",
+    "category": "growth_tools",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_059",
+    "user_description": "商机探测器",
+    "exact_url": "https://*.amazon.*/opportunity-explorer",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "商机探测器"
+    ],
+    "marketplace": "ALL",
+    "category": "growth_tools",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_060",
+    "user_description": "可用于所有渠道的亚马逊物流库存",
+    "exact_url": "https://*.amazon.*/mcf",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "可用于所有渠道的亚马逊物流库存"
+    ],
+    "marketplace": "ALL",
+    "category": "inventory_fba",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_061",
+    "user_description": "卖家钱包-新版",
+    "exact_url": "https://*.amazon.*/mario/sellerwallet/seller-wallet-onboard/regional/node/welcome/render",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "卖家钱包",
+      "新版"
+    ],
+    "marketplace": "ALL",
+    "category": "finance",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_062",
+    "user_description": "付款",
+    "exact_url": "https://*.amazon.*/payments/dashboard/index.html",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "付款"
+    ],
+    "marketplace": "ALL",
+    "category": "finance",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_063",
+    "user_description": "卖家钱包",
+    "exact_url": "https://*.amazon.*/gc/sellerwallet-program",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "卖家钱包"
+    ],
+    "marketplace": "ALL",
+    "category": "finance",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_064",
+    "user_description": "亚马逊销售指导",
+    "exact_url": "https://*.amazon.*/hz/sellingcoach",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "亚马逊销售指导"
+    ],
+    "marketplace": "ALL",
+    "category": "other",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_065",
+    "user_description": "业务报告",
+    "exact_url": "https://*.amazon.*/business-reports",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "业务报告"
+    ],
+    "marketplace": "ALL",
+    "category": "reports",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_066",
+    "user_description": "库存和销售报告",
+    "exact_url": "https://*.amazon.*/reportcentral",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "库存和销售报告"
+    ],
+    "marketplace": "ALL",
+    "category": "inventory_fba",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_067",
+    "user_description": "退货报告",
+    "exact_url": "https://*.amazon.*/returns/report",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "退货报告"
+    ],
+    "marketplace": "ALL",
+    "category": "reports",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_068",
+    "user_description": "自定义报告",
+    "exact_url": "https://*.amazon.*/customizedReports/lp",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "自定义报告"
+    ],
+    "marketplace": "ALL",
+    "category": "reports",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_069",
+    "user_description": "库存报告",
+    "exact_url": "https://*.amazon.*/listing/reports",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "库存报告"
+    ],
+    "marketplace": "ALL",
+    "category": "inventory_fba",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_070",
+    "user_description": "税务文件库",
+    "exact_url": "https://*.amazon.*/gp/tax/tax-library.html",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "税务文件库"
+    ],
+    "marketplace": "ALL",
+    "category": "tax",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_071",
+    "user_description": "广告",
+    "exact_url": "https://*.amazon.*/sspa/tresah",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "广告"
+    ],
+    "marketplace": "ALL",
+    "category": "advertising",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_072",
+    "user_description": "管理税费",
+    "exact_url": "https://*.amazon.*/managetaxes/global-transaction-reports",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "管理税费"
+    ],
+    "marketplace": "ALL",
+    "category": "reports",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_073",
+    "user_description": "广告报告",
+    "exact_url": "https://advertising.amazon.*/reports",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "广告报告"
+    ],
+    "marketplace": "ALL",
+    "category": "advertising",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_074",
+    "user_description": "销量与访问量",
+    "exact_url": "https://*.amazon.*/custom-analytics",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "销量与访问量"
+    ],
+    "marketplace": "ALL",
+    "category": "reports",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_075",
+    "user_description": "账户状况",
+    "exact_url": "https://*.amazon.*/performance/dashboard",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "账户状况"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_076",
+    "user_description": "反馈",
+    "exact_url": "https://*.amazon.*/feedback-manager/index.html",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "反馈"
+    ],
+    "marketplace": "ALL",
+    "category": "account_health",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_077",
+    "user_description": "亚马逊商城交易索赔",
+    "exact_url": "https://*.amazon.*/gp/guarantee-claims/home.html",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "亚马逊商城交易索赔"
+    ],
+    "marketplace": "ALL",
+    "category": "account_health",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_078",
+    "user_description": "信用卡拒付索赔",
+    "exact_url": "https://*.amazon.*/gp/chargebacks/home.html",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "信用卡拒付索赔"
+    ],
+    "marketplace": "ALL",
+    "category": "finance",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_079",
+    "user_description": "业绩通知",
+    "exact_url": "https://*.amazon.*/performance/notifications",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "业绩通知"
+    ],
+    "marketplace": "ALL",
+    "category": "account_health",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_080",
+    "user_description": "买家之声",
+    "exact_url": "https://*.amazon.*/voice-of-the-customer",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "买家之声"
+    ],
+    "marketplace": "ALL",
+    "category": "account_health",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_081",
+    "user_description": "账户状况-1",
+    "exact_url": "https://*.amazon.*/gp/seller-rating/pages/performance-summary.html",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "账户状况",
+      "1"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_082",
+    "user_description": "反馈管理器",
+    "exact_url": "https://*.amazon.*/gp/seller-rating/pages/feedback-manager.html",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "反馈管理器"
+    ],
+    "marketplace": "ALL",
+    "category": "account_health",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_083",
+    "user_description": "业绩通知-1",
+    "exact_url": "https://*.amazon.*/gp/customer-experience/perf-notifications.html",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "业绩通知",
+      "1"
+    ],
+    "marketplace": "ALL",
+    "category": "other",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_084",
+    "user_description": "销售伙伴应用商店",
+    "exact_url": "https://*.amazon.*/selling-partner-appstore",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "销售伙伴应用商店"
+    ],
+    "marketplace": "ALL",
+    "category": "apps_services",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_085",
+    "user_description": "管理您的应用",
+    "exact_url": "https://*.amazon.*/apps/manage",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "管理您的应用"
+    ],
+    "marketplace": "ALL",
+    "category": "apps_services",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_086",
+    "user_description": "探索服务",
+    "exact_url": "https://*.amazon.*/tsba",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "探索服务"
+    ],
+    "marketplace": "ALL",
+    "category": "apps_services",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_087",
+    "user_description": "管理服务请求",
+    "exact_url": "https://*.amazon.*/spnsellerdashboard",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "管理服务请求"
+    ],
+    "marketplace": "ALL",
+    "category": "other",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_088",
+    "user_description": "开发应用程序",
+    "exact_url": "https://*.amazon.*/sellingpartner/developerconsole",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "开发应用程序"
+    ],
+    "marketplace": "ALL",
+    "category": "apps_services",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_089",
+    "user_description": "开发应用程序-新版",
+    "exact_url": "https://solutionproviderportal.amazon.com/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "开发应用程序",
+      "新版"
+    ],
+    "marketplace": "ALL",
+    "category": "apps_services",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_090",
+    "user_description": "B2B平台",
+    "exact_url": "https://*.amazon.*/business/b2bcentral",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "B2B平台"
+    ],
+    "marketplace": "ALL",
+    "category": "b2b",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_091",
+    "user_description": "管理报价",
+    "exact_url": "https://*.amazon.*/business/manage-quotes",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "管理报价"
+    ],
+    "marketplace": "ALL",
+    "category": "b2b",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_092",
+    "user_description": "装箱推荐",
+    "exact_url": "https://*.amazon.*/business/largepacks",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "装箱推荐"
+    ],
+    "marketplace": "ALL",
+    "category": "other",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_093",
+    "user_description": "打造您的品牌",
+    "exact_url": "https://*.amazon.*/build-your-brand",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "打造您的品牌"
+    ],
+    "marketplace": "ALL",
+    "category": "brand",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_094",
+    "user_description": "卖家大学",
+    "exact_url": "https://*.amazon.*/learn",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "卖家大学"
+    ],
+    "marketplace": "ALL",
+    "category": "help_support",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_095",
+    "user_description": "论坛",
+    "exact_url": "https://*.amazon.*/forums",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "论坛"
+    ],
+    "marketplace": "ALL",
+    "category": "help_support",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_096",
+    "user_description": "新闻",
+    "exact_url": "https://*.amazon.*/gp/headlines.html",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "新闻"
+    ],
+    "marketplace": "ALL",
+    "category": "help_support",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_097",
+    "user_description": "礼品选项",
+    "exact_url": "https://*.amazon.*/gcx/gift-options",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "礼品选项"
+    ],
+    "marketplace": "ALL",
+    "category": "other",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_098",
+    "user_description": "您的信息和政策",
+    "exact_url": "https://*.amazon.*/gp/help-content/home.html",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "您的信息和政策"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_099",
+    "user_description": "税务设置-澳大利亚",
+    "exact_url": "https://sellercentral.amazon.com.au/tax/jpregistrations",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "税务设置",
+      "澳大利亚"
+    ],
+    "marketplace": "AU",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_100",
+    "user_description": "账户信息",
+    "exact_url": "https://*.amazon.*/global-dashboard",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "账户信息"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_101",
+    "user_description": "付款信息",
+    "exact_url": "https://*.amazon.*/global-dashboard/payment-information",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "付款信息"
+    ],
+    "marketplace": "ALL",
+    "category": "finance",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_102",
+    "user_description": "卖家信息",
+    "exact_url": "https://*.amazon.*/sw/AccountInfo/SellerProfile",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "卖家信息"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_103",
+    "user_description": "登录设置",
+    "exact_url": "https://*.amazon.*/ap/cnep",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "登录设置"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_104",
+    "user_description": "全球账户",
+    "exact_url": "https://*.amazon.*/account/management",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "全球账户"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_105",
+    "user_description": "通知首选项",
+    "exact_url": "https://*.amazon.*/notifications/preferences",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "通知首选项"
+    ],
+    "marketplace": "ALL",
+    "category": "other",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_106",
+    "user_description": "退货设置",
+    "exact_url": "https://*.amazon.*/gp/returns/settings",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "退货设置"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_107",
+    "user_description": "配送设置",
+    "exact_url": "https://*.amazon.*/sbr",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "配送设置"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_108",
+    "user_description": "税务设置-美国",
+    "exact_url": "https://sellercentral.amazon.com/tax/nexus/settings",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "税务设置",
+      "美国"
+    ],
+    "marketplace": "US",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_109",
+    "user_description": "税务设置-英国",
+    "exact_url": "https://sellercentral.amazon.co.uk/gc/amazon-business/tax-settings",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "税务设置",
+      "英国"
+    ],
+    "marketplace": "UK",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_110",
+    "user_description": "用户权限",
+    "exact_url": "https://*.amazon.*/gp/account-manager/home.html",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "用户权限"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_111",
+    "user_description": "用户权限历史记录",
+    "exact_url": "https://*.amazon.*/audit/account",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "用户权限历史记录"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_112",
+    "user_description": "亚马逊物流",
+    "exact_url": "https://*.amazon.*/fba/settings*",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "亚马逊物流"
+    ],
+    "marketplace": "ALL",
+    "category": "inventory_fba",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_113",
+    "user_description": "亚马逊查看存款方式",
+    "exact_url": "https://*.amazon.*/sw/AccountInfo/DepositMethodView/step/DepositMethodView",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "亚马逊查看存款方式"
+    ],
+    "marketplace": "ALL",
+    "category": "finance",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_114",
+    "user_description": "账户概览",
+    "exact_url": "https://*.amazon.*/global-dashboard/account-overview",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "账户概览"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_115",
+    "user_description": "店铺信息",
+    "exact_url": "https://*.amazon.*/global-dashboard/store-information",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "店铺信息"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_116",
+    "user_description": "业务信息",
+    "exact_url": "https://*.amazon.*/global-dashboard/business-information",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "业务信息"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_117",
+    "user_description": "发货和退货信息",
+    "exact_url": "https://*.amazon.*/global-dashboard/shipping-information",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "发货和退货信息"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_118",
+    "user_description": "税务信息",
+    "exact_url": "https://*.amazon.*/global-dashboard/tax-information",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "税务信息"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_119",
+    "user_description": "账户管理",
+    "exact_url": "https://*.amazon.*/global-dashboard/account-management",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "账户管理"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_120",
+    "user_description": "税务设置-欧洲",
+    "exact_url": "https://*.amazon.*/gc/amazon-business/tax-settings",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "税务设置",
+      "欧洲"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_121",
+    "user_description": "用户权限2",
+    "exact_url": "https://*.amazon.*/account/permission",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "用户权限2"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_122",
+    "user_description": "税务设置-日本",
+    "exact_url": "https://sellercentral-japan.amazon.com/gp/tax-manager/dashboard.html/ref=xx_taxmgr_dnav_xx",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "税务设置",
+      "日本"
+    ],
+    "marketplace": "JP",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_123",
+    "user_description": "用户权限-新版",
+    "exact_url": "https://*.amazon.*/account/permissions",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "用户权限",
+      "新版"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_124",
+    "user_description": "配送设置2",
+    "exact_url": "https://*.amazon.*/sbr#shipping_templates",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "配送设置2"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_125",
+    "user_description": "用户权限3",
+    "exact_url": "https://*.amazon.*/account/permissions#/user-management/users",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "用户权限3"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_126",
+    "user_description": "亚马逊物流设置",
+    "exact_url": "https://*.amazon.*/fba/settings/index.html#/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "亚马逊物流设置"
+    ],
+    "marketplace": "ALL",
+    "category": "inventory_fba",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_127",
+    "user_description": "税务信息2",
+    "exact_url": "https://*.amazon.*/tax",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "税务信息2"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_128",
+    "user_description": "法人实体",
+    "exact_url": "https://*.amazon.*/sw/AccountInfo/LegalEntity/step/LegalEntity",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "法人实体"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_129",
+    "user_description": "RFC信息",
+    "exact_url": "https://*.amazon.*/tax-interview",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "RFC信息"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_130",
+    "user_description": "卖家信息2",
+    "exact_url": "https://*.amazon.*/sw/AccountInfo",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "卖家信息2"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_131",
+    "user_description": "商业信息",
+    "exact_url": "https://*.amazon.*/mario/seller-verification",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "商业信息"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_132",
+    "user_description": "卖家记号",
+    "exact_url": "https://*.amazon.*/gp/on-board/configuration",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "卖家记号"
+    ],
+    "marketplace": "ALL",
+    "category": "other",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_133",
+    "user_description": "商业保险",
+    "exact_url": "https://*.amazon.*/mario/v2/az/flow/BusinessInsurance",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "商业保险"
+    ],
+    "marketplace": "ALL",
+    "category": "other",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_134",
+    "user_description": "管理您的品牌",
+    "exact_url": "https://brandregistry.amazon.*/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "管理您的品牌"
+    ],
+    "marketplace": "ALL",
+    "category": "brand",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_135",
+    "user_description": "管理员工",
+    "exact_url": "https://*.amazon.*/account/permissions#/user-management",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "管理员工"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_136",
+    "user_description": "添加员工",
+    "exact_url": "https://*.amazon.*/account/permissions#/add-user",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "添加员工"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_137",
+    "user_description": "公开邀请",
+    "exact_url": "https://*.amazon.*/account/permissions#/open-invites/user-invites",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "公开邀请"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_138",
+    "user_description": "两步验证设置",
+    "exact_url": "https://*.amazon.*/a/settings/approval",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "两步验证设置"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_139",
+    "user_description": "亚马逊欧洲站-意大利",
+    "exact_url": "https://sellercentral.amazon.it/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "亚马逊欧洲站",
+      "意大利"
+    ],
+    "marketplace": "IT",
+    "category": "marketplace_homepage",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_140",
+    "user_description": "亚马逊欧洲站-英国",
+    "exact_url": "https://sellercentral.amazon.co.uk/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "亚马逊欧洲站",
+      "英国"
+    ],
+    "marketplace": "UK",
+    "category": "marketplace_homepage",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_141",
+    "user_description": "亚马逊欧洲站-法国",
+    "exact_url": "https://sellercentral.amazon.fr/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "亚马逊欧洲站",
+      "法国"
+    ],
+    "marketplace": "FR",
+    "category": "marketplace_homepage",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_142",
+    "user_description": "亚马逊欧洲站-德国",
+    "exact_url": "https://sellercentral.amazon.de/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "亚马逊欧洲站",
+      "德国"
+    ],
+    "marketplace": "DE",
+    "category": "marketplace_homepage",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_143",
+    "user_description": "亚马逊欧洲站-荷兰",
+    "exact_url": "https://sellercentral.amazon.nl/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "亚马逊欧洲站",
+      "荷兰"
+    ],
+    "marketplace": "NL",
+    "category": "marketplace_homepage",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_144",
+    "user_description": "亚马逊欧洲站-瑞典",
+    "exact_url": "https://sellercentral.amazon.se/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "亚马逊欧洲站",
+      "瑞典"
+    ],
+    "marketplace": "SE",
+    "category": "marketplace_homepage",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_145",
+    "user_description": "亚马逊欧洲站-西班牙",
+    "exact_url": "https://sellercentral.amazon.es/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "亚马逊欧洲站",
+      "西班牙"
+    ],
+    "marketplace": "ES",
+    "category": "marketplace_homepage",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_146",
+    "user_description": "亚马逊-澳大利亚",
+    "exact_url": "https://sellercentral.amazon.com.au/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "亚马逊",
+      "澳大利亚"
+    ],
+    "marketplace": "AU",
+    "category": "marketplace_homepage",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_147",
+    "user_description": "亚马逊-日本",
+    "exact_url": "https://sellercentral.amazon.co.jp/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "亚马逊",
+      "日本"
+    ],
+    "marketplace": "JP",
+    "category": "marketplace_homepage",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_148",
+    "user_description": "亚马逊-新加坡",
+    "exact_url": "https://sellercentral.amazon.sg/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "亚马逊",
+      "新加坡"
+    ],
+    "marketplace": "SG",
+    "category": "marketplace_homepage",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_149",
+    "user_description": "亚马逊-美国",
+    "exact_url": "https://sellercentral.amazon.com/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "亚马逊",
+      "美国"
+    ],
+    "marketplace": "US",
+    "category": "marketplace_homepage",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_150",
+    "user_description": "亚马逊-墨西哥",
+    "exact_url": "https://sellercentral.amazon.com.mx/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "亚马逊",
+      "墨西哥"
+    ],
+    "marketplace": "MX",
+    "category": "marketplace_homepage",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_151",
+    "user_description": "亚马逊-加拿大",
+    "exact_url": "https://sellercentral.amazon.ca/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "亚马逊",
+      "加拿大"
+    ],
+    "marketplace": "CA",
+    "category": "marketplace_homepage",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_152",
+    "user_description": "亚马逊-沙特",
+    "exact_url": "https://sellercentral.amazon.sa/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "亚马逊",
+      "沙特"
+    ],
+    "marketplace": "SA",
+    "category": "marketplace_homepage",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_153",
+    "user_description": "亚马逊-阿联酋",
+    "exact_url": "https://sellercentral.amazon.ae/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "亚马逊",
+      "阿联酋"
+    ],
+    "marketplace": "AE",
+    "category": "marketplace_homepage",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_154",
+    "user_description": "亚马逊-埃及",
+    "exact_url": "https://sellercentral.amazon.eg/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "亚马逊",
+      "埃及"
+    ],
+    "marketplace": "EG",
+    "category": "marketplace_homepage",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_155",
+    "user_description": "亚马逊-日本new",
+    "exact_url": "https://sellercentral-japan.amazon.com/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "亚马逊",
+      "日本new"
+    ],
+    "marketplace": "JP",
+    "category": "marketplace_homepage",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_156",
+    "user_description": "亚马逊-欧洲总站",
+    "exact_url": "https://sellercentral-europe.amazon.com/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "亚马逊",
+      "欧洲总站"
+    ],
+    "marketplace": "EU",
+    "category": "marketplace_homepage",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_157",
+    "user_description": "亚马逊欧洲站-波兰",
+    "exact_url": "https://sellercentral.amazon.pl/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "亚马逊欧洲站",
+      "波兰"
+    ],
+    "marketplace": "PL",
+    "category": "marketplace_homepage",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_158",
+    "user_description": "亚马逊欧洲站-比利时",
+    "exact_url": "https://sellercentral.amazon.com.be/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "亚马逊欧洲站",
+      "比利时"
+    ],
+    "marketplace": "BE",
+    "category": "marketplace_homepage",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_159",
+    "user_description": "广告",
+    "exact_url": "https://*.amazon.*/reports",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "广告"
+    ],
+    "marketplace": "ALL",
+    "category": "advertising",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_160",
+    "user_description": "广告页-1",
+    "exact_url": "https://advertising.amazon.*/cm/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "广告页",
+      "1"
+    ],
+    "marketplace": "ALL",
+    "category": "advertising",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_161",
+    "user_description": "广告页-2",
+    "exact_url": "https://sellercentral.amazon.*/cm",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "广告页",
+      "2"
+    ],
+    "marketplace": "ALL",
+    "category": "advertising",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_162",
+    "user_description": "法国站广告活动管理",
+    "exact_url": "https://advertising.amazon.fr/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "法国站广告活动管理"
+    ],
+    "marketplace": "FR",
+    "category": "advertising",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_163",
+    "user_description": "英国站广告活动管理",
+    "exact_url": "https://advertising.amazon.co.uk/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "英国站广告活动管理"
+    ],
+    "marketplace": "UK",
+    "category": "advertising",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_164",
+    "user_description": "德国站广告活动管理",
+    "exact_url": "https://advertising.amazon.de/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "德国站广告活动管理"
+    ],
+    "marketplace": "DE",
+    "category": "advertising",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_165",
+    "user_description": "意大利站广告活动管理",
+    "exact_url": "https://advertising.amazon.it/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "意大利站广告活动管理"
+    ],
+    "marketplace": "IT",
+    "category": "advertising",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_166",
+    "user_description": "西班牙站广告活动管理",
+    "exact_url": "https://advertising.amazon.es/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "西班牙站广告活动管理"
+    ],
+    "marketplace": "ES",
+    "category": "advertising",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_167",
+    "user_description": "荷兰站广告活动管理",
+    "exact_url": "https://advertising.amazon.nl/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "荷兰站广告活动管理"
+    ],
+    "marketplace": "NL",
+    "category": "advertising",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_168",
+    "user_description": "瑞典站广告活动管理",
+    "exact_url": "https://advertising.amazon.se/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "瑞典站广告活动管理"
+    ],
+    "marketplace": "SE",
+    "category": "advertising",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_169",
+    "user_description": "波兰站广告活动管理",
+    "exact_url": "https://advertising.amazon.pl/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "波兰站广告活动管理"
+    ],
+    "marketplace": "PL",
+    "category": "advertising",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_170",
+    "user_description": "日本站new广告活动管理",
+    "exact_url": "https://advertising-japan.amazon.com/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "日本站new广告活动管理"
+    ],
+    "marketplace": "JP",
+    "category": "advertising",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_171",
+    "user_description": "澳大利亚站广告活动管理",
+    "exact_url": "https://advertising.amazon.com.au/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "澳大利亚站广告活动管理"
+    ],
+    "marketplace": "AU",
+    "category": "advertising",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_172",
+    "user_description": "墨西哥站广告活动管理",
+    "exact_url": "https://advertising.amazon.com.mx/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "墨西哥站广告活动管理"
+    ],
+    "marketplace": "MX",
+    "category": "advertising",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_173",
+    "user_description": "美国站广告活动管理",
+    "exact_url": "https://advertising.amazon.com/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "美国站广告活动管理"
+    ],
+    "marketplace": "US",
+    "category": "advertising",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_174",
+    "user_description": "加拿大广告活动管理",
+    "exact_url": "https://advertising.amazon.ca/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "加拿大广告活动管理"
+    ],
+    "marketplace": "CA",
+    "category": "advertising",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_175",
+    "user_description": "日本站广告活动管理",
+    "exact_url": "https://advertising.amazon.co.jp/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "日本站广告活动管理"
+    ],
+    "marketplace": "JP",
+    "category": "advertising",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_176",
+    "user_description": "创建coupon",
+    "exact_url": "https://*.amazon.*/coupons/create-coupon",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "创建coupon"
+    ],
+    "marketplace": "ALL",
+    "category": "promotions",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_177",
+    "user_description": "创建PercentageOff",
+    "exact_url": "https://*.amazon.*/promotions/new/preview",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "创建PercentageOff"
+    ],
+    "marketplace": "ALL",
+    "category": "promotions",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_178",
+    "user_description": "优惠券",
+    "exact_url": "https://*.amazon.*/coupons/ref=xx_scoupn_dnav_xx",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "优惠券"
+    ],
+    "marketplace": "ALL",
+    "category": "promotions",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_179",
+    "user_description": "促销",
+    "exact_url": "https://*.amazon.*/promotions",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "促销"
+    ],
+    "marketplace": "ALL",
+    "category": "promotions",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_180",
+    "user_description": "促销2",
+    "exact_url": "https://*.amazon.*/promotions/new",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "促销2"
+    ],
+    "marketplace": "ALL",
+    "category": "promotions",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_181",
+    "user_description": "广告活动查看1",
+    "exact_url": "https://*.amazon.*/campaign-manager",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "广告活动查看1"
+    ],
+    "marketplace": "ALL",
+    "category": "advertising",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_182",
+    "user_description": "广告活动查看2",
+    "exact_url": "https://*.amazon.*/cm/targeting",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "广告活动查看2"
+    ],
+    "marketplace": "ALL",
+    "category": "advertising",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_183",
+    "user_description": "广告组页面",
+    "exact_url": "https://*.amazon.*/cm/*/campaigns",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "广告组页面"
+    ],
+    "marketplace": "ALL",
+    "category": "advertising",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_184",
+    "user_description": "Vine",
+    "exact_url": "https://*.amazon.*/vine",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "Vine"
+    ],
+    "marketplace": "ALL",
+    "category": "promotions",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_185",
+    "user_description": "优惠券主页面",
+    "exact_url": "https://*.amazon.*/coupons",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "优惠券主页面"
+    ],
+    "marketplace": "ALL",
+    "category": "promotions",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_186",
+    "user_description": "价格折扣",
+    "exact_url": "https://*.amazon.*/discounts",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "价格折扣"
+    ],
+    "marketplace": "ALL",
+    "category": "pricing",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_187",
+    "user_description": "广告活动主页面",
+    "exact_url": "https://advertising.amazon.*/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "广告活动主页面"
+    ],
+    "marketplace": "ALL",
+    "category": "advertising",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_188",
+    "user_description": "登录",
+    "exact_url": "https://*.amazon.*/ap/signin",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "登录"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_189",
+    "user_description": "注册",
+    "exact_url": "https://*.amazon.*/ap/register",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "注册"
+    ],
+    "marketplace": "ALL",
+    "category": "authentication",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_190",
+    "user_description": "店铺首页-旧版界面",
+    "exact_url": "https://*.amazon.*/home",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "店铺首页",
+      "旧版界面"
+    ],
+    "marketplace": "ALL",
+    "category": "other",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_191",
+    "user_description": "登录验证",
+    "exact_url": "https://*.amazon.*/ap/mfa",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "登录验证"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_192",
+    "user_description": "亚马逊-美国站首页",
+    "exact_url": "https://sellercentral.amazon.com/home",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "亚马逊",
+      "美国站首页"
+    ],
+    "marketplace": "US",
+    "category": "other",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_193",
+    "user_description": "亚马逊-日本站首页",
+    "exact_url": "https://sellercentral-japan.amazon.com/home",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "亚马逊",
+      "日本站首页"
+    ],
+    "marketplace": "JP",
+    "category": "other",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_194",
+    "user_description": "验证",
+    "exact_url": "https://*.amazon.*/ap/sso",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "验证"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_195",
+    "user_description": "新的亚马逊销售体验",
+    "exact_url": "https://*.amazon.*/amazonsell/business",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "新的亚马逊销售体验"
+    ],
+    "marketplace": "ALL",
+    "category": "other",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_196",
+    "user_description": "账户信息2",
+    "exact_url": "https://*.amazon.*/gp/seller/configuration/account-info-page.html",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "账户信息2"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_197",
+    "user_description": "店铺首页-新版界面",
+    "exact_url": "https://*.amazon.*/amazonsell/business",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "店铺首页",
+      "新版界面"
+    ],
+    "marketplace": "ALL",
+    "category": "other",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_198",
+    "user_description": "假期设置页面",
+    "exact_url": "https://*.amazon.*/hz/account-info/vacation-settings",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "假期设置页面"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_199",
+    "user_description": "管理服务页面",
+    "exact_url": "https://*.amazon.*/account-information/mys",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "管理服务页面"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_200",
+    "user_description": "管理存款方式",
+    "exact_url": "https://*.amazon.*/sw/AccountInfo/ManageDepositMethods/step/ManageDepositMethods",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "管理存款方式"
+    ],
+    "marketplace": "ALL",
+    "category": "finance",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_201",
+    "user_description": "付费方式",
+    "exact_url": "https://*.amazon.*/gp/on-board/configuration/single-section/global-billing.html",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "付费方式"
+    ],
+    "marketplace": "ALL",
+    "category": "finance",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_202",
+    "user_description": "替换存款方式",
+    "exact_url": "https://*.amazon.*/sw/AccountInfo/DepositMethod/step/DepositMethod",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "替换存款方式"
+    ],
+    "marketplace": "ALL",
+    "category": "finance",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_203",
+    "user_description": "账户付费方式",
+    "exact_url": "https://*.amazon.*/sw/AccountInfo/Charge",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "账户付费方式"
+    ],
+    "marketplace": "ALL",
+    "category": "finance",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_204",
+    "user_description": "收费方式更新",
+    "exact_url": "https://*.amazon.*/sw/AccountInfo/ChargeMethod/step/Update",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "收费方式更新"
+    ],
+    "marketplace": "ALL",
+    "category": "finance",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_205",
+    "user_description": "亚马逊新页面",
+    "exact_url": "https://*.amazon.*/gp/returns/list/v2",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "亚马逊新页面"
+    ],
+    "marketplace": "ALL",
+    "category": "returns",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_206",
+    "user_description": "税务设置",
+    "exact_url": "https://*.amazon.*/tax/nexus/settings",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "税务设置"
+    ],
+    "marketplace": "ALL",
+    "category": "account_settings",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_207",
+    "user_description": "付款方式",
+    "exact_url": "https://*.amazon.*/gp/on-board/configuration/single-section",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "付款方式"
+    ],
+    "marketplace": "ALL",
+    "category": "finance",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_208",
+    "user_description": "管理付款方式",
+    "exact_url": "https://*.amazon.*/sw/AccountInfo/ChargeMethod",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "管理付款方式"
+    ],
+    "marketplace": "ALL",
+    "category": "finance",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_209",
+    "user_description": "帮助中心首页",
+    "exact_url": "https://*.amazon.*/help/center",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "帮助中心首页"
+    ],
+    "marketplace": "ALL",
+    "category": "help_support",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_210",
+    "user_description": "cases管理",
+    "exact_url": "https://*.amazon.*/cu/case-lobby",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "cases管理"
+    ],
+    "marketplace": "ALL",
+    "category": "help_support",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_211",
+    "user_description": "帮助中心页面",
+    "exact_url": "https://*.amazon.*/help/hub",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "帮助中心页面"
+    ],
+    "marketplace": "ALL",
+    "category": "help_support",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_212",
+    "user_description": "报告视图",
+    "exact_url": "https://*.amazon.*/payments/dashboard/index.html",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "报告视图"
+    ],
+    "marketplace": "ALL",
+    "category": "finance",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_213",
+    "user_description": "交易视图",
+    "exact_url": "https://*.amazon.*/payments/event/view",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "交易视图"
+    ],
+    "marketplace": "ALL",
+    "category": "finance",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_214",
+    "user_description": "所有声明",
+    "exact_url": "https://*.amazon.*/payments/past-settlements",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "所有声明"
+    ],
+    "marketplace": "ALL",
+    "category": "finance",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_215",
+    "user_description": "支出",
+    "exact_url": "https://*.amazon.*/payments/allstatements/index.html",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "支出"
+    ],
+    "marketplace": "ALL",
+    "category": "finance",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_216",
+    "user_description": "广告发票历史记录",
+    "exact_url": "https://*.amazon.*/gp/advertiser/transactions/transactions.html",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "广告发票历史记录"
+    ],
+    "marketplace": "ALL",
+    "category": "advertising",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_217",
+    "user_description": "报告存储库",
+    "exact_url": "https://*.amazon.*/payments/reports-repository",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "报告存储库"
+    ],
+    "marketplace": "ALL",
+    "category": "finance",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_218",
+    "user_description": "广告账单历史",
+    "exact_url": "https://*.amazon.*/billing/history",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "广告账单历史"
+    ],
+    "marketplace": "ALL",
+    "category": "advertising",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
+  },
+  {
+    "id": "rag_219",
+    "user_description": "亚马逊前台",
+    "exact_url": "https://www.amazon.*/",
+    "page_description": "",
+    "aliases": [],
+    "keywords": [
+      "亚马逊前台"
+    ],
+    "marketplace": "ALL",
+    "category": "other",
+    "created_at": "2026-04-14T16:33:38.954317",
+    "usage_count": 0,
+    "last_used": null
   }
 ]

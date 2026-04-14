@@ -1,6 +1,87 @@
-# Skill 文件 v2.0 改动说明
+# AI 辅助策略生成模块 — 改动日志
 
-> 改动日期：2026-04-13
+---
+
+## v2.2 改动说明（2026-04-14）
+
+> 改动范围：access_policy_skill_package 3 个文件更新 + 2 个新文件 + RAG 数据库扩容
+> 详细文档：体验内容/access_policy_skill_package/README_platform_module_map.md
+
+### 改动背景
+
+v2.0 解决了"输出对齐表单"的问题，但当用户需求超出访问策略能力时，Agent 的响应存在两个问题：
+1. 展示技术方案（Row-Level Security、API 网关等），小白用户看不懂
+2. Agent 只了解"访问策略"这一个模块，无法指路到平台其他功能
+
+v2.2 的核心改动：让 Agent 拥有紫鸟平台的完整能力地图，能精确指路；建议边界收敛到平台内，不推荐外部系统。
+
+### 一、能力边界指引优化（skill_definition.json + 提示词.md）
+
+**not_supported 数据结构重构**
+
+改动前：
+```json
+{
+  "capability": "业务系统字段级权限",
+  "alternative": "在业务系统的角色权限模块中配置"
+}
+```
+
+改动后：
+```json
+{
+  "capability": "业务系统字段级权限",
+  "user_explanation": "访问策略可以控制整个页面的访问权限，但没办法只隐藏页面里的某几个字段。",
+  "platform_suggestion": "如果您想隐藏的是页面上的某个按钮或特定区域，可以试试「网页元素采集」功能...",
+  "if_cannot_solve": "如果需要隐藏的是表格里的某一列数据，这个目前做不到。"
+}
+```
+
+**on_not_supported 响应模板重写**，新增 response_tone 约束和 routing_fallback 规则。
+
+**conditionally_supported（共用账号场景）** 去掉技术术语，改为平台内替代建议（拆分独立账号）。
+
+**提示词.md 指引原则确立**，从 4 条扩展到 11 条平台内指路场景。
+
+### 二、平台能力地图（新建 platform_module_map.json）
+
+通过 9 次截图收集紫鸟浏览器实际界面，建立完整的平台模块地图：
+- 24 个模块（安全监管 9 个、企业管理 7 个、账号/设备 2 个、云号 1 个、更多菜单 4 个、费用管理 1 个）
+- 17 条指路规则（routing_rules）
+- 每个模块标注置信度（verified/inferred）、导航路径、触发用语
+
+### 三、指引原则收敛
+
+确立核心原则：**Agent 的建议边界 = 紫鸟平台的能力边界**
+- 不推荐外部系统（ERP、OA 等）
+- 不出现「找技术团队」「找服务商」等指向外部角色的引导
+- 平台内有替代方案就推荐，有现成模板就推荐模板
+- 确实做不到的需求，坦诚告知「目前做不到」
+
+### 四、RAG 数据库扩容（20 → 219 条）
+
+从紫鸟平台网页资源管理 API 获取真实亚马逊 URL 数据，编写导入脚本自动修复编码 + 自动分类（20 个类别），写入 rag_simple_db.json。
+
+### 五、产出文档
+
+新建 README_platform_module_map.md，记录能力地图的完整产出过程。
+
+### 改动文件清单
+
+| 文件 | 操作 |
+|------|------|
+| access_policy_skill_package/platform_module_map.json | 新建 |
+| access_policy_skill_package/README_platform_module_map.md | 新建 |
+| access_policy_skill_package/skill_definition.json | 更新 |
+| 体验内容/提示词.md | 更新 |
+| amazon-rag-skill/rag_simple_db.json | 覆盖（20→219 条） |
+| amazon-rag-skill/rag_backup.json | 备份旧数据 |
+| amazon-rag-skill/scripts/import_real_urls.py | 新建 |
+
+---
+
+## v2.0 改动说明（2026-04-13）
+
 > 改动范围：access_policy_skill_package 全部 4 个文件 + approval_based_access_control_skill 1 个文件
 
 ---

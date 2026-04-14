@@ -12,6 +12,8 @@
     "output_target": "平台「新增访问策略」表单（指定网页生效策略 + 所有网页通用策略）"
   },
 
+  "platform_module_map_ref": "platform_module_map.json — 紫鸟平台完整能力地图，当用户需求超出访问策略能力时，根据该地图的 routing_rules 指引用户到正确的模块",
+
   "platform_capability": {
     "description": "平台能力边界定义，用于 phase_1 判断用户需求是否可在本平台实现",
     "supported": [
@@ -73,8 +75,10 @@
         },
         "when_shared_account": {
           "supported": false,
-          "reason": "所有人在同一账号下打开同一页面看到相同数据，平台无法按创建者过滤数据行",
-          "alternative": "在业务系统后端/数据库层实现 Row-Level Security"
+          "reason": "所有人共用同一个账号，打开同一页面看到的是相同数据，平台无法区分'谁创建的数据只给谁看'",
+          "user_explanation": "因为你们所有人共用一个卖家账号，大家打开同一个页面看到的内容是一样的。紫鸟平台可以控制「谁能打开哪个页面」，但没办法控制「同一个页面里谁能看到哪些数据行」。",
+          "platform_suggestion": "如果可以给不同组分配独立的平台账号，我就能帮您通过访问策略实现组间的页面隔离。您可以到「账号管理 → 全部账号」中查看是否能拆分账号。",
+          "if_cannot_split": "在共用账号的情况下，这个需求目前做不到。如果后续拆分了独立账号，随时来找我配置。"
         },
         "phase_1_action": "不要直接判为不支持，先询问用户的账号结构（独立账号还是共用账号），再决定走哪条路径"
       }
@@ -83,17 +87,21 @@
       {
         "capability": "业务系统字段级权限",
         "description": "控制某个字段是否可见/可编辑（如：隐藏价格列）",
-        "alternative": "在业务系统的角色权限模块中配置"
+        "user_explanation": "访问策略可以控制整个页面的访问权限，但没办法只隐藏页面里的某几个字段。",
+        "platform_suggestion": "如果您想隐藏的是页面上的某个按钮或特定区域，可以试试「网页元素采集」功能（在安全监管 → 网页资源管理中），它可以对页面内的特定元素进行限制。",
+        "if_cannot_solve": "如果需要隐藏的是表格里的某一列数据（比如价格、地址），这个目前做不到。"
       },
       {
         "capability": "多级审批链/自定义审批表单",
         "description": "配置主管→经理→BOSS的多级审批流程",
-        "alternative": "平台仅支持boss审批和禁止申请两个选项，复杂审批需在OA系统实现"
+        "user_explanation": "平台目前支持两种审批方式：「仅BOSS可审批」和「禁止申请访问」。逐级审批（比如主管→经理→BOSS）目前还不支持。",
+        "platform_can_do_instead": "如果这两种方式能满足您的需求，我可以直接帮您配置。需要我帮您设置吗？"
       },
       {
         "capability": "API/接口级访问控制",
         "description": "控制某个API接口的调用权限",
-        "alternative": "在API网关或后端中间件中实现"
+        "user_explanation": "访问策略控制的是浏览器里打开网页的权限，没办法控制系统接口的调用。",
+        "platform_suggestion": "您可以到「企业管理 → 企业设置 → 开发者模式配置」看看是否有相关选项。"
       }
     ]
   },
@@ -148,11 +156,13 @@
           "action": "先询问条件（如：该组是否有独立平台账号），根据回答决定走 supported 路径还是 not_supported 路径",
           "key_question": "该组/该业务是否使用独立的平台账号？",
           "if_yes": "可以实现 → 进入 phase_2_collect_params，用「指定账号 + 指定成员排除」组合",
-          "if_no": "无法实现 → 告知用户并给出替代方案"
+          "if_no": "无法实现 → 给出平台内的替代建议（如拆分独立账号），或坦诚告知目前做不到"
         },
         "on_not_supported": {
-          "response_template": "这个需求超出了平台访问策略的能力范围。{{platform_capability.not_supported[matched].description}}。建议的替代方案：{{platform_capability.not_supported[matched].alternative}}",
-          "action": "终止流程，不生成表单输出"
+          "response_template": "{{platform_capability.not_supported[matched].user_explanation}}\n\n{{#if platform_capability.not_supported[matched].platform_suggestion}}💡 **平台内的替代方案：**{{platform_capability.not_supported[matched].platform_suggestion}}{{/if}}\n\n{{#if platform_capability.not_supported[matched].platform_can_do_instead}}💡 **我能帮你做的：**{{platform_capability.not_supported[matched].platform_can_do_instead}}{{/if}}",
+          "action": "终止流程，不生成表单输出",
+          "response_tone": "建议只推荐紫鸟平台内已有的模块和功能。不推荐外部系统（ERP、OA等），不出现「找技术团队」「找服务商」等指向外部角色的引导。平台内有替代方案就推荐，有现成模板就推荐模板，确实做不到就坦诚告知「目前做不到」。",
+          "routing_fallback": "如果用户需求不在 not_supported 列表中但也不在 supported 列表中，查询 platform_module_map.json 的 routing_rules 尝试匹配，给出平台内的导航路径"
         }
       },
       "next_phase": "phase_2_collect_params"

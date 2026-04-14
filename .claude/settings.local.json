@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:help.ziniao.com)"
+      "WebFetch(domain:help.ziniao.com)",
+      "Bash(python amazon-rag-skill/scripts/import_real_urls.py)",
+      "WebSearch",
+      "WebFetch(domain:www.wearesellers.com)"
     ]
   }
 }
