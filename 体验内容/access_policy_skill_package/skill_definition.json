@@ -26,6 +26,18 @@
         "examples": ["禁止复制页面内容", "禁止下载文件", "限制查看密码框", "禁用F12开发者模式"]
       },
       {
+        "capability": "URL跨站点通配符匹配",
+        "form_field": "tab_指定网页生效策略",
+        "examples": ["https://*.amazon.*/orders-v3 一条规则覆盖所有亚马逊站点的订单页"],
+        "reference": "help.ziniao.com/docs/security/17363303414121"
+      },
+      {
+        "capability": "元素级访问控制",
+        "form_field": "网页元素采集",
+        "description": "对网页内的按钮、内容信息进行限制点击或查看（需通过网页元素采集功能配置）",
+        "examples": ["隐藏页面上的某个按钮", "限制点击某个操作入口"]
+      },
+      {
         "capability": "按成员/组范围生效",
         "form_field": "生效成员",
         "examples": ["除BOSS外所有人", "指定某些成员", "所有成员"]
@@ -214,6 +226,12 @@
           "allow_custom_url": true,
           "rag_lookup": true,
           "rag_trigger": "当用户用中文描述页面名称时，通过RAG检索精确URL",
+          "url_output_rules": {
+            "must_include_protocol": "所有URL必须以 https:// 开头",
+            "cross_site_preference": "当策略需要覆盖多个站点时，优先用 https://*.amazon.*/路径 一条规则搞定，不要逐站点列多条",
+            "dollar_terminator": "当需要仅匹配主域名时使用 $ 终止符，如 https://sellercentral-japan.amazon.com/$",
+            "param_preserve": "当需要精准匹配某个带参数的特定页面时，标注 preserve_params: true"
+          },
           "per_url_config": {
             "mode": {
               "question": "这个页面是完全禁止打开，还是可以打开但限制操作？",

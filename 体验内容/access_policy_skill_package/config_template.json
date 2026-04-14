@@ -95,8 +95,55 @@
     "field_id": "specific_page_rules",
     "description": "添加网页URL后，每条URL可设置为「可访问」或「已限制」两种模式",
     "type": "url_rule_list",
+
+    "url_syntax_rules": {
+      "description": "紫鸟平台URL匹配规则，基于帮助文档 help.ziniao.com/docs/security/17363303414121",
+
+      "protocol": {
+        "rule": "URL必须包含协议头 https://",
+        "correct": "https://sellercentral.amazon.com/orders-v3",
+        "wrong": "sellercentral.amazon.com/orders-v3"
+      },
+
+      "star_wildcard": {
+        "symbol": "*",
+        "description": "模糊匹配，用于一条规则覆盖多个站点的相同页面",
+        "examples": [
+          {"url": "https://*.amazon.*/orders-v3", "effect": "匹配所有亚马逊站点（美国、加拿大、日本等）的订单页"},
+          {"url": "https://sellercentral.amazon.com/orders-v3", "effect": "仅匹配美国站订单页"}
+        ],
+        "best_practice": "当策略需要覆盖多个站点时，优先用 * 通配符一条规则搞定，不要逐站点列多条"
+      },
+
+      "dollar_terminator": {
+        "symbol": "$",
+        "description": "终止符，仅匹配主域名，屏蔽所有子路径",
+        "examples": [
+          {"url": "https://sellercentral-japan.amazon.com/$", "effect": "日本站主域名可访问，所有子页面被限制"},
+          {"url": "https://*.amazon[^/]*/$", "effect": "所有亚马逊站点主域名可访问，子页面被限制"}
+        ],
+        "regex_note": "[^/]* 表示匹配除 / 以外的任意字符",
+        "warning": "非主域名网址不要以 / 结尾"
+      },
+
+      "query_params": {
+        "symbol": "?",
+        "description": "参数保留设置，控制URL中 ? 后面的参数是否参与匹配",
+        "preserve_off": {
+          "behavior": "系统自动删除 ? 后的所有内容，规则匹配整类页面",
+          "example": "https://www.example.com/page/?from=123 → 匹配为 https://www.example.com/page/"
+        },
+        "preserve_on": {
+          "behavior": "完整保留参数，URL必须一个字符都不差才能生效，用于精准控制特定页面",
+          "example": "https://seller-us.tiktok.com/compass/video-analytics/video-detail-item?id=7299345651836407082 → 仅匹配这一条视频"
+        },
+        "use_case": "需要限制部分商品编辑页而非全部、限制某个特定视频详情页等场景"
+      }
+    },
+
     "rule_template": {
       "url": "{{URL_PATTERN}}",
+      "preserve_params": "{{PRESERVE_PARAMS, default: false}}",
       "mode": "{{ACCESS_MODE}}",
       "mode_options": ["可访问", "已限制"],
       "mode_description": {

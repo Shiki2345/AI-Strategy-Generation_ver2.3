@@ -2,15 +2,17 @@
   "preset_version": "2.0",
   "description": "预设值库，格式对齐平台表单字段选项",
 
+  "_url_format_note": "所有URL必须以 https:// 开头。亚马逊跨站点页面优先用 https://*.amazon.*/路径 通配符写法。",
+
   "url_presets": {
     "video_sites_cn": {
       "name": "国内主流视频网站",
       "rules": [
-        {"url_rule": "*.bilibili.com", "说明": "B站"},
-        {"url_rule": "*.iqiyi.com", "说明": "爱奇艺"},
-        {"url_rule": "*.youku.com", "说明": "优酷"},
-        {"url_rule": "*.v.qq.com", "说明": "腾讯视频（精确匹配，不影响QQ邮箱）"},
-        {"url_rule": "*.mgtv.com", "说明": "芒果TV"}
+        {"url_rule": "https://*.bilibili.com", "说明": "B站"},
+        {"url_rule": "https://*.iqiyi.com", "说明": "爱奇艺"},
+        {"url_rule": "https://*.youku.com", "说明": "优酷"},
+        {"url_rule": "https://*.v.qq.com", "说明": "腾讯视频（精确匹配，不影响QQ邮箱）"},
+        {"url_rule": "https://*.mgtv.com", "说明": "芒果TV"}
       ],
       "tags": ["视频", "娱乐", "国内"]
     },
@@ -18,10 +20,10 @@
     "video_sites_global": {
       "name": "国际视频平台",
       "rules": [
-        {"url_rule": "*.youtube.com", "说明": "YouTube"},
-        {"url_rule": "*.netflix.com", "说明": "Netflix"},
-        {"url_rule": "*.twitch.tv", "说明": "Twitch"},
-        {"url_rule": "*.vimeo.com", "说明": "Vimeo"}
+        {"url_rule": "https://*.youtube.com", "说明": "YouTube"},
+        {"url_rule": "https://*.netflix.com", "说明": "Netflix"},
+        {"url_rule": "https://*.twitch.tv", "说明": "Twitch"},
+        {"url_rule": "https://*.vimeo.com", "说明": "Vimeo"}
       ],
       "tags": ["视频", "娱乐", "国际"]
     },
@@ -29,9 +31,9 @@
     "short_video": {
       "name": "短视频平台",
       "rules": [
-        {"url_rule": "*.douyin.com", "说明": "抖音"},
-        {"url_rule": "*.kuaishou.com", "说明": "快手"},
-        {"url_rule": "*.ixigua.com", "说明": "西瓜视频"}
+        {"url_rule": "https://*.douyin.com", "说明": "抖音"},
+        {"url_rule": "https://*.kuaishou.com", "说明": "快手"},
+        {"url_rule": "https://*.ixigua.com", "说明": "西瓜视频"}
       ],
       "tags": ["短视频", "娱乐"]
     },
@@ -39,12 +41,12 @@
     "social_media": {
       "name": "社交媒体",
       "rules": [
-        {"url_rule": "*.weibo.com", "说明": "微博"},
-        {"url_rule": "*.zhihu.com", "说明": "知乎"},
-        {"url_rule": "*.xiaohongshu.com", "说明": "小红书"},
-        {"url_rule": "*.facebook.com", "说明": "Facebook"},
-        {"url_rule": "*.twitter.com", "说明": "Twitter"},
-        {"url_rule": "*.instagram.com", "说明": "Instagram"}
+        {"url_rule": "https://*.weibo.com", "说明": "微博"},
+        {"url_rule": "https://*.zhihu.com", "说明": "知乎"},
+        {"url_rule": "https://*.xiaohongshu.com", "说明": "小红书"},
+        {"url_rule": "https://*.facebook.com", "说明": "Facebook"},
+        {"url_rule": "https://*.twitter.com", "说明": "Twitter"},
+        {"url_rule": "https://*.instagram.com", "说明": "Instagram"}
       ],
       "tags": ["社交", "娱乐"]
     },
@@ -52,10 +54,10 @@
     "gaming": {
       "name": "游戏平台",
       "rules": [
-        {"url_rule": "*.4399.com", "说明": "4399小游戏"},
-        {"url_rule": "*.7k7k.com", "说明": "7k7k小游戏"},
-        {"url_rule": "*.steam.com", "说明": "Steam"},
-        {"url_rule": "*.epicgames.com", "说明": "Epic Games"}
+        {"url_rule": "https://*.4399.com", "说明": "4399小游戏"},
+        {"url_rule": "https://*.7k7k.com", "说明": "7k7k小游戏"},
+        {"url_rule": "https://*.steam.com", "说明": "Steam"},
+        {"url_rule": "https://*.epicgames.com", "说明": "Epic Games"}
       ],
       "tags": ["游戏", "娱乐"]
     },
@@ -63,22 +65,56 @@
     "shopping": {
       "name": "购物网站",
       "rules": [
-        {"url_rule": "*.taobao.com", "说明": "淘宝"},
-        {"url_rule": "*.tmall.com", "说明": "天猫"},
-        {"url_rule": "*.jd.com", "说明": "京东"},
-        {"url_rule": "*.pinduoduo.com", "说明": "拼多多"}
+        {"url_rule": "https://*.taobao.com", "说明": "淘宝"},
+        {"url_rule": "https://*.tmall.com", "说明": "天猫"},
+        {"url_rule": "https://*.jd.com", "说明": "京东"},
+        {"url_rule": "https://*.pinduoduo.com", "说明": "拼多多"}
       ],
       "tags": ["购物", "电商"]
+    },
+
+    "amazon_seller_advertising": {
+      "name": "亚马逊广告相关页面（全站点）",
+      "rules": [
+        {"url_rule": "https://*.amazon.*/advertising/*", "说明": "所有站点Seller Central广告板块（通配符覆盖）"},
+        {"url_rule": "https://advertising.amazon.com/*", "说明": "Amazon Advertising独立广告控制台"}
+      ],
+      "tags": ["亚马逊", "广告", "全站点"]
+    },
+
+    "amazon_seller_payments": {
+      "name": "亚马逊金融/资金相关页面（全站点）",
+      "rules": [
+        {"url_rule": "https://*.amazon.*/payments*", "说明": "所有站点资金管理/支付报告（通配符覆盖）"},
+        {"url_rule": "https://*.amazon.*/gp/payments-account/*", "说明": "所有站点结算汇总等财务报表"}
+      ],
+      "tags": ["亚马逊", "金融", "财务", "全站点"]
+    },
+
+    "amazon_seller_case": {
+      "name": "亚马逊Case工单页面（全站点）",
+      "rules": [
+        {"url_rule": "https://*.amazon.*/cu/case-lobby*", "说明": "所有站点Case工单页（通配符覆盖）"}
+      ],
+      "tags": ["亚马逊", "Case", "工单", "全站点"]
     },
 
     "amazon_buyer_checkout": {
       "name": "亚马逊买家号结账相关页面",
       "rules": [
-        {"url_rule": "www.amazon.com/checkout/*", "说明": "Secure Checkout结账页（已验证）", "verified": true},
-        {"url_rule": "www.amazon.com/gp/cart/*", "说明": "购物车页面", "verified": "partial"},
-        {"url_rule": "www.amazon.com/gp/buy/spc*", "说明": "旧版结账页（兜底）", "verified": false}
+        {"url_rule": "https://www.amazon.com/checkout/*", "说明": "Secure Checkout结账页（已验证）", "verified": true},
+        {"url_rule": "https://www.amazon.com/gp/cart/*", "说明": "购物车页面", "verified": "partial"},
+        {"url_rule": "https://www.amazon.com/gp/buy/spc*", "说明": "旧版结账页（兜底）", "verified": false}
       ],
       "tags": ["亚马逊", "买家号", "结账", "高风险"]
+    },
+
+    "amazon_seller_account": {
+      "name": "亚马逊账户设置页面（全站点）",
+      "rules": [
+        {"url_rule": "https://*.amazon.*/sw/AccountInfo*", "说明": "所有站点账户详情页（通配符覆盖）"}
+      ],
+      "tags": ["亚马逊", "账户", "敏感", "全站点"]
     }
   },
 

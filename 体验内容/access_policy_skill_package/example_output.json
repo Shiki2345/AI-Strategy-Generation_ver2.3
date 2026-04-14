@@ -30,11 +30,11 @@
       },
 
       "tab_指定网页生效策略": [
-        { "url_rule": "*.bilibili.com",  "mode": "已限制", "说明": "B站" },
-        { "url_rule": "*.iqiyi.com",     "mode": "已限制", "说明": "爱奇艺" },
-        { "url_rule": "*.youku.com",     "mode": "已限制", "说明": "优酷" },
-        { "url_rule": "*.v.qq.com",      "mode": "已限制", "说明": "腾讯视频" },
-        { "url_rule": "*.mgtv.com",      "mode": "已限制", "说明": "芒果TV" }
+        { "url_rule": "https://*.bilibili.com",  "mode": "已限制", "说明": "B站" },
+        { "url_rule": "https://*.iqiyi.com",     "mode": "已限制", "说明": "爱奇艺" },
+        { "url_rule": "https://*.youku.com",     "mode": "已限制", "说明": "优酷" },
+        { "url_rule": "https://*.v.qq.com",      "mode": "已限制", "说明": "腾讯视频" },
+        { "url_rule": "https://*.mgtv.com",      "mode": "已限制", "说明": "芒果TV" }
       ],
 
       "tab_所有网页通用策略": {
@@ -74,9 +74,9 @@
 
       "tab_指定网页生效策略": [
         {
-          "url_rule": "sellercentral.amazon.com/sw/AccountInfo*",
+          "url_rule": "https://*.amazon.*/sw/AccountInfo*",
           "mode": "可访问",
-          "说明": "美国站账户详情页",
+          "说明": "所有站点账户详情页（通配符覆盖）",
           "behavior_controls": {
             "复制": "限制且记录",
             "文件上传": "限制且记录",
